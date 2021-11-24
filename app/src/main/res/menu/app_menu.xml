@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group
+        android:id="@+id/menus"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/account"
+            android:icon="@drawable/ic_account"
+            android:title="@string/accounts"
+            app:showAsAction="ifRoom" />
+
+        <item
+            android:id="@+id/collections"
+            android:icon="@drawable/ic_collections"
+            android:title="@string/collections"
+            app:showAsAction="ifRoom" />
+
+        <item
+            android:id="@+id/acc_conf"
+            android:icon="@drawable/ic_customer_confirmation"
+            android:title="@string/customer_confirmation"
+            app:showAsAction="ifRoom" />
+
+        <item
+            android:id="@+id/hard_core"
+            android:icon="@drawable/ic_hard_core"
+            android:title="@string/hard_core"
+            app:showAsAction="ifRoom" />
+
+        <item
+            android:id="@+id/refer_a_friend"
+            android:icon="@drawable/ic_refer_a_friend"
+            android:title="@string/refer_a_friend"
+            app:showAsAction="ifRoom" />
+    </group>
+    <group android:id="@+id/logout">
+        <item
+            android:id="@+id/log_out"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/logout"
+            app:showAsAction="ifRoom" />
+    </group>
+</menu>

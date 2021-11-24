@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">CapMobile</string>
+    <string name="app_name">Customer Activation Portal</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="keystone_icon">Logo</string>
+    <string name="logo">Bank Logo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user_name">Kunle Abu Obi</string>
+    <string name="position">Account Officer</string>
+    <string name="user_id">adebayo@keystonebankng.com</string>
+    <string name="accounts">Accounts</string>
+    <string name="collections">Collections</string>
+    <string name="customer_confirmation">Customer Confirmation</string>
+    <string name="hard_core">Hard Core</string>
+    <string name="refer_a_friend">Refer a Friend</string>
+    <string name="logout">Logout</string>
+    <string name="dashboard">DashBoard</string>
 </resources>
