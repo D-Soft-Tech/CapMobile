@@ -17,4 +17,10 @@
     <string name="refer_a_friend">Refer a Friend</string>
     <string name="logout">Logout</string>
     <string name="dashboard">DashBoard</string>
+    <string name="customer_engagement">Customer Engagement</string>
+    <string name="by_levels">By Levels</string>
+    <string name="by_transaction">By Transaction</string>
+    <string name="transacting">Transacting</string>
+    <string name="not_transacting">Not Transacting</string>
+    <string name="nav_app_bar_close_drawer_description">Close the drawer</string>
 </resources>

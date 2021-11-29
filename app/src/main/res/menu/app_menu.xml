@@ -36,6 +36,31 @@
             android:title="@string/refer_a_friend"
             app:showAsAction="ifRoom" />
     </group>
+
+    <item
+        android:id="@+id/customerEngagement"
+        android:icon="@drawable/ic_message"
+        android:visible="true"
+        android:title="@string/customer_engagement"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group
+                android:id="@+id/cus_engagement_dropdown"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/levels"
+                    android:icon="@drawable/ic_levels"
+                    android:title="@string/by_levels"
+                    app:showAsAction="ifRoom" />
+                <item android:icon="@drawable/ic_baseline_currency_exchange_24"
+                    android:id="@+id/transaction"
+                    android:title="@string/by_transaction"
+                    app:showAsAction="ifRoom" />
+            </group>
+        </menu>
+
+    </item>
+
     <group android:id="@+id/logout">
         <item
             android:id="@+id/log_out"

@@ -3,10 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_baseline_currency_exchange_24.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/drawable/ic_levels.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/drawable/ic_message.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/drawable/ic_non_transacting.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/drawable/ic_transacting.xml" value="0.24583333333333332" />
         <entry key="app/src/main/res/drawable/splash_screen.xml" value="0.24583333333333332" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.215625" />
+        <entry key="app/src/main/res/layout/app_header_layout.xml" value="0.2296875" />
         <entry key="app/src/main/res/layout/app_toolbar.xml" value="0.2296875" />
         <entry key="app/src/main/res/layout/dashboard_layout.xml" value="0.2296875" />
+        <entry key="app/src/main/res/layout/fragment_engage_by_levels_screen.xml" value="0.2296875" />
+        <entry key="app/src/main/res/layout/fragment_engage_by_transaction.xml" value="0.215625" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.2296875" />
         <entry key="app/src/main/res/menu/app_menu.xml" value="0.2296875" />
       </map>

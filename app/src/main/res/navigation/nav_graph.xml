@@ -16,6 +16,5 @@
     </fragment>
     <fragment
         android:id="@+id/dashBoard"
-        android:name="com.example.capmobile.ui.DashBoard"
-        android:label="DashBoard" />
+        android:name="com.example.capmobile.ui.DashBoard" />
 </navigation>
