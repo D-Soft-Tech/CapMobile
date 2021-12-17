@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.8"
+            app:cardBackgroundColor="@color/main_color_variant_1"
+            app:cardElevation="@dimen/dimen_10dp"
+            app:contentPadding="@dimen/dimen_20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/bvn_tIL"
+                    style="@style/myTilStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:layout_marginBottom="@dimen/dimen_20dp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView8"
+                    app:layout_constraintEnd_toStartOf="@+id/getBvnDetailsBtn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/bvn"
+                        validate="@{getBvnDetailsBtn}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/enterBvn"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <android.widget.Button
+                    android:id="@+id/getBvnDetailsBtn"
+                    style="@style/btn_general"
+                    android:enabled="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/dimen_20dp"
+                    android:text="@string/get_bvn_details"
+                    app:layout_constraintBottom_toBottomOf="@+id/bvn_tIL"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/bvn_tIL" />
+
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10dp"
+                    android:text="@string/bvn"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_bold"
+                    app:layout_constraintBottom_toTopOf="@+id/validated_bvn_tIL"
+                    app:layout_constraintStart_toStartOf="@+id/validated_bvn_tIL" />
+
+                <TextView
+                    android:id="@+id/validated_bvn_tIL"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_45dp"
+                    android:background="@drawable/til_with_grey_bg"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/dimen_20dp"
+                    android:text="@string/bvn"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/bvn_tIL"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8"
+                    tools:ignore="RtlSymmetry"
+                    tools:layout_editor_absoluteY="127dp" />
+
+                <TextView
+                    android:id="@+id/extAccLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_10dp"
+                    android:layout_marginVertical="@dimen/dimen_20dp"
+                    android:text="@string/extAccLabel"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_bold"
+                    app:layout_constraintStart_toStartOf="@+id/extAcc"
+                    app:layout_constraintTop_toBottomOf="@+id/validated_bvn_tIL" />
+
+                <TextView
+                    android:id="@+id/extAcc"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_45dp"
+                    android:background="@drawable/til_with_grey_bg"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/dimen_20dp"
+                    android:text="@string/existing_account"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/extAccLabel"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/daoLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_10dp"
+                    android:layout_marginVertical="@dimen/dimen_20dp"
+                    android:text="@string/daoCodeLabel"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_bold"
+                    app:layout_constraintStart_toStartOf="@+id/dao_tv"
+                    app:layout_constraintTop_toBottomOf="@+id/extAcc" />
+
+                <TextView
+                    android:id="@+id/dao_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_45dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/dimen_20dp"
+                    android:text="@string/daoSample"
+                    android:background="@drawable/til_with_grey_bg"
+                    android:fontFamily="@font/poppins_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/daoLabel"
+                    tools:ignore="RtlSymmetry" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/product_tIL"
+                    style="@style/myTilStyleExposedDropDown"
+                    android:layout_width="0dp"
+                    android:hint="@string/selectAProduct"
+                    android:layout_height="@dimen/dimen_55dp"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/dao_tv"
+                    app:layout_constraintTop_toBottomOf="@+id/dao_tv">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="none"
+                        android:hint="@string/select_a_prod"
+                        tools:ignore="LabelFor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

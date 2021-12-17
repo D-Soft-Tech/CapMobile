@@ -7,13 +7,13 @@
     <string name="logo">Bank Logo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="user_name">Kunle Abu Obi</string>
+    <string name="user_name">Elizabeth Oliseh</string>
     <string name="position">Account Officer</string>
     <string name="user_id">adebayo@keystonebankng.com</string>
-    <string name="accounts">Accounts</string>
+    <string name="accounts">Open New \nAccounts</string>
     <string name="collections">Collections</string>
     <string name="customer_confirmation">Customer Confirmation</string>
-    <string name="hard_core">Hard Core</string>
+    <string name="accountsAndChannels">Account &amp; Channels Activation</string>
     <string name="refer_a_friend">Refer a Friend</string>
     <string name="logout">Logout</string>
     <string name="dashboard">DashBoard</string>
@@ -23,4 +23,253 @@
     <string name="transacting">Transacting</string>
     <string name="not_transacting">Not Transacting</string>
     <string name="nav_app_bar_close_drawer_description">Close the drawer</string>
+    <string name="summary">Account Summary</string>
+    <string name="account_open">Open New Account</string>
+    <string name="reactivate">Re-activate Account</string>
+    <string name="hi_user">Hi, Adebayo!</string>
+    <string name="user_account">User Account</string>
+    <string name="value_35">35</string>
+    <string name="sample_percent">8.2%</string>
+    <string name="enterBvn">Enter BVN</string>
+    <string name="get_bvn_details">Get Details</string>
+    <string name="bvn">BVN</string>
+    <string name="existing_account">Existing Account…</string>
+    <string name="dao">DAO</string>
+    <string name="product_sample">Product Sample</string>
+    <string name="next_page">Next</string>
+    <string name="extAccLabel">Existing Account:</string>
+    <string name="daoCodeLabel">DAO Code:</string>
+    <string name="daoSample">21295</string>
+    <string name="pleaseWait">Please wait…</string>
+    <string name="invalidBvnLength">BVN must be 11 characters</string>
+    <string name="good">Good</string>
+    <string name="selectAProduct">Select A Product: *</string>
+    <string name="surname">Surname</string>
+    <string name="firstName">First Name: </string>
+    <string name="middleName">Middle Name: </string>
+    <string name="gender">Gender</string>
+    <string name="previousPage">Previous</string>
+    <string name="residentialAddress">Residential Street Address: *</string>
+    <string name="residentialCity">Residential City: *</string>
+    <string name="state">State: *</string>
+    <string name="phone">Phone: *</string>
+    <string name="preferredPhone">Preferred Phone: *</string>
+    <string name="email">Email: *</string>
+    <string name="preferredBranch">Preferred Branch: *</string>
+    <string name="dateOfBirth">Date of Birth: *</string>
+    <string name="userProfilePicture">Profile Picture</string>
+    <string name="photo">Photo</string>
+    <string name="profilePhoto">Profile Picture</string>
+    <string name="signature">Signature: *</string>
+    <string name="identification">Identification: *</string>
+    <string name="utilities">Utility: *</string>
+    <string name="submit">Submit</string>
+    <string name="getUserDetails">(1 of 4) &#160;&#160;Get User Details Via BVN</string>
+    <string name="bioDataSpecification">(2 of 4) &#160;&#160; User Bio-Data</string>
+    <string name="userAddressScreenTitle">(3 of 4) &#160; &#160; User Address / Contact</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="account_created">Account Created Successfully \n Please find your account details below</string>
+    <string name="account">Account: </string>
+    <string name="account_num">Number: &#160; 1234567890</string>
+    <string name="account_name">Name: &#160;Oloyede Adebayo Olawale</string>
+    <string name="account_type">Type: &#160; Individual Account</string>
+    <string name="account_officer">Know Your Account Officer:</string>
+    <string name="name_of_account_officer">Name: &#160; Juliet Oluwasegun Omogbolahan</string>
+    <string name="phone_number_of_account_officer">Phone: &#160;+2349075771869</string>
+    <string name="atm_details">ATM Details: </string>
+    <string name="atmType">VISA CARD</string>
+    <string name="pickup_branch">Can be picked up at any \nKeystone branch close to you</string>
+    <string name="icon_to_share">Icon to Share the account information</string>
+    <string name="icon_to_download">Icon to download the account information</string>
+    <string name="uploadDocumentsScreen">(4 of 4) &#160;Upload Documents</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="storage_permission_granted">Storage permission granted</string>
+    <string name="camera_permission_granted">Camera permission granted</string>
+    <string name="permission_granted">Camera and Storage permissions granted</string>
+    <string name="camera_permission_rationale">You need to grant this permission before you can use the camera</string>
+    <string name="storage_permission_rationale">You need to grant this permission before you can select image from your device</string>
+    <string name="cameraOrGallery">Camera / Gallery?</string>
+    <string name="overall">Performance: </string>
+    <string name="ussd">USSD: </string>
+    <string name="atm">ATM: </string>
+    <string name="mobile">Mobile: </string>
+    <string name="description">Description</string>
+    <string name="sample_description">Invalid Phone Number / Invalid BVN </string>
+    <string name="total_accounts">Total Accounts</string>
+    <string name="total_accounts_sample">500</string>
+    <string name="engage">Engage</string>
+    <string name="send_via">Engage Via:</string>
+    <string name="emailButton">Email Button</string>
+    <string name="whatsappIcon">WhatsApp Icon</string>
+    <string name="pushNotification">Push Notification Icon</string>
+    <string name="closeIcon">Icon to close the bottom sheet</string>
+    <string name="editIcon">Edit Icon</string>
+    <string name="getReward">GET REWARDS AS YOU REFER</string>
+    <string name="pageImage">Image telling you to refer a friend</string>
+    <string name="getPoint">Get Points on each Referral on our CAP</string>
+    <string name="referWithGift">Refer a Friend with Gift</string>
+    <string name="enterBeneficiaryPhoneNumber">Enter Beneficiary Phone Number</string>
+    <string name="fromContact">Select Phone From Contacts</string>
+    <string name="enterBeneficiaryPhoneName">Enter Beneficiary Name</string>
+    <string name="enterAmount">Enter Amount</string>
+    <string name="enterOptionalMessage">Input Special Message (Optional)</string>
+    <string name="welcome">Welcome</string>
+    <string name="performance">Performance:</string>
+    <string name="proceed">Proceed</string>
+    <string name="_20">20%</string>
+    <string name="pos">POS:</string>
+    <string name="welcomeBack">Welcome back!</string>
+    <string name="enterusername">Enter username</string>
+    <string name="enterPassword">Enter password</string>
+    <string name="logintoproceed">Login to proceed</string>
+    <string name="toggleIcon">Toggle Icon for revealing the drawer menu</string>
+    <string name="welcome_back_username">Welcome back Elizabeth!</string>
+    <string name="account_summary">Account Summary</string>
+    <string name="myDaoAccounts">My Dao Accounts</string>
+    <string name="card_funding">Card Funding</string>
+    <string name="channelCount">Channel count</string>
+    <string name="openAndReactivateAcc"><![CDATA[Open & \nReactivate Accounts]]></string>
+    <string name="channelsSummary">Channels Summary</string>
+    <string name="hard_core">Hard Core</string>
+    <string name="congrats">Congrats</string>
+    <string name="successfullyReceivedGift">Your gift was sent successfully</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="cards">Cards</string>
+    <string name="ibanking">e-Bank</string>
+    <string name="accounts_heading">Accounts: </string>
+    <string name="back_arrow">Back arrow to dashboard</string>
+    <string name="account_status">Account Status</string>
+    <string name="name_of_account">Name</string>
+    <string name="is_on_mobile">Mobile</string>
+    <string name="is_on_ussd">Ussd</string>
+    <string name="is_on_ibanking">iBank</string>
+    <string name="is_on_card">Card</string>
+    <string name="summary_heading">Summary</string>
+    <string name="card_funding_status">Card Funding Status</string>
+    <string name="breakFunding">Breakown of Cards Funding</string>
+    <string name="posDescr">POS Image</string>
+    <string name="pos_concession">Pos Concession</string>
+    <string name="inputAccountNumber">Input Account Number</string>
+    <string name="send">Send</string>
+    <string name="select_a_prod">Select A Product</string>
+    <string name="hint_gender">Gender</string>
+    <string name="accountOpening">Account Opening</string>
+    <string name="inputOtp">Input OTP</string>
+    <string name="enterSurname">Enter Surname</string>
+    <string name="signing_out">Signing Out</string>
+    <string name="signout_confirmation">Are you sure you want to sign out?</string>
+    <string name="no">NO</string>
+    <string name="yes">Yes</string>
+    <string name="active">Active</string>
+    <string name="image_of_account">Image of account</string>
+    <string name="status">Status</string>
+
+    <string-array name="statuses">
+        <item>Active</item>
+        <item>Inactive</item>
+        <item>Dormant</item>
+    </string-array>
+
+    <string-array name="cameraOrGalleryStringArray">
+        <item>Camera</item>
+        <item>Gallery</item>
+    </string-array>
+
+    <string-array name="fileSelector">
+        <item>Choose</item>
+        <item>Camera</item>
+        <item>Gallery</item>
+    </string-array>
+
+    <string-array name="categoryByLevel">
+        <item>Level 0</item>
+        <item>Level 0_P?</item>
+        <item>Level 0_e?</item>
+        <item>Level 0_ep?</item>
+        <item>Level 1A</item>
+        <item>Level 2</item>
+        <item>Level 8</item>
+        <item>Level 10</item>
+        <item>All</item>
+    </string-array>
+
+    <string-array name="categoryByTransaction">
+        <item>Transacting</item>
+        <item>Not Transacting</item>
+        <item>All</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="summary">
+        <item>Accounts</item>
+        <item>Card fundings</item>
+    </string-array>
+
+    <string-array name="products">
+        <item>Select a Product</item>
+        <item>Current Account - Individuals</item>
+        <item>Savings Account Extra</item>
+        <item>Savings Accounts Individuals</item>
+        <item>Pay Time - Current Account</item>
+        <item>Future Account–Kids (0 – 12)</item>
+        <item>Future Account–Teens (13 – 18)</item>
+        <item>Quick Save</item>
+        <item>Quick Save Plus</item>
+        <item>Evolve Account</item>
+        <item>Pink Savings Account</item>
+        <item>Pink Current Account - Individuals</item>
+        <item>High Interest Savings Account</item>
+    </string-array>
+
+    <string-array name="dormieBranch">
+        <item>Sample Branch A</item>
+        <item>Sample Branch B</item>
+        <item>Sample Branch C</item>
+    </string-array>
+
+    <string-array name="nigeria_states">
+        <item>Select a State</item>
+        <item>Abia</item>
+        <item>Abuja</item>
+        <item>Adamawa</item>
+        <item>Akwa Ibom</item>
+        <item>Anambra</item>
+        <item>Bauchi</item>
+        <item>Bayelsa</item>
+        <item>Benue</item>
+        <item>Bornu</item>
+        <item>Cross-Rivers</item>
+        <item>Delta</item>
+        <item>Ebonyi</item>
+        <item>Edo</item>
+        <item>Ekiti</item>
+        <item>Enugu</item>
+        <item>Gombe</item>
+        <item>Imo</item>
+        <item>Jigawa</item>
+        <item>Kaduna</item>
+        <item>Kano</item>
+        <item>Kastina</item>
+        <item>Kebbi</item>
+        <item>Kogi</item>
+        <item>Kwara</item>
+        <item>Lagos</item>
+        <item>Nasarawa</item>
+        <item>Niger</item>
+        <item>Ogun</item>
+        <item>Ondo</item>
+        <item>Osun</item>
+        <item>Oyo</item>
+        <item>Plateau</item>
+        <item>Rivers</item>
+        <item>Sokoto</item>
+        <item>Taraba</item>
+        <item>Yobe</item>
+        <item>Zamfara</item>
+    </string-array>
 </resources>

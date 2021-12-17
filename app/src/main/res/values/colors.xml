@@ -6,9 +6,34 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="background_color">#E5E5E5</color>
+    <color name="background_color_variant_2">#FBF7F7</color>
     <color name="white">#FFFFFFFF</color>
     <color name="main_color">#1c234f</color>
     <color name="btn_color_night_mode">#009cdc</color>
     <color name="status_bar_color_variant">#353D75</color>
     <color name="text_input_layout_color" tools:override="true">@color/main_color</color>
+    <color name="grey2">#E2E5EA</color>
+    <color name="grey">#DFE8F7</color>
+    <color name="status_card_sample_color">#1077bf</color>
+    <color name="cards">#077d58</color>
+    <color name="mobile">#639907</color>
+    <color name="ussd">#9c5c0c</color>
+    <color name="main_color_2">#4F6587</color>
+    <color name="internet_banking">#353952</color>
+    <color name="off_white">#979494</color>
+    <color name="main_color_variant_1">#2b80b9</color>
+    <color name="main_color_variant_2">#19334b</color>
+    <color name="error">#ee4549</color>
+    <color name="success">#3ab636</color>
+    <color name="red">#E28F89</color>
+    <color name="warning">#D18F2D</color>
+    <color name="card_bg_color">#2b80b9</color>
+    <color name="new_v1_color">#019CDC</color>
+    <color name="new_main_color">#0056A3</color>
+    <color name="grey_color_2">#e4e4e4</color>
+    <color name="grey_color">#CCC9C9</color>
+    <color name="new_color_variant_2">#BED1EF</color>
+    <color name="table_item_txt_color">#213cc4</color>
+    <color name="transparent">#0000ffff</color>
 </resources>

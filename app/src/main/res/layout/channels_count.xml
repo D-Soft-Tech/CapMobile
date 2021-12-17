@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/dimen_20dp"
+    tools:context=".ui.ChannelsCounts">
+
+    <ImageView
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/back_arrow"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:src="@drawable/ic_page_back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/heading"
+        style="@style/headingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:text="@string/channelCount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+    <View
+        android:id="@+id/headingUnderLine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_1dp"
+        android:background="@color/main_color"
+        app:layout_constraintEnd_toEndOf="@+id/heading"
+        app:layout_constraintStart_toStartOf="@+id/heading"
+        app:layout_constraintTop_toBottomOf="@+id/heading" />
+
+    <include
+        android:id="@+id/myDaoAccountsTableHeading"
+        layout="@layout/table_heading"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen_30dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/headingUnderLine"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        tools:listitem="@layout/table_item_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/myDaoAccountsTableHeading"
+        app:layout_constraintStart_toStartOf="@+id/myDaoAccountsTableHeading"
+        app:layout_constraintTop_toBottomOf="@+id/myDaoAccountsTableHeading" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

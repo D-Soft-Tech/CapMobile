@@ -1,19 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@+id/dashboardFirst"
+        android:checkableBehavior="single">
+        <item android:id="@+id/dashboardNew"
+            android:icon="@drawable/ic_baseline_dashboard_24"
+            android:title="@string/dashboard"
+            app:showAsAction="ifRoom" />
+    </group>
+
+    <group android:id="@+id/accounts"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/accountStatus"
+            android:icon="@drawable/ic_summary"
+            android:title="@string/summary"
+            app:showAsAction="ifRoom" />
+        <item
+            android:id="@id/fragment_open_account"
+            android:icon="@drawable/ic_account_opening"
+            android:title="@string/account_open"
+            app:showAsAction="ifRoom" />
+        <item
+            android:id="@id/reactivateAccount2"
+            android:icon="@drawable/ic_account_reactivation"
+            android:title="@string/reactivate"
+            app:showAsAction="ifRoom" />
+        <item
+            android:id="@id/myDaoAccounts"
+            android:icon="@drawable/person"
+            android:title="@string/myDaoAccounts"
+            app:showAsAction="ifRoom" />
+    </group>
 
     <group
-        android:id="@+id/menus"
+        android:id="@+id/cus_engagement_dropdown"
         android:checkableBehavior="single">
-
         <item
-            android:id="@+id/account"
-            android:icon="@drawable/ic_account"
-            android:title="@string/accounts"
+            android:id="@id/customerEngagement"
+            android:icon="@drawable/ic_message"
+            android:title="@string/customer_engagement"
             app:showAsAction="ifRoom" />
+    </group>
 
+    <item
+        android:id="@id/referAFriendLandingPage"
+        android:icon="@drawable/ic_refer_a_friend"
+        android:title="@string/refer_a_friend"
+        app:showAsAction="ifRoom" />
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/others">
         <item
-            android:id="@+id/collections"
+            android:id="@id/posCollection2"
             android:icon="@drawable/ic_collections"
             android:title="@string/collections"
             app:showAsAction="ifRoom" />
@@ -29,37 +68,7 @@
             android:icon="@drawable/ic_hard_core"
             android:title="@string/hard_core"
             app:showAsAction="ifRoom" />
-
-        <item
-            android:id="@+id/refer_a_friend"
-            android:icon="@drawable/ic_refer_a_friend"
-            android:title="@string/refer_a_friend"
-            app:showAsAction="ifRoom" />
     </group>
-
-    <item
-        android:id="@+id/customerEngagement"
-        android:icon="@drawable/ic_message"
-        android:visible="true"
-        android:title="@string/customer_engagement"
-        app:showAsAction="ifRoom">
-        <menu>
-            <group
-                android:id="@+id/cus_engagement_dropdown"
-                android:checkableBehavior="single">
-                <item
-                    android:id="@+id/levels"
-                    android:icon="@drawable/ic_levels"
-                    android:title="@string/by_levels"
-                    app:showAsAction="ifRoom" />
-                <item android:icon="@drawable/ic_baseline_currency_exchange_24"
-                    android:id="@+id/transaction"
-                    android:title="@string/by_transaction"
-                    app:showAsAction="ifRoom" />
-            </group>
-        </menu>
-
-    </item>
 
     <group android:id="@+id/logout">
         <item

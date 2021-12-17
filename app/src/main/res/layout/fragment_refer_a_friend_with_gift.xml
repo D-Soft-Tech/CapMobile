@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dimen_20dp"
+        android:background="@color/background_color"
+        tools:context=".ui.referAFriend.ReferAFriendWithGift">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/back_arrow"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:src="@drawable/ic_page_back_arrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/heading"
+                style="@style/headingText"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/dimen_40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/refer_a_friend"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+                app:layout_constraintStart_toEndOf="@+id/imageButton"
+                app:layout_constraintTop_toTopOf="@+id/imageButton" />
+
+            <TextView
+                android:id="@+id/getReward"
+                style="@style/headingText"
+                android:textSize="@dimen/dimen_16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="@string/getReward"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/heading" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutChooseAccount"
+                style="@style/account_summary_dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen_40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/getReward">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:paddingHorizontal="@dimen/dimen_20dp"
+                    tools:ignore="LabelFor"
+                    tools:text="Select An option" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutEnterBeneficiaryPhone"
+                style="@style/myTilStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_marginVertical="@dimen/dimen_10dp"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayoutChooseAccount"
+                app:layout_constraintStart_toStartOf="@+id/textInputLayoutChooseAccount"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutChooseAccount">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/autoCompleteTextViewEnterPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:hint="@string/enterBeneficiaryPhoneNumber"
+                    android:inputType="none"
+                    android:paddingHorizontal="@dimen/dimen_20dp"
+                    tools:ignore="LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutEnterBeneficiaryPhone2"
+                style="@style/myTilStyleExposedDropDown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_marginVertical="@dimen/dimen_10dp"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayoutChooseAccount"
+                app:layout_constraintStart_toStartOf="@+id/textInputLayoutChooseAccount"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutChooseAccount">
+
+                <AutoCompleteTextView
+                    android:id="@+id/beneficiaryAutoCompleteTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="viewStart"
+                    android:hint="@string/enterBeneficiaryPhoneNumber"
+                    android:inputType="none"
+                    android:paddingHorizontal="@dimen/dimen_20dp"
+                    tools:ignore="LabelFor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/fromContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="@string/fromContact"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayoutEnterBeneficiaryPhone"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEnterBeneficiaryPhone" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutEnterBeneficiaryName"
+                style="@style/myTilStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen_10dp"
+                app:layout_constraintEnd_toEndOf="@+id/fromContact"
+                app:layout_constraintStart_toStartOf="@+id/textInputLayoutEnterBeneficiaryPhone"
+                app:layout_constraintTop_toBottomOf="@+id/fromContact">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/autoCompleteTextViewEnterPhoneName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/enterBeneficiaryPhoneName"
+                    android:inputType="none"
+                    android:paddingHorizontal="@dimen/dimen_20dp"
+                    tools:ignore="LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutEnterAmount"
+                style="@style/myTilStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen_10dp"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayoutEnterBeneficiaryName"
+                app:layout_constraintStart_toStartOf="@+id/textInputLayoutEnterBeneficiaryName"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEnterBeneficiaryName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/autoCompleteTextViewEnterAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/enterAmount"
+                    android:inputType="none"
+                    android:paddingHorizontal="@dimen/dimen_20dp"
+                    tools:ignore="LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutOptionalMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen_10dp"
+                style="@style/myTilStyle"
+                android:hint="@string/enterOptionalMessage"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayoutEnterAmount"
+                app:layout_constraintStart_toStartOf="@+id/textInputLayoutEnterAmount"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEnterAmount">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/autoCompleteTextViewEnterOptionalMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_150dp"
+                    android:layout_weight="1"
+                    android:inputType="textMultiLine"
+                    android:paddingHorizontal="@dimen/dimen_20dp"
+                    tools:ignore="LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <android.widget.Button
+                android:id="@+id/referAFriendBtn"
+                style="@style/referBtn"
+                android:layout_width="@dimen/dimen_200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:background="@drawable/refer_a_friend_btn_bg"
+                android:text="@string/send"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayoutOptionalMessage"
+                app:layout_constraintStart_toStartOf="@+id/textInputLayoutOptionalMessage"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutOptionalMessage" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

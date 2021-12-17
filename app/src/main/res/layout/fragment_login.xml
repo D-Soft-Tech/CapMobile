@@ -1,6 +1,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.LoginPage">
 
     <data>
         <variable
@@ -11,8 +12,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.LoginPage">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -37,6 +37,20 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.35" />
+
+<!--        <com.airbnb.lottie.LottieAnimationView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="@dimen/dimen_100dp"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/textInputLayout"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/textView"-->
+<!--            app:layout_constraintHorizontal_bias="0.62"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/linearLayout"-->
+<!--            app:layout_constraintVertical_bias="0.82"-->
+<!--            app:lottie_autoPlay="true"-->
+<!--            android:foregroundGravity="right"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            app:lottie_rawRes="@raw/unlock" />-->
 
         <TextView
             android:id="@+id/textView"
@@ -66,9 +80,9 @@
                 android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxLines="1"
                 android:drawableEnd="@drawable/person"
-                android:hint="@string/username" />
+                android:hint="@string/username"
+                android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -87,7 +101,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/padlock"
-                android:maxLines="1"
+                android:singleLine="true"
                 android:hint="@string/password"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -100,7 +114,7 @@
             android:background="@drawable/button_bg"
             android:fontFamily="@font/poppins_bold"
             android:text="@string/login"
-            android:onClick="@{() -> owner.navigateToDashBoard()}"
+            android:onClick="@{() -> owner.navigateToWelcomeScreen()}"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
             app:layout_constraintStart_toStartOf="@+id/textInputLayout2"

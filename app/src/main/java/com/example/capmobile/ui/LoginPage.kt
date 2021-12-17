@@ -1,9 +1,11 @@
 package com.example.capmobile.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
@@ -29,25 +31,7 @@ class LoginPage : Fragment() {
         return binding.root
     }
 
-    override fun onResume() {
-        super.onResume()
-        // Lock the navigation drawer
-        (activity?.findViewById<DrawerLayout>(R.id.drawerLayout))?.setDrawerLockMode(
-            DrawerLayout.LOCK_MODE_LOCKED_CLOSED
-        )
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        // Unlock the navigation drawer
-        (activity?.findViewById<DrawerLayout>(R.id.drawerLayout))?.setDrawerLockMode(
-            DrawerLayout.LOCK_MODE_UNLOCKED
-        )
-    }
-
-    fun navigateToDashBoard() {
-        findNavController().navigate(
-            R.id.action_loginPage_to_dashBoard
-        )
+    fun navigateToWelcomeScreen() {
+        findNavController().navigate(R.id.action_loginPage_to_welcomeScreen)
     }
 }

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.example.capmobile.model.DaoChannelObject" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dimen_5dp"
+        android:background="@drawable/table_bg"
+        android:paddingVertical="@dimen/dimen_10dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.60" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.70" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.80" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.90" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_7dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginVertical="@dimen/dimen_5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:maxLines="4"
+            android:text="@{data.name}"
+            android:textColor="@color/table_item_txt_color"
+            app:layout_constraintEnd_toStartOf="@+id/gl1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="OLADIMEJI OLAOSEBIKAN IGBOKWEZE" />
+
+        <View
+            android:id="@+id/mobileSelection"
+            android:layout_width="@dimen/dimen_10dp"
+            android:layout_height="@dimen/dimen_10dp"
+            android:background="@{data.mobile? @drawable/round_view_bg_selected : @drawable/round_view_bg}"
+            tools:background="@drawable/round_view_bg_selected"
+            app:layout_constraintBottom_toBottomOf="@+id/textView27"
+            app:layout_constraintEnd_toStartOf="@+id/gl2"
+            app:layout_constraintStart_toStartOf="@+id/gl1"
+            app:layout_constraintTop_toTopOf="@+id/textView27" />
+
+        <View
+            android:id="@+id/ussdSelection"
+            android:layout_width="@dimen/dimen_10dp"
+            android:layout_height="@dimen/dimen_10dp"
+            android:background="@{data.ussd? @drawable/round_view_bg_selected : @drawable/round_view_bg}"
+            tools:background="@drawable/round_view_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/textView27"
+            app:layout_constraintEnd_toStartOf="@+id/gl3"
+            app:layout_constraintStart_toStartOf="@+id/gl2"
+            app:layout_constraintTop_toTopOf="@+id/textView27" />
+
+        <View
+            android:id="@+id/ibankingSelection"
+            android:layout_width="@dimen/dimen_10dp"
+            android:layout_height="@dimen/dimen_10dp"
+            android:background="@{data.iBank? @drawable/round_view_bg_selected : @drawable/round_view_bg}"
+            tools:background="@drawable/round_view_bg_selected"
+            app:layout_constraintBottom_toBottomOf="@+id/textView27"
+            app:layout_constraintEnd_toStartOf="@+id/gl4"
+            app:layout_constraintStart_toStartOf="@+id/gl3"
+            app:layout_constraintTop_toTopOf="@+id/textView27" />
+
+        <View
+            android:id="@+id/cardsSelection"
+            android:layout_width="@dimen/dimen_10dp"
+            android:layout_height="@dimen/dimen_10dp"
+            android:background="@{data.cards? @drawable/round_view_bg_selected : @drawable/round_view_bg}"
+            tools:background="@drawable/round_view_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/textView27"
+            app:layout_constraintEnd_toStartOf="@+id/gl5"
+            app:layout_constraintStart_toStartOf="@+id/gl4"
+            app:layout_constraintTop_toTopOf="@+id/textView27" />
+
+        <View
+            android:id="@+id/active"
+            android:layout_width="@dimen/dimen_10dp"
+            android:layout_height="@dimen/dimen_10dp"
+            loadBackForActiveStatus = "@{data.status}"
+            tools:background="@drawable/round_view_bg_selected"
+            app:layout_constraintBottom_toBottomOf="@+id/textView27"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/gl5"
+            app:layout_constraintTop_toTopOf="@+id/textView27" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

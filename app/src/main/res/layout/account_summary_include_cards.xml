@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_account_summary"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimen_10dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cards_card"
+        android:layout_width="@dimen/dimen_120dp"
+        android:layout_height="@dimen/dimen_110dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        app:cardBackgroundColor="@color/cards"
+        app:cardCornerRadius="@dimen/dimen_15dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline20"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView25">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dimen_10dp"
+            app:layout_constraintEnd_toStartOf="@+id/constraintLayout3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/mobile_card">
+
+            <ImageView
+                android:id="@+id/cardsIcon"
+                android:layout_width="@dimen/dimen_25dp"
+                android:layout_height="@dimen/dimen_25dp"
+                android:contentDescription="@string/user_account"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_credit_card" />
+
+            <TextView
+                android:id="@+id/cardName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cardsIcon"
+                android:text="@string/cards" />
+
+            <TextView
+                android:id="@+id/cardCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen_10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/cardName"
+                app:layout_constraintTop_toBottomOf="@+id/cardName"
+                android:text="@string/value_35" />
+
+            <TextView
+                android:id="@+id/cardPercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/cardCount"
+                app:layout_constraintTop_toBottomOf="@+id/cardCount"
+                app:layout_constraintVertical_bias="0.060000002"
+                android:text="@string/sample_percent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mobile_card"
+        android:layout_width="@dimen/dimen_120dp"
+        android:layout_height="@dimen/dimen_110dp"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        app:cardBackgroundColor="@color/mobile"
+        app:cardCornerRadius="@dimen/dimen_15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline20"
+        app:layout_constraintTop_toTopOf="@+id/cards_card">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dimen_10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout4">
+
+            <ImageView
+                android:id="@+id/modbile_icon"
+                android:layout_width="@dimen/dimen_25dp"
+                android:layout_height="@dimen/dimen_25dp"
+                android:contentDescription="@string/user_account"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_phone" />
+
+            <TextView
+                android:id="@+id/mobile_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/modbile_icon"
+                android:text="@string/mobile" />
+
+            <TextView
+                android:id="@+id/mobile_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen_10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/mobile_title"
+                app:layout_constraintTop_toBottomOf="@+id/mobile_title"
+                android:text="@string/value_35" />
+
+            <TextView
+                android:id="@+id/mobile_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/mobile_count"
+                app:layout_constraintTop_toBottomOf="@+id/mobile_count"
+                app:layout_constraintVertical_bias="0.060000002"
+                android:text="@string/sample_percent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ussd_card"
+        android:layout_width="@dimen/dimen_120dp"
+        android:layout_height="@dimen/dimen_110dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        app:cardBackgroundColor="@color/ussd"
+        app:cardCornerRadius="@dimen/dimen_15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cards_card"
+        app:layout_constraintTop_toBottomOf="@+id/cards_card">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dimen_10dp"
+            app:layout_constraintEnd_toStartOf="@+id/mobile_card"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout">
+
+            <ImageView
+                android:id="@+id/ussd_icon"
+                android:layout_width="@dimen/dimen_25dp"
+                android:layout_height="@dimen/dimen_25dp"
+                android:contentDescription="@string/user_account"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_phone_ussd" />
+
+            <TextView
+                android:id="@+id/ussd_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ussd_icon"
+                android:text="@string/ussd" />
+
+            <TextView
+                android:id="@+id/ussd_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen_10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/ussd_title"
+                app:layout_constraintTop_toBottomOf="@+id/ussd_title"
+                android:text="@string/value_35" />
+
+            <TextView
+                android:id="@+id/ussd_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/ussd_count"
+                app:layout_constraintTop_toBottomOf="@+id/ussd_count"
+                app:layout_constraintVertical_bias="0.060000002"
+                android:text="@string/sample_percent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ibanking_card"
+        android:layout_width="@dimen/dimen_120dp"
+        android:layout_height="@dimen/dimen_110dp"
+        app:cardBackgroundColor="@color/internet_banking"
+        app:cardCornerRadius="@dimen/dimen_15dp"
+        app:layout_constraintEnd_toEndOf="@+id/mobile_card"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/ussd_card"
+        app:layout_constraintTop_toTopOf="@+id/ussd_card">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dimen_10dp">
+
+            <ImageView
+                android:id="@+id/ibankin_icon"
+                android:layout_width="@dimen/dimen_25dp"
+                android:layout_height="@dimen/dimen_25dp"
+                android:contentDescription="@string/user_account"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_bank" />
+
+            <TextView
+                android:id="@+id/ibanking_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ibankin_icon"
+                android:text="@string/ibanking" />
+
+            <TextView
+                android:id="@+id/ibanking_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen_10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/ibanking_title"
+                app:layout_constraintTop_toBottomOf="@+id/ibanking_title"
+                android:text="@string/value_35" />
+
+            <TextView
+                android:id="@+id/ibanking_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/ibanking_count"
+                app:layout_constraintTop_toBottomOf="@+id/ibanking_count"
+                app:layout_constraintVertical_bias="0.060000002"
+                android:text="@string/sample_percent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/accounts_heading"
+        android:textColor="@color/new_main_color"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintStart_toStartOf="@+id/cards_card"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:text="@string/value_35"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/main_color"
+        app:layout_constraintBottom_toBottomOf="@+id/textView25"
+        app:layout_constraintStart_toEndOf="@+id/textView25"
+        app:layout_constraintTop_toTopOf="@+id/textView25" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,18 +3,82 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginPage">
+    app:startDestination="@id/dashboardNew">
 
-    <fragment
-        android:id="@+id/loginPage"
-        android:name="com.example.capmobile.ui.LoginPage"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_loginPage_to_dashBoard"
-            app:destination="@id/dashBoard" />
-    </fragment>
     <fragment
         android:id="@+id/dashBoard"
         android:name="com.example.capmobile.ui.DashBoard" />
+    <fragment
+        android:id="@+id/fragment_open_account"
+        android:name="com.example.capmobile.ui.openAccountScreens.FragmentOpenAccount"
+        android:label="open_account_first_screen"
+        tools:layout="@layout/open_account_first_screen" />
+    <fragment
+        android:id="@+id/customerEngagement"
+        android:name="com.example.capmobile.ui.customerEngagement.CustomerEngagement"
+        android:label="CustomerEngagement" />
+    <fragment
+        android:id="@+id/referAFriendLandingPage"
+        android:name="com.example.capmobile.ui.referAFriend.ReferAFriendLandingPage"
+        android:label="fragment_refer_a_friend_landing_page"
+        tools:layout="@layout/fragment_refer_a_friend_landing_page" >
+        <action
+            android:id="@+id/action_referAFriendLandingPage_to_referAFriendWithGift2"
+            app:destination="@id/referAFriendWithGift2" />
+    </fragment>
+    <fragment
+        android:id="@+id/referAFriendWithGift2"
+        android:name="com.example.capmobile.ui.referAFriend.ReferAFriendWithGift"
+        android:label="fragment_refer_a_friend_with_gift"
+        tools:layout="@layout/fragment_refer_a_friend_with_gift" />
+    <fragment
+        android:id="@+id/dashboardNew"
+        android:name="com.example.capmobile.ui.dashboard.DashboardNew"
+        android:label="dashboard"
+        tools:layout="@layout/dashboard" >
+        <action
+            android:id="@+id/action_dashboardNew_to_accountStatus"
+            app:destination="@id/accountStatus" />
+        <action
+            android:id="@+id/action_dashboardNew_to_reactivateAccount2"
+            app:destination="@id/reactivateAccount2" />
+        <action
+            android:id="@+id/action_dashboardNew_to_posCollection2"
+            app:destination="@id/posCollection2" />
+        <action
+            android:id="@+id/action_dashboardNew_to_referAFriendLandingPage"
+            app:destination="@id/referAFriendLandingPage" />
+        <action
+            android:id="@+id/action_dashboardNew_to_customerEngagement"
+            app:destination="@id/customerEngagement" />
+        <action
+            android:id="@+id/action_dashboardNew_self"
+            app:destination="@id/dashboardNew" />
+        <action
+            android:id="@+id/action_dashboardNew_to_fragment_open_account"
+            app:destination="@id/fragment_open_account" />
+        <action
+            android:id="@+id/action_dashboardNew_to_myDaoAccounts"
+            app:destination="@id/myDaoAccounts" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountStatus"
+        android:name="com.example.capmobile.ui.AccountStatus"
+        android:label="new_account_status"
+        tools:layout="@layout/new_account_status" />
+    <fragment
+        android:id="@+id/reactivateAccount2"
+        android:name="com.example.capmobile.ui.reactivateAccount.ReactivateAccount"
+        android:label="fragment_reactivate_account"
+        tools:layout="@layout/fragment_reactivate_account" />
+    <fragment
+        android:id="@+id/posCollection2"
+        android:name="com.example.capmobile.ui.PosCollection"
+        android:label="fragment_pos_collection"
+        tools:layout="@layout/fragment_pos_collection" />
+    <fragment
+        android:id="@+id/myDaoAccounts"
+        android:name="com.example.capmobile.ui.MyDaoAccounts"
+        android:label="fragment_my_dao_accounts"
+        tools:layout="@layout/fragment_my_dao_accounts" />
 </navigation>

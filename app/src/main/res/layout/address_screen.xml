@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.openAccountScreens.FragmentOpenAccount">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.8"
+                app:cardBackgroundColor="@color/main_color_variant_1"
+                app:cardElevation="@dimen/dimen_10dp"
+                app:contentPadding="@dimen/dimen_20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/residentialStreetTil"
+                        style="@style/myTilStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/residentialStreet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/residentialAddress" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/residentialCityTil"
+                        style="@style/myTilStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_55dp"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        app:layout_constraintEnd_toEndOf="@+id/residentialStreetTil"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/residentialStreetTil">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/residentialCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/residentialCity" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/genderSelector"
+                        style="@style/myTilStyleExposedDropDown"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_55dp"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/state"
+                        app:layout_constraintEnd_toEndOf="@+id/residentialCityTil"
+                        app:layout_constraintStart_toStartOf="@+id/residentialCityTil"
+                        app:layout_constraintTop_toBottomOf="@+id/residentialCityTil">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/til_bg"
+                            android:inputType="none"
+                            tools:text="@string/state" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout3"
+                        style="@style/myTilStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_55dp"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        app:layout_constraintEnd_toEndOf="@+id/genderSelector"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/genderSelector">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/phone"
+                            android:inputType="number" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/preferredPhoneTil"
+                        style="@style/myTilStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_55dp"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/preferredPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/preferredPhone"
+                            android:inputType="number" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/emailTil"
+                        style="@style/myTilStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_55dp"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        app:layout_constraintEnd_toEndOf="@+id/preferredPhoneTil"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/preferredPhoneTil">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/email"
+                            android:inputType="textEmailAddress" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/preferredBranchLabel"
+                        style="@style/myTilStyleExposedDropDown"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_55dp"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/preferredBranch"
+                        app:layout_constraintEnd_toEndOf="@+id/emailTil"
+                        app:layout_constraintStart_toStartOf="@+id/emailTil"
+                        app:layout_constraintTop_toBottomOf="@+id/emailTil">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/preferredBranch"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:inputType="none"
+                            tools:ignore="LabelFor"
+                            tools:text="@string/preferredBranch" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

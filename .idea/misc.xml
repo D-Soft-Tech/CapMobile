@@ -3,27 +3,145 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.262037037037037" />
+        <entry key="app/src/main/res/drawable/account_card_bg.xml" value="0.29739583333333336" />
+        <entry key="app/src/main/res/drawable/active_status_bg.xml" value="0.2462962962962963" />
+        <entry key="app/src/main/res/drawable/bottom_sheet_bg.xml" value="0.3020833333333333" />
+        <entry key="app/src/main/res/drawable/btn_bg_with_new_main_color.xml" value="0.30364583333333334" />
+        <entry key="app/src/main/res/drawable/button_bg.xml" value="0.29739583333333336" />
+        <entry key="app/src/main/res/drawable/customer_engagement_tab_bg.xml" value="0.3020833333333333" />
+        <entry key="app/src/main/res/drawable/dormant_status_bg.xml" value="0.2462962962962963" />
+        <entry key="app/src/main/res/drawable/drawable_please_wait_dialog.xml" value="0.17962962962962964" />
+        <entry key="app/src/main/res/drawable/engage_icon_bg.xml" value="0.3494791666666667" />
+        <entry key="app/src/main/res/drawable/ic_account_opening.xml" value="0.29739583333333336" />
+        <entry key="app/src/main/res/drawable/ic_account_reactivation.xml" value="0.29739583333333336" />
+        <entry key="app/src/main/res/drawable/ic_accounts.xml" value="0.4197916666666667" />
+        <entry key="app/src/main/res/drawable/ic_android_studio_back_arrow.xml" value="0.3494791666666667" />
         <entry key="app/src/main/res/drawable/ic_baseline_currency_exchange_24.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/drawable/ic_baseline_dashboard_24.xml" value="0.29074074074074074" />
+        <entry key="app/src/main/res/drawable/ic_bills.xml" value="0.3494791666666667" />
+        <entry key="app/src/main/res/drawable/ic_card_funding.xml" value="0.4197916666666667" />
+        <entry key="app/src/main/res/drawable/ic_channel_count.xml" value="0.4197916666666667" />
+        <entry key="app/src/main/res/drawable/ic_collection_icon.xml" value="0.4197916666666667" />
+        <entry key="app/src/main/res/drawable/ic_collections.xml" value="0.2994871794871795" />
+        <entry key="app/src/main/res/drawable/ic_customer_confirmation.xml" value="0.2994871794871795" />
+        <entry key="app/src/main/res/drawable/ic_drop_down.xml" value="0.29739583333333336" />
+        <entry key="app/src/main/res/drawable/ic_edit.xml" value="0.3494791666666667" />
+        <entry key="app/src/main/res/drawable/ic_error.xml" value="0.17962962962962964" />
+        <entry key="app/src/main/res/drawable/ic_hard_core.xml" value="0.2994871794871795" />
+        <entry key="app/src/main/res/drawable/ic_id_card.xml" value="0.3494791666666667" />
         <entry key="app/src/main/res/drawable/ic_levels.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/drawable/ic_logout.xml" value="0.2994871794871795" />
         <entry key="app/src/main/res/drawable/ic_message.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/drawable/ic_my_dao.xml" value="0.4197916666666667" />
+        <entry key="app/src/main/res/drawable/ic_new_whatsapp.xml" value="0.33796296296296297" />
         <entry key="app/src/main/res/drawable/ic_non_transacting.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/drawable/ic_open_and_reactivate_acc.xml" value="0.4197916666666667" />
+        <entry key="app/src/main/res/drawable/ic_page_back_arrow.xml" value="0.3494791666666667" />
+        <entry key="app/src/main/res/drawable/ic_person_clock.xml" value="0.4197916666666667" />
+        <entry key="app/src/main/res/drawable/ic_push_notification.xml" value="0.3020833333333333" />
+        <entry key="app/src/main/res/drawable/ic_refer_a_friend.xml" value="0.2994871794871795" />
+        <entry key="app/src/main/res/drawable/ic_signature.xml" value="0.3494791666666667" />
+        <entry key="app/src/main/res/drawable/ic_success.xml" value="0.2" />
+        <entry key="app/src/main/res/drawable/ic_summary.xml" value="0.29739583333333336" />
         <entry key="app/src/main/res/drawable/ic_transacting.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/drawable/inactive_status_bg.xml" value="0.2462962962962963" />
+        <entry key="app/src/main/res/drawable/new_btn.xml" value="0.3494791666666667" />
+        <entry key="app/src/main/res/drawable/new_btn_2.xml" value="0.3494791666666667" />
+        <entry key="app/src/main/res/drawable/progressbar.xml" value="0.3175925925925926" />
+        <entry key="app/src/main/res/drawable/refer_a_friend_btn_bg.xml" value="0.3020833333333333" />
+        <entry key="app/src/main/res/drawable/reuseable_btn_bg.xml" value="0.30416666666666664" />
+        <entry key="app/src/main/res/drawable/round_view_bg.xml" value="0.30364583333333334" />
+        <entry key="app/src/main/res/drawable/round_view_bg_selected.xml" value="0.30364583333333334" />
+        <entry key="app/src/main/res/drawable/spinner_bg.xml" value="0.29739583333333336" />
         <entry key="app/src/main/res/drawable/splash_screen.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/drawable/submit_btn.xml" value="0.33240740740740743" />
+        <entry key="app/src/main/res/drawable/submit_btn_bg.xml" value="0.3494791666666667" />
+        <entry key="app/src/main/res/drawable/submit_btn_white_bg.xml" value="0.3020833333333333" />
+        <entry key="app/src/main/res/drawable/tab_layout_indicator.xml" value="0.29739583333333336" />
+        <entry key="app/src/main/res/drawable/tablayout_not_selected.xml" value="0.29739583333333336" />
+        <entry key="app/src/main/res/drawable/tablayout_selected.xml" value="0.29739583333333336" />
+        <entry key="app/src/main/res/drawable/table_bg.xml" value="0.30364583333333334" />
+        <entry key="app/src/main/res/drawable/til_bg.xml" value="0.29739583333333336" />
+        <entry key="app/src/main/res/drawable/til_bg_refer_a_friend.xml" value="0.3020833333333333" />
+        <entry key="app/src/main/res/drawable/til_new_bg.xml" value="0.30416666666666664" />
+        <entry key="app/src/main/res/drawable/til_new_bg_2.xml" value="0.3494791666666667" />
+        <entry key="app/src/main/res/drawable/til_new_bg_3.xml" value="0.3494791666666667" />
+        <entry key="app/src/main/res/drawable/til_with_grey_bg.xml" value="0.30364583333333334" />
+        <entry key="app/src/main/res/drawable/validate_bvn_bg.xml" value="0.29739583333333336" />
+        <entry key="app/src/main/res/drawable/welcome_text.xml" value="0.3020833333333333" />
+        <entry key="app/src/main/res/layout-v26/rich_text_editor_layout.xml" value="0.2875" />
+        <entry key="app/src/main/res/layout/account_created.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/account_status.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/account_summary_include_cards.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/account_summary_item_layout.xml" value="0.28125" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.3333333333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.215625" />
+        <entry key="app/src/main/res/layout/address_screen.xml" value="0.3333333333333333" />
         <entry key="app/src/main/res/layout/app_header_layout.xml" value="0.2296875" />
         <entry key="app/src/main/res/layout/app_toolbar.xml" value="0.2296875" />
-        <entry key="app/src/main/res/layout/dashboard_layout.xml" value="0.2296875" />
+        <entry key="app/src/main/res/layout/bio_data_page.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/card_funding_status.xml" value="0.2875" />
+        <entry key="app/src/main/res/layout/channels_count.xml" value="0.2875" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.30277777777777776" />
+        <entry key="app/src/main/res/layout/customer_engagement.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/customer_engagement_bottom_sheet.xml" value="0.2859375" />
+        <entry key="app/src/main/res/layout/dashboard.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/dashboard_layout.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/dialog_please_wait.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/exposed_dropdown_menu_layout.xml" value="0.28125" />
+        <entry key="app/src/main/res/layout/fragment_account_created_success_screen.xml" value="0.31927083333333334" />
+        <entry key="app/src/main/res/layout/fragment_account_reactivation_bio_data.xml" value="0.2875" />
+        <entry key="app/src/main/res/layout/fragment_account_reactivation_first_page.xml" value="0.2875" />
+        <entry key="app/src/main/res/layout/fragment_bio_data_screen.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/fragment_blank_a.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/fragment_customer_engagement.xml" value="0.3157604898243334" />
+        <entry key="app/src/main/res/layout/fragment_dashboard_new.xml" value="0.19444444444444445" />
         <entry key="app/src/main/res/layout/fragment_engage_by_levels_screen.xml" value="0.2296875" />
         <entry key="app/src/main/res/layout/fragment_engage_by_transaction.xml" value="0.215625" />
+        <entry key="app/src/main/res/layout/fragment_first_screen.xml" value="0.3333333333333333" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.2296875" />
-        <entry key="app/src/main/res/menu/app_menu.xml" value="0.2296875" />
+        <entry key="app/src/main/res/layout/fragment_login_screen_new.xml" value="0.28802083333333334" />
+        <entry key="app/src/main/res/layout/fragment_my_dao_accounts.xml" value="0.2875" />
+        <entry key="app/src/main/res/layout/fragment_pos_collection.xml" value="0.2875" />
+        <entry key="app/src/main/res/layout/fragment_reactivate_account.xml" value="0.2875" />
+        <entry key="app/src/main/res/layout/fragment_reactivate_account_documentation.xml" value="0.2875" />
+        <entry key="app/src/main/res/layout/fragment_reactivate_account_success_page.xml" value="0.2875" />
+        <entry key="app/src/main/res/layout/fragment_reactivate_account_user_address.xml" value="0.2875" />
+        <entry key="app/src/main/res/layout/fragment_refer_a_friend_landing_page.xml" value="0.2859375" />
+        <entry key="app/src/main/res/layout/fragment_refer_a_friend_with_gift.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_welcome_page.xml" value="0.28802083333333334" />
+        <entry key="app/src/main/res/layout/fragment_welcome_screen.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/login_screen_new.xml" value="0.28802083333333334" />
+        <entry key="app/src/main/res/layout/logout_dialog_layout.xml" value="0.2875" />
+        <entry key="app/src/main/res/layout/new_account_status.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/open_account_first_screen.xml" value="0.28125" />
+        <entry key="app/src/main/res/layout/open_fragment.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/reactivate_account_first_page.xml" value="0.2875" />
+        <entry key="app/src/main/res/layout/refer_a_friend_bottom_sheet_layout.xml" value="0.2859375" />
+        <entry key="app/src/main/res/layout/refer_a_friend_success_page.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/rich_text_editor_layout.xml" value="0.2859375" />
+        <entry key="app/src/main/res/layout/table_heading.xml" value="0.2875" />
+        <entry key="app/src/main/res/layout/table_item_layout.xml" value="0.2875" />
+        <entry key="app/src/main/res/layout/testing.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/testing_testing.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/text_editor_tool_bar.xml" value="0.2859375" />
+        <entry key="app/src/main/res/layout/upload_documents.xml" value="0.335" />
+        <entry key="app/src/main/res/menu/app_menu.xml" value="0.1" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.3333333333333333" />
+      </ProjectState>
+    </option>
   </component>
 </project>

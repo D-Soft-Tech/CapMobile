@@ -1,24 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    tools:context=".ui.MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:id="@+id/toolBar"
-        android:layout_height="wrap_content"
-        style="@style/toolbarToggleIconColor"
-        android:background="@color/main_color"
-        app:titleTextColor="@color/white"
-        android:elevation="@dimen/dimen_10dp">
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
 
-        <ImageView
-            android:layout_width="@dimen/dimen_30dp"
-            android:layout_height="@dimen/dimen_30dp"
-            android:contentDescription="@string/logo"
-            android:scaleType="centerCrop"
-            android:src="@drawable/logo" />
-    </androidx.appcompat.widget.Toolbar>
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolBar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            android:background="@color/main_color"-->
+<!--            android:elevation="@dimen/dimen_10dp"-->
+<!--            android:fitsSystemWindows="true"-->
+<!--            android:theme="@style/ThemeOverlay.AppCompat.Dark"-->
+<!--            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
+<!--            app:titleTextColor="@color/white">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="@dimen/dimen_30dp"-->
+<!--                android:layout_height="@dimen/dimen_30dp"-->
+<!--                android:contentDescription="@string/logo"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@drawable/logo" />-->
+<!--        </androidx.appcompat.widget.Toolbar>-->
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+    <include layout="@layout/content_main" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
