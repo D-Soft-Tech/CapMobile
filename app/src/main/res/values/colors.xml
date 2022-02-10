@@ -36,4 +36,21 @@
     <color name="new_color_variant_2">#BED1EF</color>
     <color name="table_item_txt_color">#213cc4</color>
     <color name="transparent">#0000ffff</color>
+    <color name="lekanColor">#0056A3</color>
+    <color name="lekanColor90Alpha">#E60056A3</color>
+    <color name="lekanColor75Alpha">#BF0056A3</color>
+    <color name="lekanColor60Alpha">#990056A3</color>
+    <color name="lekanColor40Alpha">#660056A3</color>
+    <color name="lekanColor2">#1A0056A3</color>
+    <color name="lekanColorVariant1">#019CDC</color>
+    <color name="lekanStrokeColor">#BDE4FE</color>
+    <color name="lekan_background_color">#F9F9F9</color>
+    <color name="lekan_menu_icon_color">#801E1F20</color>
+    <color name="danger">#F51212</color>
+    <color name="lekanColorDeepBlueVariation">#002561</color>
+    <color name="white2">#F7F6F6</color>
+    <color name="lekan_grey_color">#33DADADA</color>
+    <color name="color_lekan_grey_2">#331E1F20</color>
+    <color name="color_70_a_black">#B31E1F20</color>
+    <color name="new_grey_color">#4DC4C4C4</color>
 </resources>

@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.dashboard.DashboardNew">
+    tools:context=".ui.view.dashboard.DashboardNew">
 
     <data>
 
@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:padding="@dimen/dimen_25dp"
-        android:background="@drawable/new_bg_dashboard"
+        android:background="@drawable/home"
         android:layout_height="match_parent">
 
         <TextView
@@ -57,28 +57,28 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/card_bg_color"
+                android:background="@color/white"
                 android:padding="@dimen/dimen_10dp">
 
                 <ImageView
                     android:id="@+id/acc_summary_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/dimen_25dp"
+                    android:layout_height="@dimen/dimen_25dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_account_summary_icon"
+                    app:srcCompat="@drawable/ic_lekan_account_summary"
                     android:contentDescription="@string/image_of_account" />
 
                 <TextView
                     android:id="@+id/textView24"
                     style="@style/pageSubTitle"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/dimen_5dp"
                     android:text="@string/account_summary"
-                    android:textColor="@color/white"
-                    android:textAlignment="center"
+                    android:textColor="@color/lekanColor"
+                    android:gravity="center"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/acc_summary_icon"
@@ -102,27 +102,28 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/card_bg_color"
-                android:padding="@dimen/dimen_5dp">
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/dimen_10dp"
+                android:paddingTop="@dimen/dimen_10dp">
 
                 <ImageView
                     android:id="@+id/my_dao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/dimen_25dp"
+                    android:layout_height="@dimen/dimen_25dp"
+                    android:contentDescription="@string/account_summary"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_channel_count" />
+                    app:srcCompat="@drawable/ic_lekan_channel_summary" />
 
                 <TextView
                     android:id="@+id/my_dao_accounts"
                     style="@style/pageSubTitle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_5dp"
-                    android:text="@string/channelsSummary"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:text="@string/hard_core"
+                    android:textColor="@color/lekanColor"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/my_dao"
@@ -148,28 +149,28 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/card_bg_color"
+                android:background="@color/white"
                 android:padding="@dimen/dimen_10dp">
 
                 <ImageView
                     android:id="@+id/cardFunding"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:layout_width="@dimen/dimen_25dp"
+                    android:layout_height="@dimen/dimen_25dp"
+                    android:layout_marginTop="@dimen/dimen_5dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_card_funding" />
+                    app:srcCompat="@drawable/ic_lekan_card_funding"
+                    android:contentDescription="@string/card_funding" />
 
                 <TextView
                     android:id="@+id/cardFundingTv"
                     style="@style/pageSubTitle"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_1dp"
-                    android:text="@string/card_funding"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:layout_height="0dp"
+                    android:text="@string/customer_engagement"
+                    android:gravity="center"
+                    android:textColor="@color/lekanColor"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/cardFunding"
@@ -193,28 +194,29 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/card_bg_color"
+                android:background="@color/white"
                 android:padding="@dimen/dimen_10dp">
 
                 <ImageView
+                    android:contentDescription="@string/dao_accounts"
                     android:id="@+id/channelsCount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/dimen_25dp"
+                    android:layout_height="@dimen/dimen_25dp"
                     android:layout_marginTop="@dimen/dimen_5dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_my_dao_accounts_icon" />
+                    app:srcCompat="@drawable/ic_lekan_dao_accounts" />
 
                 <TextView
                     android:id="@+id/channelsCountTv"
                     style="@style/pageSubTitle"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:layout_height="0dp"
                     android:text="@string/myDaoAccounts"
-                    android:textColor="@color/white"
+                    android:textColor="@color/lekanColor"
                     android:textStyle="bold"
+                    android:gravity="center"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/channelsCount"
                     app:layout_constraintStart_toStartOf="@+id/channelsCount"
@@ -270,7 +272,7 @@
             android:layout_height="@dimen/dimen_30dp"
             android:layout_marginTop="@dimen/dimen_15dp"
             android:contentDescription="@string/toggleIcon"
-            android:src="@drawable/ic_toggle_icon"
+            android:src="@drawable/ic_new_menu_icon"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -282,7 +284,7 @@
             android:background="@drawable/new_btn"
             android:fontFamily="@font/poppins"
             android:text="@string/account_open"
-            android:textAlignment="center"
+            android:gravity="center"
             android:textAllCaps="false"
             android:textColor="@color/new_main_color"
             app:layout_constraintEnd_toStartOf="@+id/guideline19"

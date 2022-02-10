@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/table_bg_2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <TextView
+        android:id="@+id/name_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dimen_10dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/name_of_account"
+        android:textSize="@dimen/dimen_9sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/mobile_heading"
+        app:layout_constraintEnd_toStartOf="@+id/gl1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mobile_heading" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@color/lekanColor2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/gl1"
+        app:layout_constraintStart_toStartOf="@+id/gl1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@color/lekanColor2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gl2"
+        app:layout_constraintStart_toStartOf="@+id/gl2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@color/lekanColor2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gl3"
+        app:layout_constraintStart_toStartOf="@+id/gl3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mobile_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/status"
+        android:textSize="@dimen/dimen_9sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gl2"
+        app:layout_constraintStart_toStartOf="@+id/gl1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ussd_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/products"
+        android:textSize="@dimen/dimen_9sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/gl3"
+        app:layout_constraintStart_toStartOf="@+id/gl2"
+        app:layout_constraintTop_toTopOf="@+id/mobile_heading" />
+
+    <TextView
+        android:id="@+id/ibaning_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/balance"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_9sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gl3"
+        app:layout_constraintTop_toTopOf="@+id/mobile_heading" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

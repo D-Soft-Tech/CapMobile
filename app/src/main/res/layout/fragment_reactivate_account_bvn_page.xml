@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context=".ui.view.reactivateAccountScreens.ReactivateAccountBvnPage">
+
+<data>
+
+</data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView35"
+        style="@style/lekan_txt_view_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:text="@string/bvn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout5"
+        style="@style/lekanTilStyle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_15dp"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView35">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bvn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            validate="@{1}"
+            android:drawablePadding="@dimen/dimen_20dp"
+            android:hint="@string/bvn"
+            android:inputType="number"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/passwordLabel"
+        style="@style/lekan_txt_view_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:text="@string/otpCode"
+        app:layout_constraintStart_toStartOf="@+id/textView35"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password"
+        style="@style/lekanTilStyle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout5"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLabel">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/existingAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/dimen_20dp"
+            android:hint="@string/enterOtpCode"
+            android:singleLine="true"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/daoCodeLabel"
+        style="@style/lekan_txt_view_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:text="@string/daoCodeLabel"
+        app:layout_constraintStart_toStartOf="@+id/passwordLabel"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/daoCodeTIL"
+        style="@style/lekanTilStyle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/daoCodeLabel">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/daoCodeTIET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_lekan_check_icon"
+            android:drawablePadding="@dimen/dimen_20dp"
+            android:hint="@string/enterDaoCode"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/accountTypeLabel"
+        style="@style/lekan_txt_view_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:text="@string/accountType"
+        app:layout_constraintStart_toStartOf="@+id/daoCodeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/daoCodeTIL" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/accountTypeTIL"
+        style="@style/lekanDropDownMenuStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="@+id/daoCodeTIL"
+        app:layout_constraintStart_toStartOf="@+id/daoCodeTIL"
+        app:layout_constraintTop_toBottomOf="@+id/accountTypeLabel">
+
+        <AutoCompleteTextView
+            android:id="@+id/accountTypeTIET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/dimen_20dp"
+            android:ellipsize="end"
+            android:hint="@string/selectAnAccountType"
+            android:inputType="none"
+            android:maxLines="1"
+            android:singleLine="true"
+            tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <android.widget.Button
+        android:id="@+id/proceedBtn"
+        style="@style/reuseableFairPayBtn"
+        android:layout_width="@dimen/dimen_200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_40dp"
+        android:text="@string/continueToNextPage"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/accountTypeTIL"
+        app:layout_constraintStart_toStartOf="@+id/accountTypeTIL"
+        app:layout_constraintTop_toBottomOf="@+id/accountTypeTIL"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="RtlSymmetry" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

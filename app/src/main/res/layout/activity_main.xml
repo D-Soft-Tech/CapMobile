@@ -5,7 +5,7 @@
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.view.MainActivity">
 
     <include
         android:id="@+id/app_tool_bar"
@@ -19,7 +19,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:itemTextColor="@color/main_color_variant_1"
+        app:itemTextColor="#0058A9"
         app:itemIconTint="@color/main_color_variant_1"
         app:headerLayout="@layout/app_header_layout"
         app:menu="@menu/app_menu" />

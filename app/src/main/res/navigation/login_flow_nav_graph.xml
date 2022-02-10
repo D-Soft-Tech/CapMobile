@@ -3,31 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/login_flow_nav_graph"
-    app:startDestination="@id/loginScreenNew">
+    app:startDestination="@id/newLoginFragment">
     <fragment
-        android:id="@+id/loginPage"
-        android:name="com.example.capmobile.ui.LoginPage"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_loginPage_to_welcomeScreen"
-            app:destination="@id/welcomeScreen" />
-    </fragment>
-    <fragment
-        android:id="@+id/welcomeScreen"
-        android:name="com.example.capmobile.ui.WelcomeScreen"
-        android:label="WelcomeScreen" />
-    <fragment
-        android:id="@+id/welcomePage"
-        android:name="com.example.capmobile.ui.loginFlow.WelcomePage"
-        android:label="WelcomePage" />
-    <fragment
-        android:id="@+id/loginScreenNew"
-        android:name="com.example.capmobile.ui.loginFlow.LoginScreenNew"
-        android:label="login_screen_new"
-        tools:layout="@layout/login_screen_new" >
-        <action
-            android:id="@+id/action_loginScreenNew_to_welcomePage"
-            app:destination="@id/welcomePage" />
-    </fragment>
+        android:id="@+id/newLoginFragment"
+        android:name="com.example.capmobile.ui.view.loginFlow.NewLoginFragment"
+        android:label="fragment_new_login"
+        tools:layout="@layout/fragment_new_login" />
 </navigation>

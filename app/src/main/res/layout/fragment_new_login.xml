@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.view.loginFlow.NewLoginFragment">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/new_login_bg"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:contentDescription="@string/logo"
+            android:layout_margin="@dimen/dimen_20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/new_keystone_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dimen_30dp"
+            android:textSize="@dimen/dimen_18sp"
+            android:text="@string/customer_activation_portal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/customer_activation_on_the_go"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/textView36"
+            app:layout_constraintHorizontal_bias="0.73"
+            app:layout_constraintStart_toStartOf="@+id/textView36"
+            app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_30dp"
+            android:layout_marginVertical="@dimen/dimen_40dp"
+            android:background="@color/lekan_background_color"
+            app:cardCornerRadius="@dimen/dimen_15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView37">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingVertical="@dimen/dimen_25dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout5"
+                    style="@style/lekanTilStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_25dp"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/userNameTIET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_lakan_user_icon"
+                        android:drawablePadding="@dimen/dimen_20dp"
+                        android:hint="@string/username"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/password"
+                    style="@style/lekanTilStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout5"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout5"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/passwordTIET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dimen_20dp"
+                        android:hint="@string/enterPassword"
+                        android:inputType="textPassword"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <android.widget.Button
+                    android:id="@+id/proceedBtn"
+                    style="@style/reuseableFairPayBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_30dp"
+                    android:layout_marginEnd="@dimen/dimen_30dp"
+                    android:text="@string/login"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/fingerPrint"
+                    app:layout_constraintStart_toStartOf="@+id/password"
+                    app:layout_constraintTop_toBottomOf="@+id/password"
+                    tools:ignore="RtlSymmetry" />
+
+                <ImageView
+                    android:id="@+id/fingerPrint"
+                    android:layout_width="@dimen/dimen_35dp"
+                    android:layout_height="@dimen/dimen_35dp"
+                    android:contentDescription="@string/unlock_using_fingerprint_sensor"
+                    android:src="@drawable/ic_fingerprint_recognition"
+                    app:layout_constraintBottom_toBottomOf="@+id/proceedBtn"
+                    app:layout_constraintEnd_toEndOf="@+id/password"
+                    app:layout_constraintTop_toTopOf="@+id/proceedBtn" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_page_with_curved_bg"
+    android:padding="@dimen/dimen_25dp">
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/open_new_account"
+        android:textColor="@color/lekanColor"
+        android:textSize="@dimen/dimen_20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.widget.Button
+        android:id="@+id/withBvn"
+        style="@style/lakanButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_30dp"
+        android:text="@string/withBVN"
+        android:textAlignment="center"
+        android:elevation="@dimen/dimen_20dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/withoutBVN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView38"
+        tools:ignore="RtlSymmetry" />
+
+    <android.widget.Button
+        android:id="@+id/withoutBVN"
+        style="@style/lakanButtonStyleFilledWithBlueColor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dimen_20dp"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:text="@string/withoutBVN"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/withBvn"
+        app:layout_constraintTop_toTopOf="@+id/withBvn"
+        tools:ignore="RtlSymmetry" />
+</androidx.constraintlayout.widget.ConstraintLayout>

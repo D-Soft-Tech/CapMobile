@@ -30,7 +30,6 @@
 
     <style name="title_text" parent="Theme.CapMobile">
         <item name="android:fontFamily">@font/poppins_bold</item>
-        <item name="android:text">@string/user_name</item>
         <item name="android:textColor">@color/main_color_variant_1</item>
         <item name="android:textSize">@dimen/dimen_26sp</item>
     </style>
@@ -77,6 +76,70 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
+    <style name="borderedBtn" parent="Theme.CapMobile">
+        <item name="android:background">@drawable/bordered_button</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/lekanColor</item>
+    </style>
+
+    <style name="switch_style" parent="Theme.MaterialComponents">
+        <item name="colorOnSurface">@color/lekan_background_color</item>
+        <item name="colorSecondary">@color/lekanColor60Alpha</item>
+    </style>
+
+    <style name="text_editor_tool_bar_button_style" parent="Theme.CapMobile">
+        <item name="android:layout_width">@dimen/dimen_35dp</item>
+        <item name="android:layout_height">@dimen/dimen_35dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#444444</item>
+        <item name="android:textSize">@dimen/dimen_14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="appBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/curved_top_sheet_bottom_sheet</item>
+    </style>
+
+    <style name="lakanButtonStyle" parent="Theme.CapMobile">
+        <item name="android:background">@drawable/lekan_btn_bg</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/lekanColor</item>
+    </style>
+
+    <!-- THEME FOR MATERIAL DATE PICKER -->
+    <style name="ThemeOverlay.App.DatePicker" parent="@style/ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="colorPrimary">@color/lekanColor</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/lekanColor</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.App.MediumComponent</item>
+        <!-- Customize text field of the text input mode. -->
+        <item name="textInputStyle">@style/Widget.Design.TextInputLayout</item>
+    </style>
+
+    <style name="lakanButtonStyleFilledWithBlueColor" parent="Theme.CapMobile">
+        <item name="android:background">@drawable/lekan_btn_bg_2</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
     <style name="referBtn" parent="Theme.CapMobile" >
         <item name="android:textAllCaps">false</item>
         <item name="android:textColor">@color/white</item>
@@ -96,8 +159,60 @@
         <item name="hintEnabled">false</item>
     </style>
 
+    <style name="lekanTilStyle" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:background">@drawable/lekan_et_bg</item>
+        <item name="boxStrokeColor">@color/transparent</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="lekanTilStyle2" parent="lekanTilStyle">
+        <item name="android:background">@drawable/lekan_et_bg2</item>
+    </style>
+
+    <style name="lekanTilStyleForSuccess" parent="lekanTilStyle">
+        <item name="android:background">@drawable/lekan_et_bg_for_success_border</item>
+    </style>
+
+    <style name="lekanTilStyleForErrorBorder" parent="lekanTilStyle">
+        <item name="android:background">@drawable/lekan_et_bg_for_error_border</item>
+    </style>
+
+    <style name="lekanAccountOpeningDocumentationStyle" parent="lekanTilStyle">
+        <item name="android:background">@drawable/lekan_til_documentation_bg</item>
+    </style>
+
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">4dp</item>
+        <item name="android:width">@dimen/dimen_150dp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="lekanDropDownMenuStyle" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:background">@drawable/lekan_et_bg2</item>
+        <item name="boxStrokeColor">@color/transparent</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
     <style name="myTilStyle2" parent="myTilStyle">
         <item name="android:background">@drawable/til_new_bg_2</item>
+    </style>
+
+    <style name="lekan_txt_view_label" parent="Theme.CapMobile">
+        <item name="android:textColor">@color/lekanColor</item>
+    </style>
+
+    <style name="hr_bar_chart_value_txt_style" parent="Theme.CapMobile">
+        <item name="android:textColor">@color/lekanColor</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">@dimen/dimen_12sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_weight">1</item>
     </style>
 
     <style name="myTilStyleExposedDropDown" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
@@ -113,5 +228,17 @@
 
     <style name="account_summary_dropdown_with_ash_bg" parent="myTilStyleExposedDropDown">
         <item name="android:background">@drawable/til_new_bg</item>
+    </style>
+
+    <style name="dialogAnimation" parent="Theme.CapMobile">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+    <style name="slideInFromRight" parent="Theme.CapMobile">
+        <item name="android:windowEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_right</item>
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">4dp</item>
+        <item name="android:width">@dimen/dimen_150dp</item>
     </style>
 </resources>

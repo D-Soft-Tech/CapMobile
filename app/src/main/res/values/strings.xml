@@ -18,49 +18,49 @@
     <string name="logout">Logout</string>
     <string name="dashboard">DashBoard</string>
     <string name="customer_engagement">Customer Engagement</string>
-    <string name="by_levels">By Levels</string>
+    <string name="by_levels">Levels</string>
     <string name="by_transaction">By Transaction</string>
     <string name="transacting">Transacting</string>
     <string name="not_transacting">Not Transacting</string>
     <string name="nav_app_bar_close_drawer_description">Close the drawer</string>
     <string name="summary">Account Summary</string>
-    <string name="account_open">Open New Account</string>
+    <string name="account_open">Open Account</string>
     <string name="reactivate">Re-activate Account</string>
-    <string name="hi_user">Hi, Adebayo!</string>
+    <string name="hi_user">Good %1$s, %2$s!</string>
     <string name="user_account">User Account</string>
     <string name="value_35">35</string>
     <string name="sample_percent">8.2%</string>
     <string name="enterBvn">Enter BVN</string>
     <string name="get_bvn_details">Get Details</string>
     <string name="bvn">BVN</string>
-    <string name="existing_account">Existing Account…</string>
+    <string name="existing_account">Existing Account</string>
     <string name="dao">DAO</string>
     <string name="product_sample">Product Sample</string>
     <string name="next_page">Next</string>
     <string name="extAccLabel">Existing Account:</string>
-    <string name="daoCodeLabel">DAO Code:</string>
+    <string name="daoCodeLabel">DAO Code</string>
     <string name="daoSample">21295</string>
     <string name="pleaseWait">Please wait…</string>
     <string name="invalidBvnLength">BVN must be 11 characters</string>
     <string name="good">Good</string>
     <string name="selectAProduct">Select A Product: *</string>
     <string name="surname">Surname</string>
-    <string name="firstName">First Name: </string>
-    <string name="middleName">Middle Name: </string>
+    <string name="firstName">First Name </string>
+    <string name="middleName">Middle Name </string>
     <string name="gender">Gender</string>
     <string name="previousPage">Previous</string>
-    <string name="residentialAddress">Residential Street Address: *</string>
-    <string name="residentialCity">Residential City: *</string>
+    <string name="residentialAddress">Residential Street Address</string>
+    <string name="residentialCity">Residential City</string>
     <string name="state">State: *</string>
     <string name="phone">Phone: *</string>
     <string name="preferredPhone">Preferred Phone: *</string>
-    <string name="email">Email: *</string>
+    <string name="email">Email</string>
     <string name="preferredBranch">Preferred Branch: *</string>
-    <string name="dateOfBirth">Date of Birth: *</string>
+    <string name="dateOfBirth">Date of Birth</string>
     <string name="userProfilePicture">Profile Picture</string>
     <string name="photo">Photo</string>
     <string name="profilePhoto">Profile Picture</string>
-    <string name="signature">Signature: *</string>
+    <string name="signature">Signature</string>
     <string name="identification">Identification: *</string>
     <string name="utilities">Utility: *</string>
     <string name="submit">Submit</string>
@@ -88,6 +88,7 @@
     <string name="permission_granted">Camera and Storage permissions granted</string>
     <string name="camera_permission_rationale">You need to grant this permission before you can use the camera</string>
     <string name="storage_permission_rationale">You need to grant this permission before you can select image from your device</string>
+    <string name="storage_permission_rationale_for_download">You need to grant this permission to save this file</string>
     <string name="cameraOrGallery">Camera / Gallery?</string>
     <string name="overall">Performance: </string>
     <string name="ussd">USSD: </string>
@@ -112,20 +113,20 @@
     <string name="fromContact">Select Phone From Contacts</string>
     <string name="enterBeneficiaryPhoneName">Enter Beneficiary Name</string>
     <string name="enterAmount">Enter Amount</string>
-    <string name="enterOptionalMessage">Input Special Message (Optional)</string>
+    <string name="enterOptionalMessage">Message (Optional)</string>
     <string name="welcome">Welcome</string>
     <string name="performance">Performance:</string>
     <string name="proceed">Proceed</string>
     <string name="_20">20%</string>
     <string name="pos">POS:</string>
-    <string name="welcomeBack">Welcome back!</string>
+    <string name="welcomeBack">Welcome back %1$s!</string>
     <string name="enterusername">Enter username</string>
     <string name="enterPassword">Enter password</string>
     <string name="logintoproceed">Login to proceed</string>
     <string name="toggleIcon">Toggle Icon for revealing the drawer menu</string>
-    <string name="welcome_back_username">Welcome back Elizabeth!</string>
+    <string name="welcome_back_username">Welcome back %1$s!</string>
     <string name="account_summary">Account Summary</string>
-    <string name="myDaoAccounts">My Dao Accounts</string>
+    <string name="myDaoAccounts">My DAO Accounts</string>
     <string name="card_funding">Card Funding</string>
     <string name="channelCount">Channel count</string>
     <string name="openAndReactivateAcc"><![CDATA[Open & \nReactivate Accounts]]></string>
@@ -163,11 +164,169 @@
     <string name="active">Active</string>
     <string name="image_of_account">Image of account</string>
     <string name="status">Status</string>
+    <string name="background_image">Background Image</string>
+    <string name="fieldsCantBeEmpty">Field can not be empty</string>
+    <string name="loading">Loading…</string>
+    <string name="circular_progress_bar">Circular progress bar</string>
+    <string name="timeOut">Time out</string>
+    <string name="allFieldsAreRequired">All fields are required</string>
+    <string name="username_phone_number">Username/Phone number</string>
+    <string name="unlock_using_fingerprint_sensor">Tap to unlock using Fingerprint sensor</string>
+    <string name="remember_me">Remember me</string>
+    <string name="loginErrorMessage">Unable to login, make sure you input valid credentials</string>
+    <string name="biometricTitle">Fingerprint Required</string>
+    <string name="biometricSubTitle">Fingerprint Authentication</string>
+    <string name="biometricDescription">Place your finger on the scanner to login</string>
+    <string name="cancel">Cancel</string>
+    <string name="fingerPrintAuthDeclined">Fingerprint authentication declined</string>
+    <string name="fingerPrintNotEnabled">Fingerprint is not been enabled in settings.</string>
+    <string name="customer_activation_portal">Customer Activation Portal</string>
+    <string name="customer_activation_on_the_go">....Customer activation on the go!</string>
+    <string name="open_new_account">Open new Account</string>
+    <string name="withBVN">With BVN</string>
+    <string name="withoutBVN">Without BVN</string>
+    <string name="withGift">With Gift</string>
+    <string name="withoutGift">Without Gift</string>
+    <string name="dao_accounts">DAO Accounts</string>
+    <string name="you_are_few_steps_away">You are few steps away from creating an account</string>
+    <string name="enterDaoCode">Enter DAO Code</string>
+    <string name="accountType">Account Type</string>
+    <string name="selectAnAccountType">Select an Account Type</string>
+    <string name="continueToNextPage">Continue</string>
+    <string name="john">John</string>
+    <string name="lastName">Last Name</string>
+    <string name="doe">Doe</string>
+    <string name="felix">Felix</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="set_date_of_birth">Set Date Of Birth</string>
+    <string name="success">Success</string>
+    <string name="dateOfBirthFormat">yyyy-mm-dd</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="selectBranch">Select Branch</string>
+    <string name="branch">Branch</string>
+    <string name="enterEmail">Enter your email</string>
+    <string name="residentialState">Residential State</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="enterPhoneNumber">Enter Phone Number</string>
+    <string name="validId">Valid ID</string>
+    <string name="utilityBill">Utility Bill</string>
+    <string name="noFileChosen">No file chosen</string>
+    <string name="success_icon">Success Icon</string>
+    <string name="account_created_successfully">Account created successfully, Kindly find your account details below</string>
+    <string name="account_details">Account Details</string>
+    <string name="refer_a_friend_with_gift_msg">Hi %1$s, \nI just sent you a gift of %2$s airtime from keystone bank. \nVisit our website, www.keystonebankng.com to open an account to enjoy more amazing opportunities. \n\nKeystone Bank …We grow together</string>
+    <string name="refer_a_friend_without_gift_msg">Hi there, \n\nI will like to refer my Bank, Keystone Bank, to you \n\nVisit their website, www.keystonebankng.com, and open an account to join me in enjoying the amazing opportunities they offer. \nYou will thank me later \n\nKeystone Bank …We grow together</string>
+    <string name="account_name_place_holder"><![CDATA[Account Name:        %1$s]]></string>
+    <string name="account_number_place_holder"><![CDATA[Account Number:     %1$s]]></string>
+    <string name="account_type_place_holder"><![CDATA[Account Type:           %1$s]]></string>
+    <string name="account_officer_name_place_holder"><![CDATA[Name:        %1$s]]></string>
+    <string name="account_officer_phone_number_place_holder"><![CDATA[Number:     %1$s]]></string>
+    <string name="accountOfficerDetails">Account Officer Details</string>
+    <string name="finish">Finish</string>
+    <string name="for_enquiries">For enquiries:</string>
+    <string name="contactCenterNumber">0700 2000 3000</string>
+    <string name="contactCenterEmail">ContactCentre@keystonebankng.com</string>
+    <string name="keystoneWebsite">www.keystonebankng.com</string>
+    <string name="page_header_image">Page Header Image</string>
+    <string name="accountDetailsPrintOut">keystoneAccount</string>
+    <string name="fileDownloaded">File downloaded</string>
+    <string name="back">Back</string>
+    <string name="completed">Completed</string>
+    <string name="aa">aa</string>
+    <string name="bb">bb</string>
+    <string name="cc">cc</string>
+    <string name="dd">dd</string>
+    <string name="firstPage">First Page</string>
+    <string name="accountReactivation">Account Reactivation</string>
+    <string name="few_steps_away_from_reactivating">You are few steps away from reactivating your account</string>
+    <string name="otpCode">OTP Code</string>
+    <string name="enterOtpCode">Enter OTP</string>
+    <string name="sampleReferalCode">OlA10L1</string>
+    <string name="tap_to_copy_code">Tap to copy code</string>
+    <string name="share">Share</string>
+    <string name="referral_image">Referral Image</string>
+    <string name="getRewardsOnEachReferrals">Get rewards on each of your referals</string>
+    <string name="beneficiaryNumber">Beneficiary Number</string>
+    <string name="sourceAccount">Source Account</string>
+    <string name="beneficiaryName">Beneficiary Name</string>
+    <string name="amount">Amount</string>
+    <string name="selectAccount">Select account</string>
+    <string name="enterNumberOrSelectFromContact">Enter number or select from contact</string>
+    <string name="enterName">Enter name</string>
+    <string name="enter_message">Enter message</string>
+    <string name="phone_contact_perm_granted">Phone contact permission granted</string>
+    <string name="phone_contact_perm_rationale">This permission is needed to help auto populate number from your phone contact</string>
+    <string name="referalCode">Referral Code</string>
+    <string name="copiedToClipBoard">%1$s copied to Clipboard</string>
+    <string name="daoSummary">Summary</string>
+    <string name="inactive">Inactive</string>
+    <string name="dormant">Dormant</string>
+    <string name="call">Call</string>
+    <string name="dialer_icon">Dialer icon</string>
+    <string name="menu_icon">Menu Icon</string>
+    <string name="phoneCallPermissionRationale">You need to grant the permission in order to call %1$s</string>
+    <string name="account_breakdown">Account Breakdown</string>
+    <string name="sample_value_for_chart">5604,209</string>
+    <string name="breakDown">Breakdown</string>
+    <string name="percent_sign">%</string>
+    <string name="_84">84%</string>
+    <string name="_75">75%</string>
+    <string name="_60">60%</string>
+    <string name="_40">40%</string>
+    <string name="by_transaction_status">Transaction status</string>
+    <string name="you_have_no_contact">There is no phone number in your contact list</string>
+    <string name="totalBalanceAsAt">Total balance as at:</string>
+    <string name="_07_01_2021">07 – 01 – 2021</string>
+    <string name="opening">Opening:</string>
+    <string name="sampleMoney">N2,642,342</string>
+    <string name="closing">Closing:</string>
+    <string name="movement">Movement:</string>
+    <string name="search_acc_here">Search accounts here</string>
+    <string name="products">Products</string>
+    <string name="balance">Balance</string>
+    <string name="sampleProductCode">206</string>
+    <string name="avgDeposit">Avg Deposit</string>
+    <string name="avgDom">Average DOM Portfolio</string>
+    <string name="avgCasa">Avg CASA Portfolio</string>
+    <string name="avgFd">Avg FD Portfolio</string>
+    <string name="noAccountFound">Record not found, first login with your username and passord</string>
+    <string name="morning">morining</string>
+    <string name="afternoon">afternoon</string>
+    <string name="evening">evening</string>
+    <string name="takeTooLong">Request took too long, please check your network</string>
+    <string name="selectLevel">Select level</string>
 
     <string-array name="statuses">
         <item>Active</item>
         <item>Inactive</item>
         <item>Dormant</item>
+    </string-array>
+
+    <string-array name="transactionStatus">
+        <item>TRANSACTING</item>
+        <item>NON-TRANSACTING</item>
+        <item>ALL</item>
+    </string-array>
+
+    <string-array name="new_statuses">
+        <item>ACTIVE</item>
+        <item>INACTIVE</item>
+        <item>ALL</item>
+    </string-array>
+
+    <string-array name="hardCoreInfoHeadings">
+        <item>Avg Deposit Portfolio</item>
+        <item>Average DOM Portfolio</item>
+        <item>Avg CASA Portfolio</item>
+        <item>Avg FD Portfolio</item>
+    </string-array>
+
+    <string-array name="statuses_with_all">
+        <item>All Accounts</item>
+        <item>Active Accounts</item>
+        <item>Inactive Accounts</item>
+        <item>Dormant Accounts</item>
     </string-array>
 
     <string-array name="cameraOrGalleryStringArray">

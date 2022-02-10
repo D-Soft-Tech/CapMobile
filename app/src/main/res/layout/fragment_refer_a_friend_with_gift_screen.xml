@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:animateLayoutChanges="true"
+    tools:context=".ui.view.referAFriend.ReferAFriendWithGiftScreen">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/edited_top_bar_bg"
+            app:layout_constraintBottom_toTopOf="@+id/pageGuideLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:contentDescription="@string/back_arrow"
+                android:src="@drawable/ic_back_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/pageTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/pageTitle" />
+
+            <TextView
+                android:id="@+id/backText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/back"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/backArrow"
+                app:layout_constraintStart_toEndOf="@+id/backArrow"
+                app:layout_constraintTop_toTopOf="@+id/backArrow" />
+
+            <TextView
+                android:id="@+id/pageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/referWithGift"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.36"
+                app:layout_constraintStart_toEndOf="@+id/backText"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pageSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_15dp"
+                android:text="@string/getRewardsOnEachReferrals"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pageTitle"
+                app:layout_constraintVertical_bias="0.6" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/pageGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/shareButton"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView35"
+                    style="@style/lekan_txt_view_label"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enterOptionalMessage"
+                    app:layout_constraintStart_toStartOf="@+id/daoCodeLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/amountTIL" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/optionalMessageTIL"
+                    style="@style/lekanTilStyle2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_15dp"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:layout_marginBottom="@dimen/dimen_20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView35">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/optionalMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="top|left"
+                        android:inputType="textMultiLine"
+                        android:hint="@string/enter_message"
+                        android:lines="4"
+                        android:maxLines="10"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:scrollHorizontally="false"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        tools:ignore="RtlHardcoded" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/passwordLabel"
+                    style="@style/lekan_txt_view_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:text="@string/beneficiaryName"
+                    app:layout_constraintStart_toStartOf="@+id/dateOfBirthLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/beneficiaryTil" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/beneficiaryNameTIL"
+                    style="@style/lekanTilStyle2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    app:layout_constraintEnd_toEndOf="@+id/optionalMessageTIL"
+                    app:layout_constraintStart_toStartOf="@+id/optionalMessageTIL"
+                    app:layout_constraintTop_toBottomOf="@+id/passwordLabel">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/beneficiaryName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dimen_20dp"
+                        android:hint="@string/enterName"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/daoCodeLabel"
+                    style="@style/lekan_txt_view_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:text="@string/amount"
+                    app:layout_constraintStart_toStartOf="@+id/passwordLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/beneficiaryNameTIL" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/amountTIL"
+                    style="@style/lekanTilStyle2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    app:layout_constraintEnd_toEndOf="@+id/beneficiaryNameTIL"
+                    app:layout_constraintStart_toStartOf="@+id/beneficiaryNameTIL"
+                    app:layout_constraintTop_toBottomOf="@+id/daoCodeLabel">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dimen_20dp"
+                        android:inputType="number"
+                        android:hint="@string/enterAmount"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/accountTypeLabel"
+                    style="@style/lekan_txt_view_label"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_20dp"
+                    android:text="@string/sourceAccount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/accountTypeTIL"
+                    style="@style/lekanDropDownMenuStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toEndOf="@+id/amountTIL"
+                    app:layout_constraintStart_toStartOf="@+id/amountTIL"
+                    app:layout_constraintTop_toBottomOf="@+id/accountTypeLabel">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/accountTypeTIET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="@dimen/dimen_20dp"
+                        android:ellipsize="end"
+                        android:hint="@string/selectAccount"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        tools:ignore="LabelFor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/dateOfBirthLabel"
+                    style="@style/lekan_txt_view_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:text="@string/beneficiaryNumber"
+                    app:layout_constraintStart_toStartOf="@+id/accountTypeLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/accountTypeTIL" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/beneficiaryTil"
+                    style="@style/lekanTilStyle2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    app:layout_constraintEnd_toEndOf="@+id/accountTypeTIL"
+                    app:layout_constraintStart_toStartOf="@+id/accountTypeTIL"
+                    app:layout_constraintTop_toBottomOf="@+id/dateOfBirthLabel">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/beneficiaryNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_contact_image"
+                        android:drawablePadding="@dimen/dimen_20dp"
+                        android:hint="@string/enterNumberOrSelectFromContact"
+                        android:inputType="date"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <android.widget.Button
+            android:id="@+id/shareButton"
+            style="@style/reuseableFairPayBtn"
+            android:layout_width="@dimen/dimen_170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:text="@string/share"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

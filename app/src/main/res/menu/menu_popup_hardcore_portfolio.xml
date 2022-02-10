@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/avgDeposit"
+        android:title="@string/avgDeposit" />
+
+    <item
+        android:id="@+id/avgDom"
+        android:title="@string/avgDom" />
+
+    <item
+        android:id="@+id/avgCasa"
+        android:title="@string/avgCasa" />
+
+    <item
+        android:id="@+id/avgFd"
+        android:title="@string/avgFd" />
+</menu>

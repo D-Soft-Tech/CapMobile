@@ -7,14 +7,14 @@
 
         <variable
             name="data"
-            type="com.example.capmobile.model.DaoChannelObject" />
+            type="com.example.capmobile.data.model.DaoChannelObject" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="@dimen/dimen_5dp"
-        android:background="@drawable/table_bg"
+        android:layout_marginVertical="@dimen/dimen_3dp"
+        android:background="@drawable/table_bg_2"
         android:paddingVertical="@dimen/dimen_10dp">
 
         <androidx.constraintlayout.widget.Guideline
@@ -22,106 +22,121 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.50" />
+            app:layout_constraintGuide_percent="0.4" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/gl2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.60" />
+            app:layout_constraintGuide_percent="0.50" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/gl3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.70" />
+            app:layout_constraintGuide_percent="0.60" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/gl4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.80" />
+            app:layout_constraintGuide_percent="0.70" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/gl5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.90" />
+            app:layout_constraintGuide_percent="0.80" />
 
         <TextView
             android:id="@+id/textView27"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/dimen_7dp"
-            android:layout_marginStart="@dimen/dimen_10dp"
             android:layout_marginVertical="@dimen/dimen_5dp"
-            android:fontFamily="@font/poppins_medium"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_7dp"
+            android:fontFamily="@font/poppins"
             android:maxLines="4"
             android:text="@{data.name}"
-            android:textColor="@color/table_item_txt_color"
+            android:textColor="@color/lekanColor"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/gl1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="OLADIMEJI OLAOSEBIKAN IGBOKWEZE" />
+            tools:text="OLADIMEJI OLAOSEBIKAN" />
 
         <View
             android:id="@+id/mobileSelection"
             android:layout_width="@dimen/dimen_10dp"
             android:layout_height="@dimen/dimen_10dp"
             android:background="@{data.mobile? @drawable/round_view_bg_selected : @drawable/round_view_bg}"
-            tools:background="@drawable/round_view_bg_selected"
             app:layout_constraintBottom_toBottomOf="@+id/textView27"
             app:layout_constraintEnd_toStartOf="@+id/gl2"
             app:layout_constraintStart_toStartOf="@+id/gl1"
-            app:layout_constraintTop_toTopOf="@+id/textView27" />
+            app:layout_constraintTop_toTopOf="@+id/textView27"
+            tools:background="@drawable/round_view_bg_selected" />
 
         <View
             android:id="@+id/ussdSelection"
             android:layout_width="@dimen/dimen_10dp"
             android:layout_height="@dimen/dimen_10dp"
             android:background="@{data.ussd? @drawable/round_view_bg_selected : @drawable/round_view_bg}"
-            tools:background="@drawable/round_view_bg"
             app:layout_constraintBottom_toBottomOf="@+id/textView27"
             app:layout_constraintEnd_toStartOf="@+id/gl3"
             app:layout_constraintStart_toStartOf="@+id/gl2"
-            app:layout_constraintTop_toTopOf="@+id/textView27" />
+            app:layout_constraintTop_toTopOf="@+id/textView27"
+            tools:background="@drawable/round_view_bg" />
 
         <View
             android:id="@+id/ibankingSelection"
             android:layout_width="@dimen/dimen_10dp"
             android:layout_height="@dimen/dimen_10dp"
             android:background="@{data.iBank? @drawable/round_view_bg_selected : @drawable/round_view_bg}"
-            tools:background="@drawable/round_view_bg_selected"
             app:layout_constraintBottom_toBottomOf="@+id/textView27"
             app:layout_constraintEnd_toStartOf="@+id/gl4"
             app:layout_constraintStart_toStartOf="@+id/gl3"
-            app:layout_constraintTop_toTopOf="@+id/textView27" />
+            app:layout_constraintTop_toTopOf="@+id/textView27"
+            tools:background="@drawable/round_view_bg_selected" />
 
         <View
             android:id="@+id/cardsSelection"
             android:layout_width="@dimen/dimen_10dp"
             android:layout_height="@dimen/dimen_10dp"
             android:background="@{data.cards? @drawable/round_view_bg_selected : @drawable/round_view_bg}"
-            tools:background="@drawable/round_view_bg"
             app:layout_constraintBottom_toBottomOf="@+id/textView27"
             app:layout_constraintEnd_toStartOf="@+id/gl5"
             app:layout_constraintStart_toStartOf="@+id/gl4"
-            app:layout_constraintTop_toTopOf="@+id/textView27" />
+            app:layout_constraintTop_toTopOf="@+id/textView27"
+            tools:background="@drawable/round_view_bg" />
 
         <View
             android:id="@+id/active"
+            loadBackForActiveStatus="@{data.status}"
             android:layout_width="@dimen/dimen_10dp"
             android:layout_height="@dimen/dimen_10dp"
-            loadBackForActiveStatus = "@{data.status}"
-            tools:background="@drawable/round_view_bg_selected"
             app:layout_constraintBottom_toBottomOf="@+id/textView27"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/menuItem"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cardsSelection"
             app:layout_constraintStart_toStartOf="@+id/gl5"
-            app:layout_constraintTop_toTopOf="@+id/textView27" />
+            app:layout_constraintTop_toTopOf="@+id/textView27"
+            tools:background="@drawable/round_view_bg_selected" />
+
+        <ImageView
+            android:id="@+id/menuItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/active"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/active"
+            app:layout_constraintTop_toTopOf="@+id/active"
+            app:srcCompat="@drawable/ic_more_icon"
+            android:contentDescription="@string/menu_icon" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

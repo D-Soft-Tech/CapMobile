@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.hardcore.HardCore">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/edited_top_bar_bg"
+            app:layout_constraintBottom_toTopOf="@+id/guideline24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:contentDescription="@string/back_arrow"
+                android:src="@drawable/ic_back_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/pageTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/pageTitle" />
+
+            <TextView
+                android:id="@+id/backText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/back"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/backArrow"
+                app:layout_constraintStart_toEndOf="@+id/backArrow"
+                app:layout_constraintTop_toTopOf="@+id/backArrow" />
+
+            <TextView
+                android:id="@+id/pageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/hard_core"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline24">
+
+            <TextView
+                android:id="@+id/textView49"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen_10dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/totalBalanceAsAt"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/lekan_calendar_2"
+                android:paddingEnd="@dimen/dimen_10dp"
+                android:drawablePadding="@dimen/dimen_8dp"
+                android:fontFamily="@font/poppins"
+                android:background="@drawable/edittext_border"
+                android:layout_marginVertical="@dimen/dimen_10dp"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:paddingVertical="@dimen/dimen_5dp"
+                android:paddingHorizontal="@dimen/dimen_15dp"
+                android:text="@string/_07_01_2021"
+                android:textColor="@color/lekanColor"
+                android:textSize="@dimen/dimen_12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView49"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textView49"
+                app:layout_constraintTop_toTopOf="@+id/textView49"
+                tools:ignore="RtlSymmetry" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hard_core_card_bg"
+            app:cardCornerRadius="@dimen/dimen_8dp"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout5">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hard_core_card_bg"
+                android:paddingBottom="@dimen/dimen_15dp">
+
+                <TextView
+                    android:id="@+id/heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_25dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:background="@drawable/spinner_bg_with_transparent_border"
+                    android:gravity="left"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlHardcoded"
+                    app:drawableEndCompat="@drawable/down_arrow" />
+
+                <View
+                    android:id="@+id/view7"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:layout_marginHorizontal="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:background="@drawable/view_2_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/heading" />
+
+                <ImageView
+                    android:id="@+id/visibilityToggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:contentDescription="@string/toggleIcon"
+                    android:src="@drawable/hide_icon"
+                    app:layout_constraintEnd_toEndOf="@+id/heading"
+                    app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/figures"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/view7"
+                    app:layout_constraintStart_toStartOf="@+id/view7"
+                    app:layout_constraintTop_toBottomOf="@+id/visibilityToggle"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <LinearLayout
+                        android:id="@+id/opening"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        app:layout_constraintEnd_toEndOf="@+id/figures"
+                        app:layout_constraintStart_toStartOf="@+id/figures"
+                        app:layout_constraintTop_toTopOf="@+id/figures">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/poppins"
+                            android:text="@string/opening"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="end"
+                            android:text="@string/sampleMoney"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/closing"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        app:layout_constraintEnd_toEndOf="@+id/opening"
+                        app:layout_constraintStart_toStartOf="@+id/opening"
+                        app:layout_constraintTop_toBottomOf="@+id/opening">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/poppins"
+                            android:text="@string/closing"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="end"
+                            android:text="@string/sampleMoney"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/movement"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        app:layout_constraintEnd_toEndOf="@+id/closing"
+                        app:layout_constraintStart_toStartOf="@+id/closing"
+                        app:layout_constraintTop_toBottomOf="@+id/closing">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/poppins"
+                            android:text="@string/movement"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="end"
+                            android:text="@string/sampleMoney"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="0dp"
+            android:iconifiedByDefault="true"
+            android:queryHint="@string/search_acc_here"
+            android:background="@drawable/custom_edittext_border"
+            android:layout_height="@dimen/dimen_35dp"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            app:layout_constraintEnd_toEndOf="@+id/cardView7"
+            app:layout_constraintStart_toStartOf="@+id/cardView7"
+            app:layout_constraintTop_toBottomOf="@+id/cardView7" />
+
+        <include
+            android:id="@+id/myDaoAccountsTableHeading"
+            layout="@layout/layout_hard_core_heading"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
+            app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/dimen_15dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/myDaoAccountsTableHeading"
+            app:layout_constraintStart_toStartOf="@+id/myDaoAccountsTableHeading"
+            app:layout_constraintTop_toBottomOf="@+id/myDaoAccountsTableHeading"
+            tools:listitem="@layout/layout_hard_core_item" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.12" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option java_package = "com.example.capmobile";
+option java_multiple_files = true;
+
+message SavedUser {
+  string userName = 1;
+  string password = 2;
+}

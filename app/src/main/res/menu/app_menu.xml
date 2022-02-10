@@ -17,12 +17,12 @@
             android:title="@string/summary"
             app:showAsAction="ifRoom" />
         <item
-            android:id="@id/fragment_open_account"
+            android:id="@+id/fragment_open_account"
             android:icon="@drawable/ic_account_opening"
             android:title="@string/account_open"
             app:showAsAction="ifRoom" />
         <item
-            android:id="@id/reactivateAccount2"
+            android:id="@+id/reactivateAccount2"
             android:icon="@drawable/ic_account_reactivation"
             android:title="@string/reactivate"
             app:showAsAction="ifRoom" />
@@ -44,7 +44,7 @@
     </group>
 
     <item
-        android:id="@id/referAFriendLandingPage"
+        android:id="@+id/referAFriendLandingPage"
         android:icon="@drawable/ic_refer_a_friend"
         android:title="@string/refer_a_friend"
         app:showAsAction="ifRoom" />

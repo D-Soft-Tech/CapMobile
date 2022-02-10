@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:animateLayoutChanges="true"
+    tools:context=".ui.view.customerEngagement.CustomerEngagement">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/edited_top_bar_bg"
+            app:layout_constraintBottom_toTopOf="@+id/pageGuideLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:contentDescription="@string/back_arrow"
+                android:src="@drawable/ic_back_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/pageTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/pageTitle" />
+
+            <TextView
+                android:id="@+id/backText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/back"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/backArrow"
+                app:layout_constraintStart_toEndOf="@+id/backArrow"
+                app:layout_constraintTop_toTopOf="@+id/backArrow" />
+
+            <TextView
+                android:id="@+id/pageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/customer_engagement"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.36"
+                app:layout_constraintStart_toEndOf="@+id/backText"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/pageGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/levelsTIL"
+            style="@style/lekanDropDownMenuStyle"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_10dp"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pageGuideLine">
+
+            <AutoCompleteTextView
+                android:id="@+id/levelsDropDown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dimen_20dp"
+                android:ellipsize="end"
+                android:hint="@string/selectAccount"
+                android:inputType="none"
+                android:maxLines="1"
+                android:singleLine="true"
+                tools:ignore="LabelFor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/statusTIL"
+            style="@style/lekanDropDownMenuStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/levelsTIL">
+
+            <AutoCompleteTextView
+                android:id="@+id/statusDropDown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dimen_20dp"
+                android:ellipsize="end"
+                android:hint="@string/selectLevel"
+                android:inputType="none"
+                android:maxLines="1"
+                android:singleLine="true"
+                tools:ignore="LabelFor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/textInputLayoutOptionalMessage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="@dimen/dimen_30dp"
+            android:layout_marginTop="391dp"
+            android:background="@drawable/lekan_et_bg2"
+            android:padding="@dimen/dimen_5dp"
+            app:layout_constraintBottom_toTopOf="@+id/engageBtn"
+            app:layout_constraintEnd_toEndOf="@+id/levelsTIL"
+            app:layout_constraintStart_toStartOf="@+id/levelsTIL"
+            app:layout_constraintTop_toBottomOf="@+id/statusTIL">
+
+            <include
+                android:id="@+id/nestedEditor"
+                layout="@layout/rich_text_editor_layout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <android.widget.Button
+            android:id="@+id/engageBtn"
+            style="@style/reuseableFairPayBtn"
+            android:layout_width="@dimen/dimen_170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:text="@string/engage"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
