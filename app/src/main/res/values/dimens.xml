@@ -53,4 +53,9 @@
     <dimen name="dimen_47dp">47dp</dimen>
     <dimen name="dimen_22dp">22dp</dimen>
     <dimen name="dimen_23dp">23dp</dimen>
+    <dimen name="dimen_400dp">400dp</dimen>
+    <dimen name="dimen_350dp">350dp</dimen>
+    <dimen name="dimen_13dp">13dp</dimen>
+    <dimen name="dimen_6dp">6dp</dimen>
+    <dimen name="dimen_190dp">190dp</dimen>
 </resources>

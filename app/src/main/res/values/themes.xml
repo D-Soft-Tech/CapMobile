@@ -86,13 +86,17 @@
     <style name="switch_style" parent="Theme.MaterialComponents">
         <item name="colorOnSurface">@color/lekan_background_color</item>
         <item name="colorSecondary">@color/lekanColor60Alpha</item>
+        <item name="trackColor">@color/switch_toggle_color</item>
     </style>
 
     <style name="text_editor_tool_bar_button_style" parent="Theme.CapMobile">
-        <item name="android:layout_width">@dimen/dimen_35dp</item>
-        <item name="android:layout_height">@dimen/dimen_35dp</item>
+        <item name="android:layout_width">@dimen/dimen_40dp</item>
+        <item name="android:layout_height">@dimen/dimen_40dp</item>
+        <item name="android:padding">@dimen/dimen_10dp</item>
+        <item name="android:contentDescription">@null</item>
         <item name="android:background">@android:color/transparent</item>
         <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:scaleType">fitXY</item>
         <item name="android:textAlignment">center</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
@@ -163,6 +167,8 @@
         <item name="android:background">@drawable/lekan_et_bg</item>
         <item name="boxStrokeColor">@color/transparent</item>
         <item name="boxStrokeWidth">0dp</item>
+        <item name="android:paddingRight">@dimen/dimen_10dp</item>
+        <item name="android:paddingStart">@dimen/dimen_10dp</item>
         <item name="hintEnabled">false</item>
     </style>
 
@@ -182,6 +188,14 @@
         <item name="android:background">@drawable/lekan_til_documentation_bg</item>
     </style>
 
+    <style name="lekanAccountOpeningDocumentationErrorStyle" parent="lekanTilStyle">
+        <item name="android:background">@drawable/documentation_input_error_bg</item>
+    </style>
+
+    <style name="lekanAccountOpeningDocumentationSuccessStyle" parent="lekanTilStyle">
+        <item name="android:background">@drawable/documentation_input_success_bg</item>
+    </style>
+
     <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamily">cut</item>
         <item name="cornerSize">4dp</item>
@@ -195,6 +209,8 @@
     <style name="lekanDropDownMenuStyle" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
         <item name="android:background">@drawable/lekan_et_bg2</item>
         <item name="boxStrokeColor">@color/transparent</item>
+        <item name="android:paddingStart">@dimen/dimen_10dp</item>
+        <item name="android:paddingRight">@dimen/dimen_10dp</item>
         <item name="boxStrokeWidth">0dp</item>
         <item name="hintEnabled">false</item>
     </style>
@@ -235,8 +251,8 @@
         <item name="android:windowExitAnimation">@android:anim/fade_out</item>
     </style>
     <style name="slideInFromRight" parent="Theme.CapMobile">
-        <item name="android:windowEnterAnimation">@anim/slide_in_right</item>
-        <item name="android:windowExitAnimation">@anim/slide_out_right</item>
+        <item name="android:windowEnterAnimation">@anim/slide_in_right_for_dao_menu_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_right_for_dao_menu_dialog</item>
         <item name="cornerFamily">cut</item>
         <item name="cornerSize">4dp</item>
         <item name="android:width">@dimen/dimen_150dp</item>

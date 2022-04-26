@@ -7,114 +7,249 @@
 
     <fragment
         android:id="@+id/customerEngagement"
-        android:name="com.example.capmobile.ui.view.customerEngagement.CustomerEngagement"
+        android:name="com.keystone.capmobile.ui.view.customerEngagement.CustomerEngagement"
         android:label="CustomerEngagement" />
     <fragment
         android:id="@+id/dashboardNew"
-        android:name="com.example.capmobile.ui.view.dashboard.DashboardNew"
+        android:name="com.keystone.capmobile.ui.view.dashboard.DashboardNew"
         android:label="dashboard"
-        tools:layout="@layout/dashboard" >
-        <action
-            android:id="@+id/action_dashboardNew_to_posCollection2"
-            app:destination="@id/posCollection2" />
+        tools:layout="@layout/dashboard">
         <action
             android:id="@+id/action_dashboardNew_to_customerEngagement"
-            app:destination="@id/customerEngagement" />
+            app:destination="@id/customerEngagement"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_dashboardNew_to_myDaoAccounts"
             app:destination="@id/myDaoAccounts"
-            app:exitAnim="@anim/slide_in_right" />
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_dashboardNew_to_cardFundingStatus"
             app:destination="@id/cardFundingStatus"
-            app:exitAnim="@anim/slide_in_right" />
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_dashboardNew_to_newAccountOpeningViewPager"
-            app:destination="@id/newAccountOpeningViewPager" />
+            app:destination="@id/newAccountOpeningViewPager"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_dashboardNew_to_reactivateAccountViewPager"
-            app:destination="@id/reactivateAccountViewPager" />
+            app:destination="@id/reactivateAccountViewPager"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_dashboardNew_to_openAccountWithoutBvnViewPager"
             app:destination="@id/openAccountWithoutBvnViewPager"
-            app:exitAnim="@anim/slide_in_right" />
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_dashboardNew_to_referAFriendWithGiftScreen"
-            app:destination="@id/referAFriendWithGiftScreen" />
+            app:destination="@id/referAFriendWithGiftScreen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_dashboardNew_to_referAFriendWithoutGiftScreen"
             app:destination="@id/referAFriendWithoutGiftScreen"
-            app:exitAnim="@anim/slide_in_right" />
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_dashboardNew_to_hardCore"
-            app:destination="@id/hardCore" />
+            app:destination="@id/hardCore"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboardNew_to_collectionsHomePage2"
+            app:destination="@id/collectionsHomePage2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboardNew_to_keyValueProductsFragment"
+            app:destination="@id/keyValueProductsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboardNew_to_formsStartScreen2"
+            app:destination="@id/formsStartScreen2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboardNew_to_formsHomePage22"
+            app:destination="@id/formsHomePage2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboardNew_to_newReactivateAccountFragment"
+            app:destination="@id/newReactivateAccountFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
+
     </fragment>
     <fragment
         android:id="@+id/posCollection2"
-        android:name="com.example.capmobile.ui.view.PosCollection"
+        android:name="com.keystone.capmobile.ui.view.posCollection.PosCollection"
         android:label="fragment_pos_collection"
         tools:layout="@layout/fragment_pos_collection" />
     <fragment
         android:id="@+id/myDaoAccounts"
-        android:name="com.example.capmobile.ui.view.MyDaoAccounts"
+        android:name="com.keystone.capmobile.ui.view.MyDaoAccounts"
         android:label="fragment_my_dao_accounts"
-        tools:layout="@layout/fragment_my_dao_accounts" />
+        tools:layout="@layout/fragment_my_dao_accounts" >
+        <action
+            android:id="@+id/action_myDaoAccounts_to_engageIndividualCustomerScreen"
+            app:destination="@id/engageIndividualCustomerScreen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
     <fragment
         android:id="@+id/cardFundingStatus"
-        android:name="com.example.capmobile.ui.view.CardFundingStatus"
+        android:name="com.keystone.capmobile.ui.view.CardFundingStatus"
         android:label="card_funding_status"
         tools:layout="@layout/card_funding_status" />
     <fragment
         android:id="@+id/accountOpeningSummaryPage"
-        android:name="com.example.capmobile.ui.view.openAccountScreens.AccountOpeningSummaryPage"
+        android:name="com.keystone.capmobile.ui.view.openAccountScreens.AccountOpeningSummaryPage"
         android:label="fragment_account_opening_summary_page"
-        tools:layout="@layout/fragment_account_opening_summary_page" >
+        tools:layout="@layout/fragment_account_opening_summary_page">
         <action
             android:id="@+id/action_accountOpeningSummaryPage_to_dashboardNew"
+            app:destination="@id/dashboardNew"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right"
             app:popUpTo="@id/newAccountOpeningViewPager"
-            app:popUpToInclusive="true"
-            app:destination="@id/dashboardNew" />
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/newAccountOpeningViewPager"
-        android:name="com.example.capmobile.ui.view.openAccountScreens.NewAccountOpeningViewPager"
+        android:name="com.keystone.capmobile.ui.view.openAccountScreens.NewAccountOpeningViewPager"
         android:label="fragment_new_account_opening_view_pager"
-        tools:layout="@layout/fragment_new_account_opening_view_pager" >
+        tools:layout="@layout/fragment_new_account_opening_view_pager">
         <action
             android:id="@+id/action_newAccountOpeningViewPager_to_accountOpeningSummaryPage"
-            app:destination="@id/accountOpeningSummaryPage" />
+            app:destination="@id/accountOpeningSummaryPage"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_newAccountOpeningViewPager_to_drawYourSignatureFragment2"
+            app:destination="@id/drawYourSignatureFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/reactivateAccountViewPager"
-        android:name="com.example.capmobile.ui.view.reactivateAccountScreens.ReactivateAccountViewPager"
+        android:name="com.keystone.capmobile.ui.view.reactivateAccountScreens.ReactivateAccountViewPager"
         android:label="fragment_reactivate_account_view_pager"
-        tools:layout="@layout/fragment_reactivate_account_view_pager" >
+        tools:layout="@layout/fragment_reactivate_account_view_pager">
         <action
             android:id="@+id/action_reactivateAccountViewPager_to_accountOpeningSummaryPage"
-            app:destination="@id/accountOpeningSummaryPage" />
+            app:destination="@id/accountOpeningSummaryPage"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/openAccountWithoutBvnViewPager"
-        android:name="com.example.capmobile.ui.view.openAccountScreens.openAccountWithoutBvnScreens.OpenAccountWithoutBvnViewPager"
+        android:name="com.keystone.capmobile.ui.view.openAccountScreens.openAccountWithoutBvnScreens.OpenAccountWithoutBvnViewPager"
         android:label="fragment_open_account_without_bvn_view_pager"
-        tools:layout="@layout/fragment_open_account_without_bvn_view_pager" >
+        tools:layout="@layout/fragment_open_account_without_bvn_view_pager">
         <action
             android:id="@+id/action_openAccountWithoutBvnViewPager_to_accountOpeningSummaryPage"
-            app:destination="@id/accountOpeningSummaryPage" />
+            app:destination="@id/accountOpeningSummaryPage"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/referAFriendWithGiftScreen"
-        android:name="com.example.capmobile.ui.view.referAFriend.ReferAFriendWithGiftScreen"
+        android:name="com.keystone.capmobile.ui.view.referAFriend.ReferAFriendWithGiftScreen"
         android:label="fragment_refer_a_friend_with_gift_screen"
         tools:layout="@layout/fragment_refer_a_friend_with_gift_screen" />
     <fragment
         android:id="@+id/referAFriendWithoutGiftScreen"
-        android:name="com.example.capmobile.ui.view.referAFriend.ReferAFriendWithoutGiftScreen"
+        android:name="com.keystone.capmobile.ui.view.referAFriend.ReferAFriendWithoutGiftScreen"
         android:label="fragment_refer_a_friend_without_gift_screen"
         tools:layout="@layout/fragment_refer_a_friend_without_gift_screen" />
     <fragment
         android:id="@+id/hardCore"
-        android:name="com.example.capmobile.ui.view.hardcore.HardCore"
+        android:name="com.keystone.capmobile.ui.view.hardcore.HardCore"
         android:label="fragment_hard_core"
         tools:layout="@layout/fragment_hard_core" />
+    <fragment
+        android:id="@+id/drawYourSignatureFragment2"
+        android:name="com.keystone.capmobile.util.DrawYourSignatureFragment"
+        android:label="DrawYourSignatureFragment" />
+    <fragment
+        android:id="@+id/collectionsHomePage2"
+        android:name="com.keystone.capmobile.ui.view.posCollection.CollectionsHomePage"
+        android:label="fragment_collections_home_page"
+        tools:layout="@layout/fragment_collections_home_page">
+        <action
+            android:id="@+id/action_collectionsHomePage2_to_posCollection2"
+            app:destination="@id/posCollection2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_collectionsHomePage2_to_nqr"
+            app:destination="@id/nqr"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/nqr"
+        android:name="com.keystone.capmobile.ui.view.posCollection.Nqr"
+        android:label="fragment_nqr"
+        tools:layout="@layout/fragment_nqr">
+        <action
+            android:id="@+id/action_nqr_to_nqrScanPage"
+            app:destination="@id/nqrScanPage"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/nqrScanPage"
+        android:name="com.keystone.capmobile.ui.view.posCollection.NqrScanPage"
+        android:label="NqrScanPage" />
+    <fragment
+        android:id="@+id/keyValueProductsFragment"
+        android:name="com.keystone.capmobile.ui.view.keyValueProducts.KeyValueProductsFragment"
+        android:label="fragment_key_value_products"
+        tools:layout="@layout/fragment_key_value_products">
+        <action
+            android:id="@+id/action_keyValueProductsFragment_to_keyValueProductDetailFragment"
+            app:destination="@id/keyValueProductDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/keyValueProductDetailFragment"
+        android:name="com.keystone.capmobile.ui.view.keyValueProducts.KeyValueProductDetailFragment"
+        android:label="fragment_key_value_product_detail"
+        tools:layout="@layout/fragment_key_value_product_detail">
+        <argument
+            android:name="keyValueProductItem"
+            app:argType="com.keystone.capmobile.data.model.KeyValueProductsModelClass" />
+    </fragment>
+    <fragment
+        android:id="@+id/formsStartScreen2"
+        android:name="com.keystone.capmobile.ui.view.forms.FormsStartScreen"
+        android:label="fragment_forms_start_screen"
+        tools:layout="@layout/fragment_forms_start_screen" />
+    <fragment
+        android:id="@+id/formsHomePage2"
+        android:name="com.keystone.capmobile.ui.view.forms.FormsHomePage"
+        android:label="fragment_forms_home_page"
+        tools:layout="@layout/fragment_forms_home_page" />
+    <fragment
+        android:id="@+id/engageIndividualCustomerScreen"
+        android:name="com.keystone.capmobile.ui.view.customerEngagement.EngageIndividualCustomerScreen"
+        android:label="fragment_engage_individual_customer_screen"
+        tools:layout="@layout/fragment_engage_individual_customer_screen" >
+        <argument
+            android:name="userToEngage"
+            app:argType="com.keystone.capmobile.data.model.DataToPassToDaoEngageDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/newReactivateAccountFragment"
+        android:name="com.keystone.capmobile.ui.view.reactivateAccountScreens.NewReactivateAccountFragment"
+        android:label="fragment_new_reactivate_account"
+        tools:layout="@layout/fragment_new_reactivate_account" />
 </navigation>

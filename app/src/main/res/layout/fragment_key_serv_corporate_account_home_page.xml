@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen_15dp"
+    tools:context=".ui.view.forms.keyServ.KeyServCorporateAccountHomePage">
+
+    <com.aceinteract.android.stepper.StepperNavigationView
+        android:id="@+id/stepperView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:stepperFleetDuration="1000"
+        app:stepperIconSize="@dimen/dimen_20dp"
+        app:stepperItems="@menu/my_6_steps_stepper_view"
+        app:stepperTextSize="0sp"
+        app:stepperType="TAB_NUMBERED"
+        app:stepperWidgetColor="@color/lekanColor" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stepperView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,12 @@
 syntax = "proto3";
 
-option java_package = "com.example.capmobile";
+option java_package = "com.keystone.capmobile";
 option java_multiple_files = true;
 
 message SavedUser {
   string userName = 1;
   string password = 2;
+  string fullName = 3;
+  string daoCode = 4;
+  string branchName = 5;
 }

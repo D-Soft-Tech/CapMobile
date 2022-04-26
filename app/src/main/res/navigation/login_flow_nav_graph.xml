@@ -6,7 +6,7 @@
     app:startDestination="@id/newLoginFragment">
     <fragment
         android:id="@+id/newLoginFragment"
-        android:name="com.example.capmobile.ui.view.loginFlow.NewLoginFragment"
+        android:name="com.keystone.capmobile.ui.view.loginFlow.NewLoginFragment"
         android:label="fragment_new_login"
         tools:layout="@layout/fragment_new_login" />
 </navigation>

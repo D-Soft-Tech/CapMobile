@@ -56,6 +56,11 @@
             android:icon="@drawable/ic_collections"
             android:title="@string/collections"
             app:showAsAction="ifRoom" />
+        <item
+            android:id="@id/keyValueProductsFragment"
+            android:icon="@drawable/ic_key_swift"
+            android:title="@string/keyValueProducts"
+            app:showAsAction="ifRoom" />
 
         <item
             android:id="@+id/acc_conf"

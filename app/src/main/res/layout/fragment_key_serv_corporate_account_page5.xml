@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen_15dp"
+    tools:context=".ui.view.forms.keyServ.KeyServCorporateAccountPage5">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/agrementSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="@dimen/dimen_10dp"
+                android:layout_height="@dimen/dimen_10dp"
+                android:contentDescription="@string/bullet_point"
+                app:layout_constraintBottom_toBottomOf="@+id/onBoardingStepText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/onBoardingStepText"
+                app:srcCompat="@drawable/ic_bullet_point" />
+
+            <TextView
+                android:id="@+id/onBoardingStepText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen_10dp"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/agreementTerms"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/termsAgreement"
+                app:layout_constraintStart_toEndOf="@+id/imageView6"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/termsAgreement"
+                style="@style/switch_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/onBoardingStepText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/onBoardingStepText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/spaceAgreementSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            app:layout_constraintEnd_toEndOf="@+id/agrementSection"
+            app:layout_constraintStart_toStartOf="@+id/agrementSection"
+            app:layout_constraintTop_toBottomOf="@+id/agrementSection">
+
+            <ImageView
+                android:id="@+id/icon2"
+                android:layout_width="@dimen/dimen_10dp"
+                android:layout_height="@dimen/dimen_10dp"
+                android:contentDescription="@string/bullet_point"
+                app:layout_constraintBottom_toBottomOf="@+id/willingToProvideSpace"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/willingToProvideSpace"
+                app:srcCompat="@drawable/ic_bullet_point" />
+
+            <TextView
+                android:id="@+id/willingToProvideSpace"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen_10dp"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:text="@string/agreementTerms2"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/spaceAgreement"
+                app:layout_constraintStart_toEndOf="@+id/icon2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/spaceAgreement"
+                style="@style/switch_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/willingToProvideSpace"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/willingToProvideSpace" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/brandingAgreementSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            app:layout_constraintEnd_toEndOf="@+id/spaceAgreementSection"
+            app:layout_constraintStart_toStartOf="@+id/spaceAgreementSection"
+            app:layout_constraintTop_toBottomOf="@+id/spaceAgreementSection">
+
+            <ImageView
+                android:id="@+id/icon3"
+                android:layout_width="@dimen/dimen_10dp"
+                android:layout_height="@dimen/dimen_10dp"
+                android:contentDescription="@string/bullet_point"
+                app:layout_constraintBottom_toBottomOf="@+id/willingToProvideBranding"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/willingToProvideBranding"
+                app:srcCompat="@drawable/ic_bullet_point" />
+
+            <TextView
+                android:id="@+id/willingToProvideBranding"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen_10dp"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:text="@string/agreementTerms3"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/brandingAgreement"
+                app:layout_constraintStart_toEndOf="@+id/icon3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/brandingAgreement"
+                style="@style/switch_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/willingToProvideBranding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/willingToProvideBranding" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/customerCountSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            app:layout_constraintEnd_toEndOf="@+id/brandingAgreementSection"
+            app:layout_constraintStart_toStartOf="@+id/brandingAgreementSection"
+            app:layout_constraintTop_toBottomOf="@+id/brandingAgreementSection">
+
+            <ImageView
+                android:id="@+id/icon4"
+                android:layout_width="@dimen/dimen_10dp"
+                android:layout_height="@dimen/dimen_10dp"
+                android:contentDescription="@string/bullet_point"
+                app:layout_constraintBottom_toBottomOf="@+id/customerCountHeading"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/customerCountHeading"
+                app:srcCompat="@drawable/ic_bullet_point" />
+
+            <TextView
+                android:id="@+id/customerCountHeading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen_10dp"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:text="@string/customerCountRequestHeading"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/icon4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/averageCustomerRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:checkedButton="@+id/radio_button_1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/customerCountHeading">
+
+                <RadioButton
+                    android:id="@+id/avgCusBelow20"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:buttonTint="@color/lekanColor"
+                    android:text="@string/below_20" />
+
+                <RadioButton
+                    android:id="@+id/avgCus20_50"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:buttonTint="@color/lekanColor"
+                    android:text="@string/_20_50" />
+
+                <RadioButton
+                    android:id="@+id/avgCus51_100"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:buttonTint="@color/lekanColor"
+                    android:text="@string/_51_100" />
+
+                <RadioButton
+                    android:id="@+id/avgCus101_200"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:buttonTint="@color/lekanColor"
+                    android:text="@string/_100_200" />
+
+                <RadioButton
+                    android:id="@+id/avgCusAbove200"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:buttonTint="@color/lekanColor"
+                    android:text="@string/_201_and_above" />
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/averageSalesSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            app:layout_constraintEnd_toEndOf="@+id/customerCountSection"
+            app:layout_constraintStart_toStartOf="@+id/customerCountSection"
+            app:layout_constraintTop_toBottomOf="@+id/customerCountSection">
+
+            <ImageView
+                android:id="@+id/icon5"
+                android:layout_width="@dimen/dimen_10dp"
+                android:layout_height="@dimen/dimen_10dp"
+                android:contentDescription="@string/bullet_point"
+                app:layout_constraintBottom_toBottomOf="@+id/averageSalesHeading"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/averageSalesHeading"
+                app:srcCompat="@drawable/ic_bullet_point" />
+
+            <TextView
+                android:id="@+id/averageSalesHeading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen_10dp"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:text="@string/avgSales"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/icon5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/averageSalesRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_10dp"
+                android:checkedButton="@+id/radio_button_1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/averageSalesHeading">
+
+                <RadioButton
+                    android:id="@+id/avgSalesBelow20"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:buttonTint="@color/lekanColor"
+                    android:text="@string/below_50k" />
+
+                <RadioButton
+                    android:id="@+id/avgSales21_50"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:buttonTint="@color/lekanColor"
+                    android:text="@string/_51k_150k" />
+
+                <RadioButton
+                    android:id="@+id/avgSales101_200"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:buttonTint="@color/lekanColor"
+                    android:text="@string/_151k_250k" />
+
+                <RadioButton
+                    android:id="@+id/avgSales51_100"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:buttonTint="@color/lekanColor"
+                    android:text="@string/_251k_500k" />
+
+                <RadioButton
+                    android:id="@+id/avgSalesAbove200"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:buttonTint="@color/lekanColor"
+                    android:text="@string/_501_and_above" />
+            </RadioGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <android.widget.Button
+            android:id="@+id/previousPage"
+            style="@style/reuseableFairPayBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_15dp"
+            android:text="@string/previous"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/averageSalesSection"
+            app:layout_constraintTop_toBottomOf="@+id/averageSalesSection"
+            tools:ignore="RtlSymmetry" />
+
+        <android.widget.Button
+            android:id="@+id/proceedBtn"
+            style="@style/reuseableFairPayBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@+id/averageSalesSection"
+            app:layout_constraintTop_toTopOf="@+id/previousPage"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="RtlSymmetry" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

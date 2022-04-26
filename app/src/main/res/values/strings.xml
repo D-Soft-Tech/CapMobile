@@ -25,7 +25,7 @@
     <string name="nav_app_bar_close_drawer_description">Close the drawer</string>
     <string name="summary">Account Summary</string>
     <string name="account_open">Open Account</string>
-    <string name="reactivate">Re-activate Account</string>
+    <string name="reactivate">Reactivate Account</string>
     <string name="hi_user">Good %1$s, %2$s!</string>
     <string name="user_account">User Account</string>
     <string name="value_35">35</string>
@@ -33,7 +33,7 @@
     <string name="enterBvn">Enter BVN</string>
     <string name="get_bvn_details">Get Details</string>
     <string name="bvn">BVN</string>
-    <string name="existing_account">Existing Account</string>
+    <string name="existing_account">Existing Keystone Account</string>
     <string name="dao">DAO</string>
     <string name="product_sample">Product Sample</string>
     <string name="next_page">Next</string>
@@ -90,6 +90,7 @@
     <string name="storage_permission_rationale">You need to grant this permission before you can select image from your device</string>
     <string name="storage_permission_rationale_for_download">You need to grant this permission to save this file</string>
     <string name="cameraOrGallery">Camera / Gallery?</string>
+    <string name="cameraOrGalleryOrSign">Camera / Gallery / Sign</string>
     <string name="overall">Performance: </string>
     <string name="ussd">USSD: </string>
     <string name="atm">ATM: </string>
@@ -119,6 +120,7 @@
     <string name="proceed">Proceed</string>
     <string name="_20">20%</string>
     <string name="pos">POS:</string>
+    <string name="posHeading">POS</string>
     <string name="welcomeBack">Welcome back %1$s!</string>
     <string name="enterusername">Enter username</string>
     <string name="enterPassword">Enter password</string>
@@ -181,7 +183,7 @@
     <string name="fingerPrintAuthDeclined">Fingerprint authentication declined</string>
     <string name="fingerPrintNotEnabled">Fingerprint is not been enabled in settings.</string>
     <string name="customer_activation_portal">Customer Activation Portal</string>
-    <string name="customer_activation_on_the_go">....Customer activation on the go!</string>
+    <string name="customer_activation_on_the_go">Customer activation on the go!</string>
     <string name="open_new_account">Open new Account</string>
     <string name="withBVN">With BVN</string>
     <string name="withoutBVN">Without BVN</string>
@@ -220,6 +222,8 @@
     <string name="account_name_place_holder"><![CDATA[Account Name:        %1$s]]></string>
     <string name="account_number_place_holder"><![CDATA[Account Number:     %1$s]]></string>
     <string name="account_type_place_holder"><![CDATA[Account Type:           %1$s]]></string>
+    <string name="account_branch_place_holder"><![CDATA[Branch:    %1$s]]></string>
+    <string name="account_branch_code_place_holder"><![CDATA[Branch Code:    %1$s]]></string>
     <string name="account_officer_name_place_holder"><![CDATA[Name:        %1$s]]></string>
     <string name="account_officer_phone_number_place_holder"><![CDATA[Number:     %1$s]]></string>
     <string name="accountOfficerDetails">Account Officer Details</string>
@@ -267,7 +271,7 @@
     <string name="menu_icon">Menu Icon</string>
     <string name="phoneCallPermissionRationale">You need to grant the permission in order to call %1$s</string>
     <string name="account_breakdown">Account Breakdown</string>
-    <string name="sample_value_for_chart">5604,209</string>
+    <string name="sample_value_for_chart">5,604,209</string>
     <string name="breakDown">Breakdown</string>
     <string name="percent_sign">%</string>
     <string name="_84">84%</string>
@@ -286,7 +290,7 @@
     <string name="products">Products</string>
     <string name="balance">Balance</string>
     <string name="sampleProductCode">206</string>
-    <string name="avgDeposit">Avg Deposit</string>
+    <string name="avgDeposit">Avg Deposit Portfolio</string>
     <string name="avgDom">Average DOM Portfolio</string>
     <string name="avgCasa">Avg CASA Portfolio</string>
     <string name="avgFd">Avg FD Portfolio</string>
@@ -296,11 +300,236 @@
     <string name="evening">evening</string>
     <string name="takeTooLong">Request took too long, please check your network</string>
     <string name="selectLevel">Select level</string>
+    <string name="pleaseSelectALevel">Please select a level</string>
+    <string name="transactionStatusNotSelected">Transaction status not selected</string>
+    <string name="selectTransactionStatus">Select transaction status</string>
+    <string name="noMessageFoundForThis">No predefined message for this category</string>
+    <string name="placeholder_message_subject">Update and get free transfer</string>
+    <string name="errorGettingLevels">Error fetching levels</string>
+    <string name="errorFetchingMessage">Error fetching message, please make sure your internet is on</string>
+    <string name="createMessage">Create Message</string>
+    <string name="enterSubject">Enter subject</string>
+    <string name="bvnDoesNotExist">Invalid BVN number</string>
+    <string name="sample_bank_name">Keystone Head Office</string>
+    <string name="sample_bank_address">Keystone Bank Limited, 1,Keystone Bank Crescent,</string>
+    <string name="sample_branch_code">NG0010001</string>
+    <string name="errorGettingBranchLists">Opps!, error getting branch lists</string>
+    <string name="preferred_branch_selected">Preferred branch selected successfully</string>
+    <string name="clearSignature">Clear Signature</string>
+    <string name="uploadSignature">Upload Signature</string>
+    <string name="clearedSignAgain">Cleared, please sign again</string>
+    <string name="preview">Preview</string>
+    <string name="signatureUploaded">Signature Uploaded</string>
+    <string name="counts">Count</string>
+    <string name="nqr">NQR</string>
+    <string name="onboard_merchant">ONBOARD MERCHANT</string>
+    <string name="goToDetails">Go to details</string>
+    <string name="icon">Icon</string>
+    <string name="portals">PORTALS</string>
+    <string name="share_and_download_merchant_qr_code">Share and Download Merchant QR Code</string>
+    <string name="scan_barcode">Scan BarCode</string>
+    <string name="download_qr_code">Download QR Code</string>
+    <string name="keyValueProducts">Key Products</string>
+    <string name="keySwift">Key Swift</string>
+    <string name="ussd_without_collon">USSD</string>
+    <string name="bullet_point">Bullet Point</string>
+    <string name="pullet_point_sample_text">A POS machine is the most advanced payment accepting machine.</string>
+    <string name="internetBanking">Internet Banking</string>
+    <string name="mToken">m-Token</string>
+    <string name="onboarding_flyer">Flyer showing how to onboard merchant</string>
+    <string name="forms">Forms</string>
+    <string name="keyServe">KeyServ Agency</string>
+    <string name="visaCardForm">Visa Card Form</string>
+    <string name="performanceDashboard">Performance Dashboard</string>
+    <string name="prodValueProposition">Product Value Proposition</string>
+    <string name="e_channel_onboarding">E-channel Onboarding</string>
+    <string name="openAccount">Open Account</string>
+    <string name="userState">State</string>
+    <string name="ward">Ward</string>
+    <string name="localGovernment">Local Government</string>
+    <string name="educationalQualification">Educational Qualification</string>
+    <string name="accountNumber">Account Number</string>
+    <string name="agreementTerms">Do you agree with the Attributes of the Agency banking project/initiative?</string>
+    <string name="agreementTerms2">Are you willing to provide us with a space  and a staff to man the Agency banking operation?</string>
+    <string name="agreementTerms3">Are you ready to provide us with an exclusive space  to accommodate our branding or promotional items?</string>
+    <string name="customerCountRequestHeading">How many customers visits your outlet on a daily basis?</string>
+    <string name="below_20">Below 20</string>
+    <string name="_20_50">20 – 50</string>
+    <string name="_51_100">51 – 100</string>
+    <string name="_100_200">101 – 200</string>
+    <string name="_201_and_above">200 and above</string>
+    <string name="dedication">Dedication</string>
+    <string name="dedicationText">I am aware that it is an offence to knowingly or recklessly provide
+        information which are false or misleading in connection with  agency  banking
+        business  approval  in  Nigeria. <br />I  am  also  aware  that  omitting  material
+        information  intentionally  or unintentionally may lead to rejection of my application or listing
+        of my agency banking access. <br />I  certify  that  this  information  given  above  is  complete
+        and  accurate  to  the  best  of  my  knowledge.  There  are  no  facts relevant to this application which has
+        not been disclosed. <br />I  also  undertake to make  known  any change material to this application which
+        may arise while the application is under consideration.
+    </string>
+    <string name="agentName">Agent Name</string>
+    <string name="witnessName">Witness Name</string>
+    <string name="agentSignature">Enter Agent Signature</string>
+    <string name="witnessSignature">Enter witness signature</string>
+    <string name="avgSales">Average daily sales?</string>
+    <string name="below_50k">Below 50,000</string>
+    <string name="_51k_150k">51,000 – 150,000</string>
+    <string name="_251k_500k">251,000 – 500,000</string>
+    <string name="_151k_250k">151,000 – 250,000</string>
+    <string name="_501_and_above">501,000</string>
+    <string name="company_details">COMPANY DETAILS(Corporate KeyServ Account)</string>
+    <string name="name_of_company">Name of Company</string>
+    <string name="physical_address">Physical Address</string>
+    <string name="typeOfBusiness">Type of Business</string>
+    <string name="businessExperience">Years of Business Experience</string>
+    <string name="relationshipWithTheCompany">Position in the Company</string>
+    <string name="bankAffiliation">Bank affiliation</string>
+    <string name="businessAccountNumber">Business Account Number</string>
+    <string name="tin">TIN number</string>
+    <string name="rcNumber">RC Number</string>
+    <string name="corporate_information">Corporate Information</string>
+    <string name="corporate_name">Corporate Name</string>
+    <string name="corporate_short_name">Corporate short name</string>
+    <string name="corporate_address">Corporate address</string>
+    <string name="corporate_number">Corporate number</string>
+    <string name="city">City</string>
+    <string name="non_authorizer_details">Non Authorizer\'s details</string>
+    <string name="name">Name</string>
+    <string name="title">Title</string>
+    <string name="role">Role</string>
+    <string name="modeOfIdentification">Mode of ID</string>
+    <string name="id_number">Id number</string>
+    <string name="placeOfIssuance">Place of Issuance</string>
+    <string name="passport">Passport</string>
+    <string name="id_expiry_date">Id Expiry date</string>
+    <string name="id_issuance_date">Id issuance date</string>
+    <string name="address">Address</string>
+    <string name="choose_passport">Choose passport</string>
+    <string name="authorizerHeading">Approved Authorizer’s details</string>
+    <string name="authorizerSubHeading">(Please note that all authorizers must have a token)</string>
+    <string name="accountInformation">Account Information</string>
+    <string name="accountName">Account Name</string>
+    <string name="whoShouldView">Who should view the account balance</string>
+    <string name="tokenType">Token Type</string>
+    <string name="nqrForms">NQR Forms</string>
+    <string name="nqr1Heading">Personal/Business Information</string>
+    <string name="accountNumberForOfficialUseOnly">Account Number (for official use only)</string>
+    <string name="fullName">Full name</string>
+    <string name="bussinessAddress">Business address</string>
+    <string name="stickersType">Stickers type</string>
+    <string name="nqrHeading2">Sub-Merchants (Optional)</string>
+    <string name="fullNameSurnameFirst">Full name (Surname first)</string>
+    <string name="fullNameOfSubMerchant2">Full name (Sub-merchant2, Surname first)</string>
+    <string name="submerchant2_phoneNumber">Sub-merchant2, phone number</string>
+    <string name="submerchant2_email">Submerchant2 email</string>
+    <string name="signatureAndDate">Signature and Date</string>
+    <string name="merchant1">Merchant 1</string>
+    <string name="merchant2">Merchant 2</string>
+    <string name="keySwiftForm">KeySwift Application</string>
+    <string name="posApplication">POS Application Form</string>
+    <string name="merchantInformation">Merchant Information</string>
+    <string name="bussinessName">Business Name</string>
+    <string name="businessDescription">Business Description</string>
+    <string name="foreignCardAcceptanceRequest">Foreign Card Acceptance</string>
+    <string name="typeOfAccount">Type of Account</string>
+    <string name="directDetails">Director\'s Details</string>
+    <string name="otherName">Other name</string>
+    <string name="designation">Designation</string>
+    <string name="detailsOfPrimaryContact">Details of Primary Contact</string>
+    <string name="bankUseOnly">Bank Use Only</string>
+    <string name="cso">CSO</string>
+    <string name="sm">SM</string>
+    <string name="visaApplicationForm">Visa Application Form</string>
+    <string name="cardDetails">Card Details</string>
+    <string name="cardType">Card Type</string>
+    <string name="date">Date</string>
+    <string name="errorPleaseTryAgain">An error occured please try again</string>
+    <string name="sampleZeroMoney">0</string>
+    <string name="digitalMarketing">Digital Marketing</string>
+    <string name="noBvn">No BVN</string>
+    <string name="errorPleaseRefreshToTryAgain">Error occured, please refresh the page to try again</string>
+    <string name="timeoutPleaseRefreshToTryAgain">Timeout, please refresh to try again</string>
+    <string name="_100_percent">100%</string>
+    <string name="accountOfficerPhoneNumber">Phone number of Account officer</string>
+    <string name="phoneNumberOfAccountOfficer">Account officer\'s phone number</string>
+    <string name="checkIfTheCustomerIsOnOurPlatform">Check if an individual/Business is a keystone customer</string>
+    <string name="engageCustomer">Engage Customer</string>
+    <string name="cantBeEmpty">Field can\'t be empty</string>
+    <string name="pleaseInstallWhatsapp">You need to first install whatsapp</string>
+    <string name="alert">Alert!</string>
+    <string name="userEmailIsInvalid">You can not engage this user via email because user\'s email is not valid</string>
+    <string name="anErrorOccurred">An error occurred</string>
+    <string name="keystone">KeyStone</string>
+    <string name="activate">Activate</string>
+    <string name="view_details">View Details</string>
+    <string name="accountReactivatedSuccessfully">Account reactivated successfully</string>
+    <string name="errorReactivatingAccount">Error reactivating account</string>
 
     <string-array name="statuses">
         <item>Active</item>
         <item>Inactive</item>
         <item>Dormant</item>
+    </string-array>
+
+    <string-array name="pos_on_boarding_steps">
+        <item>A POS machine is the most advanced payment accepting machine.</item>
+        <item>It accepts all kinds of credit and debit card payments and issues receipts along with maintaining transactions. </item>
+        <item>The POS machines have evolved with time and now are more user friendly and advanced.</item>
+        <item>A point-of-sale (POS) terminal is a hardware system for processing card payments at retail locations.</item>
+    </string-array>
+
+    <string-array name="internet_banking_on_boarding_steps">
+        <item>Go to Keystone bank website (www.keystonebankng.com) or Open Keystone Bank Mobile app</item>
+        <item>Input account details</item>
+        <item>OTP is sent to your email/phone number</item>
+        <item>Create username/ password, TPIN /OTP</item>
+        <item>Enrolment successful</item>
+        <item>Select three security questions</item>
+        <item>Login</item>
+    </string-array>
+
+    <string-array name="m_token_on_boarding_steps">
+        <item>Customer downloads and Installs the Keystone Bank mToken from Playstore or Apple store (for Android and IOS users)</item>
+        <item>Launch the App and click on ‘Get Codes’</item>
+        <item>Input “Username” for Mobile app/Internet Banking</item>
+        <item>Click on “Initiate Request for mToken”.</item>
+        <item>Call Contact Centre on 070020003000 or visit the nearest Keystone Bank Branch to complete activation process</item>
+        <item>Activation details (User ID &amp; Activation Code) are sent to registered phone number</item>
+        <item>Launch the mToken App</item>
+        <item>Enter the Activation details received</item>
+        <item>Create a 6-Digit PIN</item>
+        <item>Reconfirm the 6-Digit PIN</item>
+        <item>A National Flag is displayed as a hint for customer</item>
+        <item>Click OK and OTP is generated</item>
+    </string-array>
+
+    <string-array name="ussd_on_boarding_steps">
+        <item>Dial USSD string *7111# from his mobile line registered with the bank</item>
+        <item>Input NUBAN account number</item>
+        <item>Customer is prompted to create pin if account number match</item>
+        <item>Profile is automatically created having satisfied 1 to 3 above</item>
+        <item>Customer then proceeds to dial the strings for other functionalities and perform any financial transaction whilst using his PIN to authenticate same.</item>
+    </string-array>
+
+    <string-array name="key_mobile_on_boarding_steps">
+        <item>There are two approaches to registering on the mobile app:</item>
+        <item><b>1. With Account Number</b></item>
+        <item>&#160; &#160;Download and install the new Keystone Mobile App from the Play store or App store. </item>
+        <item>&#160; &#160;Click on Register on the login page, input Account number</item>
+        <item>&#160; &#160;An OTP will be sent instantly via mail and sms, input OTP</item>
+        <item>&#160; &#160;Create and Input Username, Password and Transaction pin</item>
+        <item>&#160; &#160;Log in to the app with the username and password you have created and finalize transactions with the transaction pin.</item>
+        <item>&#160; &#160;Default one off transaction limit of N1,000</item>
+        <item>&#160; &#160;Proceed to ‘Self Service’ module to increase your daily transaction limit<br /></item>
+        <item><b>2. With Account Number and Debit Card</b></item>
+        <item>&#160; &#160;Download and install the new Keystone Mobile App from the Play store or App store.</item>
+        <item>&#160; &#160;Click on Register on the login page, input Account number and last 6 digits on the debit card</item>
+        <item>&#160; &#160;An OTP will be sent instantly via mail and sms, input OTP</item>
+        <item>&#160; &#160;Create and Input Username, Password and Transaction pin</item>
+        <item>&#160; &#160;Log in to the app with the username and password you have created and finalize transactions with the transaction pin</item>
+        <item>&#160; &#160;Default one off transaction limit of N50,000</item>
+        <item>&#160; &#160;Proceed to ‘Self Service’ module to increase your daily transaction limit</item>
     </string-array>
 
     <string-array name="transactionStatus">
@@ -310,9 +539,9 @@
     </string-array>
 
     <string-array name="new_statuses">
+        <item>ALL</item>
         <item>ACTIVE</item>
         <item>INACTIVE</item>
-        <item>ALL</item>
     </string-array>
 
     <string-array name="hardCoreInfoHeadings">
@@ -329,9 +558,20 @@
         <item>Dormant Accounts</item>
     </string-array>
 
+    <string-array name="posViewPagerArray">
+        <item>Existing Customer</item>
+        <item>Target Customer</item>
+    </string-array>
+
     <string-array name="cameraOrGalleryStringArray">
         <item>Camera</item>
         <item>Gallery</item>
+    </string-array>
+
+    <string-array name="cameraOrGalleryOrDrawStringArray">
+        <item>Camera</item>
+        <item>Gallery</item>
+        <item>Draw Signature</item>
     </string-array>
 
     <string-array name="fileSelector">

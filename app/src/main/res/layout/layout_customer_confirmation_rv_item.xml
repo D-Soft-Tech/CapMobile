@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.keystone.capmobile.data.model.DaoChannelObject" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dimen_3dp"
+        android:background="@drawable/table_bg_2"
+        android:paddingVertical="@dimen/dimen_10dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.86" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_5dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_7dp"
+            android:fontFamily="@font/poppins"
+            android:maxLines="4"
+            android:text="@{data.number}"
+            android:textColor="@color/lekanColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/gl1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="0122450102" />
+
+        <TextView
+            android:id="@+id/mobileSelection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{data.name}"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/active"
+            app:layout_constraintEnd_toStartOf="@+id/gl5"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/gl1"
+            app:layout_constraintTop_toTopOf="@+id/active"
+            tools:text="OLADIMEJI OLAOSEBIKAN" />
+
+        <View
+            android:id="@+id/active"
+            loadBackForActiveStatus="@{data.status}"
+            android:layout_width="@dimen/dimen_10dp"
+            android:layout_height="@dimen/dimen_10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView27"
+            app:layout_constraintEnd_toStartOf="@+id/menuItem"
+            app:layout_constraintHorizontal_bias="0.82"
+            app:layout_constraintStart_toStartOf="@+id/gl5"
+            app:layout_constraintTop_toTopOf="@+id/textView27"
+            tools:background="@drawable/round_view_bg_selected" />
+
+        <ImageView
+            android:id="@+id/menuItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/active"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/active"
+            app:layout_constraintTop_toTopOf="@+id/active"
+            app:srcCompat="@drawable/ic_more_icon"
+            android:contentDescription="@string/menu_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

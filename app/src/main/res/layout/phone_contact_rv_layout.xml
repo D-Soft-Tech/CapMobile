@@ -6,7 +6,7 @@
     <data>
         <variable
             name="data"
-            type="com.example.capmobile.data.model.PhoneContact" />
+            type="com.keystone.capmobile.data.model.PhoneContact" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

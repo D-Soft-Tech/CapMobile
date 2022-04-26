@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/inputBvn"
+        android:title="" />
+
+    <item
+        android:id="@+id/customerBioDetails"
+        android:title="" />
+
+    <item
+        android:id="@+id/customerAddress"
+        android:title="" />
+
+    <item
+        android:id="@+id/uploadCustomerDocuments"
+        android:title="" />
+
+    <item
+        android:id="@+id/step5"
+        android:title="" />
+
+    <item
+        android:id="@+id/step6"
+        android:title="" />
+
+</menu>

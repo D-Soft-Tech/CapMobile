@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:animateLayoutChanges="true"
+    tools:context=".ui.view.dialogFragments.BottomSheetCreateMessageDialog">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomSheetCreateDialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/edited_top_bar_bg"
+            app:layout_constraintBottom_toTopOf="@+id/pageGuideLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:id="@+id/pageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/createMessage"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/dismissImageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_30dp"
+                android:src="@drawable/ic_cancel"
+                android:contentDescription="@string/dismiss"
+                android:layout_marginBottom="@dimen/dimen_20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/pageTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/pageTitle"
+                app:tint="@color/white" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/pageGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/levelsTIL"
+            style="@style/lekanTilStyle"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pageGuideLine">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/messageSubject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enterSubject" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/textInputLayoutOptionalMessage"
+            android:layout_width="0dp"
+            android:layout_height="450dp"
+            android:background="@drawable/lekan_et_bg2"
+            android:padding="@dimen/dimen_5dp"
+            app:layout_constraintBottom_toTopOf="@+id/hr2"
+            app:layout_constraintEnd_toEndOf="@+id/levelsTIL"
+            app:layout_constraintStart_toStartOf="@+id/levelsTIL"
+            app:layout_constraintTop_toTopOf="@+id/hr1">
+
+            <EditText
+                android:id="@+id/textArea_information"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:overScrollMode="always"
+                android:padding="@dimen/dimen_10dp"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:scrollHorizontally="false"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="Autofill,RtlHardcoded,SpeakableTextPresentCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <android.widget.Button
+            android:id="@+id/engageBtn"
+            style="@style/reuseableFairPayBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/hr3"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayoutOptionalMessage"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayoutOptionalMessage"
+            app:layout_constraintTop_toBottomOf="@+id/hr2"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hr1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.23" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hr2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.87" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hr3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.97" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

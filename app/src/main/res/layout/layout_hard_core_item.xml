@@ -7,7 +7,7 @@
 
         <variable
             name="data"
-            type="com.example.capmobile.data.model.HardCoreDataObjects" />
+            type="com.keystone.capmobile.data.model.HardCoreDataObjects" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -87,7 +87,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
             android:textColor="@color/color_70_a_black"
-            android:text="@{`N ` + String.valueOf(data.balance)}"
+            android:text="@{`N ` + String.valueOf(data.getCurrencyFormattedBalance())}"
             android:layout_marginHorizontal="@dimen/dimen_10dp"
             android:textAlignment="viewEnd"
             app:layout_constraintBottom_toBottomOf="@+id/accountName"

@@ -6,376 +6,764 @@
 
     <data>
 
+        <variable
+            name="accSummary"
+            type="com.keystone.capmobile.data.model.AccountSummary" />
+        <import type="com.keystone.capmobile.util.AppConstants" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
         android:layout_width="match_parent"
-        android:background="@color/white"
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout2"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="@drawable/edited_top_bar_bg"
-            app:layout_constraintBottom_toTopOf="@+id/pageGuideLine"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
 
-            <ImageView
-                android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimen_20dp"
-                android:contentDescription="@string/back_arrow"
-                android:src="@drawable/ic_back_icon"
-                app:layout_constraintBottom_toBottomOf="@+id/pageTitle"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/edited_top_bar_bg"
+                app:layout_constraintBottom_toTopOf="@+id/pageGuideLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/pageTitle" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0">
 
-            <TextView
-                android:id="@+id/backText"
+                <ImageView
+                    android:id="@+id/imageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_20dp"
+                    android:contentDescription="@string/back_arrow"
+                    android:src="@drawable/ic_back_icon"
+                    app:layout_constraintBottom_toBottomOf="@+id/pageTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/pageTitle" />
+
+                <TextView
+                    android:id="@+id/backText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/back"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+                    app:layout_constraintStart_toEndOf="@+id/imageButton"
+                    app:layout_constraintTop_toTopOf="@+id/imageButton" />
+
+                <TextView
+                    android:id="@+id/pageTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/account_summary"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.4"
+                    app:layout_constraintStart_toEndOf="@+id/backText"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/pageGuideLine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimen_10dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.15" />
+
+            <!--        <com.google.android.material.textfield.TextInputLayout-->
+            <!--            android:id="@+id/accountTypeTIL"-->
+            <!--            style="@style/lekanDropDownMenuStyle"-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginHorizontal="@dimen/dimen_15dp"-->
+            <!--            android:layout_marginTop="@dimen/dimen_20dp"-->
+            <!--            android:gravity="center_vertical"-->
+            <!--            app:layout_constraintEnd_toEndOf="parent"-->
+            <!--            app:layout_constraintStart_toStartOf="parent"-->
+            <!--            app:layout_constraintTop_toTopOf="@+id/pageGuideLine">-->
+
+            <!--            <AutoCompleteTextView-->
+            <!--                android:id="@+id/accountTypeTIET"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:drawablePadding="@dimen/dimen_20dp"-->
+            <!--                android:ellipsize="end"-->
+            <!--                android:hint="@string/selectAccount"-->
+            <!--                android:inputType="none"-->
+            <!--                android:maxLines="1"-->
+            <!--                android:singleLine="true"-->
+            <!--                tools:ignore="LabelFor" />-->
+            <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+            <!-- SUMMARY START -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_15dp"
+                android:background="@drawable/hard_core_card_bg"
+                app:cardCornerRadius="@dimen/dimen_8dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView30"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pageGuideLine">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/hard_core_card_bg"
+                    android:paddingBottom="@dimen/dimen_15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimen_25dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/spinner_bg_with_transparent_border"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="@string/total_accounts"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.49"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="RtlHardcoded" />
+
+                    <TextView
+                        android:id="@+id/totalAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dimen_25dp"
+                        android:layout_marginVertical="@dimen/dimen_10dp"
+                        android:background="@drawable/spinner_bg_with_transparent_border"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center"
+                        android:text="@{String.valueOf(accSummary.details.dashboard.totalAccounts)}"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.49"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/heading"
+                        tools:ignore="RtlHardcoded" />
+
+                    <View
+                        android:id="@+id/view7"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_1dp"
+                        android:layout_marginHorizontal="@dimen/dimen_20dp"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:background="@drawable/view_2_bg"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/totalAmount" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/figures"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dimen_15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/view7"
+                        app:layout_constraintStart_toStartOf="@+id/view7"
+                        app:layout_constraintTop_toBottomOf="@+id/view7">
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.5" />
+
+                        <View
+                            android:id="@+id/view10"
+                            android:layout_width="1dp"
+                            android:layout_height="0dp"
+                            android:background="@drawable/view_2_bg"
+                            app:layout_constraintBottom_toBottomOf="@+id/opening"
+                            app:layout_constraintEnd_toEndOf="@+id/guideline3"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/guideline3"
+                            app:layout_constraintTop_toTopOf="@+id/opening" />
+
+                        <View
+                            android:id="@+id/view11"
+                            android:layout_width="1dp"
+                            android:layout_height="0dp"
+                            android:background="@drawable/view_2_bg"
+                            app:layout_constraintBottom_toBottomOf="@+id/closing"
+                            app:layout_constraintEnd_toEndOf="@+id/guideline3"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/guideline3"
+                            app:layout_constraintTop_toTopOf="@+id/closing" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/opening"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="@+id/figures"
+                            app:layout_constraintStart_toStartOf="@+id/figures"
+                            app:layout_constraintTop_toTopOf="@+id/figures">
+
+                            <androidx.constraintlayout.widget.Guideline
+                                android:id="@+id/guideline4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintGuide_percent="0.5" />
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <TextView
+                                    android:id="@+id/active"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="@string/active"
+                                    android:textColor="@color/white"
+                                    app:drawableEndCompat="@drawable/view_2_bg" />
+
+                                <TextView
+                                    android:id="@+id/openingBalance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:gravity="end"
+                                    android:text="@{String.valueOf(accSummary.details.summary[0].PctActive) + `%`}"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                                app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                                <TextView
+                                    android:id="@+id/activeTotal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="@{String.valueOf(accSummary.details.dashboard.totalActive)}"
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/inactive"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/guideline4"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <TextView
+                                    android:id="@+id/inactiveHeader"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.3"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="@string/inactive"
+                                    android:textColor="@color/white"
+                                    app:drawableEndCompat="@drawable/view_2_bg" />
+
+                                <TextView
+                                    android:id="@+id/inactivePercent"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_weight="0.7"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:gravity="end"
+                                    android:text="@{String.valueOf(accSummary.details.getPercentageInactiveAcc()) + `%`}"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp"
+                                app:layout_constraintEnd_toEndOf="@+id/inactive"
+                                app:layout_constraintStart_toStartOf="@+id/inactive"
+                                app:layout_constraintTop_toBottomOf="@+id/inactive">
+
+                                <TextView
+                                    android:id="@+id/inactiveTotal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="@{String.valueOf(accSummary.details.dashboard.totalInactive)}"
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:id="@+id/view8"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_1dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:background="@drawable/view_2_bg"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/opening" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/closing"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_20dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3"
+                            app:layout_constraintEnd_toEndOf="@+id/opening"
+                            app:layout_constraintStart_toStartOf="@+id/opening"
+                            app:layout_constraintTop_toBottomOf="@+id/view8">
+
+                            <androidx.constraintlayout.widget.Guideline
+                                android:id="@+id/guideline5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintGuide_percent="0.5" />
+
+                            <LinearLayout
+                                android:id="@+id/linearLayoutDormAcc"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <TextView
+                                    android:id="@+id/dormAccLabel"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.3"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="@string/dormant"
+                                    android:textColor="@color/white"
+                                    app:drawableEndCompat="@drawable/view_2_bg" />
+
+                                <TextView
+                                    android:id="@+id/dormAcc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_weight="0.7"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:gravity="end"
+                                    android:text="@{String.valueOf(accSummary.details.dashboard.getPercentageDormant())+ `%`}"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearLayoutDormAccLabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toEndOf="@+id/linearLayoutDormAcc"
+                                app:layout_constraintStart_toStartOf="@+id/linearLayoutDormAcc"
+                                app:layout_constraintTop_toBottomOf="@+id/linearLayoutDormAcc">
+
+                                <TextView
+                                    android:id="@+id/dormAccTotal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="@{String.valueOf(accSummary.details.dashboard.totalDormant)}"
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/noBvn"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/guideline5"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <TextView
+                                    android:id="@+id/noBvnTitle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.3"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="@string/noBvn"
+                                    android:textColor="@color/white"
+                                    app:drawableEndCompat="@drawable/view_2_bg" />
+
+                                <TextView
+                                    android:id="@+id/noBvnPercent"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_weight="0.7"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:gravity="end"
+                                    android:text=""
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp"
+                                app:layout_constraintEnd_toEndOf="@+id/noBvn"
+                                app:layout_constraintStart_toStartOf="@+id/noBvn"
+                                app:layout_constraintTop_toBottomOf="@+id/noBvn">
+
+                                <TextView
+                                    android:id="@+id/noBvnTotal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:text=""
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- SUMMARY END -->
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_medium"
-                android:text="@string/back"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="@+id/imageButton"
-                app:layout_constraintStart_toEndOf="@+id/imageButton"
-                app:layout_constraintTop_toTopOf="@+id/imageButton" />
+                android:text="@string/account_breakdown"
+                android:textColor="@color/lekanColorDeepBlueVariation"
+                app:layout_constraintBottom_toTopOf="@+id/guideline26"
+                app:layout_constraintStart_toStartOf="@+id/cardView7" />
 
-            <TextView
-                android:id="@+id/pageTitle"
+            <com.github.mikephil.charting.charts.HorizontalBarChart
+                android:id="@+id/barChart"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginVertical="@dimen/dimen_10dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_5dp"
+                android:elevation="@dimen/dimen_10dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline22"
+                app:layout_constraintEnd_toStartOf="@+id/chartValue"
+                app:layout_constraintStart_toStartOf="@+id/textView30"
+                app:layout_constraintTop_toBottomOf="@+id/guideline26"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <LinearLayout
+                android:id="@+id/chartValue"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="1dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingVertical="@dimen/dimen_5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/barChart"
+                app:layout_constraintEnd_toEndOf="@+id/cardView7"
+                app:layout_constraintTop_toTopOf="@+id/barChart">
+
+                <TextView
+                    android:id="@+id/value1"
+                    style="@style/hr_bar_chart_value_txt_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{String.valueOf(accSummary.details.getPercentageTotalAcc()) + `%`}" />
+
+                <TextView
+                    android:id="@+id/value2"
+                    style="@style/hr_bar_chart_value_txt_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{String.valueOf(accSummary.details.summary[0].PctCard) + `%`}" />
+
+                <TextView
+                    android:id="@+id/value3"
+                    style="@style/hr_bar_chart_value_txt_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{String.valueOf(accSummary.details.summary[0].PctMobile) + `%`}" />
+
+                <TextView
+                    android:id="@+id/value4"
+                    style="@style/hr_bar_chart_value_txt_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{String.valueOf(accSummary.details.summary[0].Pctussd) + `%`}" />
+
+                <TextView
+                    android:id="@+id/value5"
+                    style="@style/hr_bar_chart_value_txt_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{String.valueOf(accSummary.details.summary[0].PctIbank) + `%`}" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline26"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="@string/account_summary"
-                android:textColor="@color/white"
-                android:textSize="@dimen/dimen_18sp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.6" />
+
+            <!--        <TextView-->
+            <!--            android:id="@+id/textView47"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:text="@string/breakDown"-->
+            <!--            android:textColor="@color/lekanColorDeepBlueVariation"-->
+            <!--            android:fontFamily="@font/poppins_medium"-->
+            <!--            android:layout_marginTop="@dimen/dimen_20dp"-->
+            <!--            app:layout_constraintStart_toStartOf="@+id/barChart"-->
+            <!--            app:layout_constraintTop_toTopOf="@+id/guideline26" />-->
+
+            <!--        <TextView-->
+            <!--            android:id="@+id/textView48"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:text="@string/percent_sign"-->
+            <!--            android:layout_marginEnd="@dimen/dimen_5dp"-->
+            <!--            android:textColor="@color/lekanColorDeepBlueVariation"-->
+            <!--            android:fontFamily="@font/poppins_medium"-->
+            <!--            app:layout_constraintEnd_toEndOf="@+id/chartValue"-->
+            <!--            app:layout_constraintTop_toTopOf="@+id/textView47" />-->
+
+            <!--        <LinearLayout-->
+            <!--            android:id="@+id/cardsLayout"-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:weightSum="6"-->
+            <!--            android:layout_marginTop="@dimen/dimen_15dp"-->
+            <!--            android:orientation="horizontal"-->
+            <!--            app:layout_constraintEnd_toEndOf="@+id/textView48"-->
+            <!--            app:layout_constraintStart_toStartOf="@+id/textView47"-->
+            <!--            app:layout_constraintTop_toBottomOf="@+id/textView48">-->
+
+            <!--            <View-->
+            <!--                android:id="@+id/view6"-->
+            <!--                android:layout_width="@dimen/dimen_10dp"-->
+            <!--                android:layout_weight="0.3"-->
+            <!--                android:layout_height="@dimen/dimen_20dp"-->
+            <!--                android:background="@color/lekanColor90Alpha" />-->
+
+            <!--            <TextView-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_weight="1.2"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginHorizontal="@dimen/dimen_10dp"-->
+            <!--                android:text="@string/cards"-->
+            <!--                style="@style/hr_bar_chart_value_txt_style"/>-->
+
+            <!--            <View-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_weight="3.7"-->
+            <!--                android:layout_height="@dimen/dimen_20dp"-->
+            <!--                android:background="@drawable/dash_line" />-->
+
+            <!--            <TextView-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="@string/_84"-->
+            <!--                android:layout_weight="0.8"-->
+            <!--                android:paddingHorizontal="0dp"-->
+            <!--                android:layout_marginStart="@dimen/dimen_10dp"-->
+            <!--                android:gravity="end"-->
+            <!--                style="@style/hr_bar_chart_value_txt_style"/>-->
+            <!--        </LinearLayout>-->
+
+            <!--        <LinearLayout-->
+            <!--            android:id="@+id/mobileLayout"-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_marginTop="@dimen/dimen_15dp"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:orientation="horizontal"-->
+            <!--            android:weightSum="6"-->
+            <!--            app:layout_constraintEnd_toEndOf="@+id/cardsLayout"-->
+            <!--            app:layout_constraintStart_toStartOf="@+id/cardsLayout"-->
+            <!--            app:layout_constraintTop_toBottomOf="@+id/cardsLayout">-->
+
+            <!--            <View-->
+            <!--                android:layout_width="@dimen/dimen_10dp"-->
+            <!--                android:layout_height="@dimen/dimen_20dp"-->
+            <!--                android:layout_weight="0.3"-->
+            <!--                android:background="@color/lekanColor75Alpha" />-->
+
+            <!--            <TextView-->
+            <!--                style="@style/hr_bar_chart_value_txt_style"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginHorizontal="@dimen/dimen_10dp"-->
+            <!--                android:layout_weight="1.2"-->
+            <!--                android:text="@string/mobile" />-->
+
+            <!--            <View-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="@dimen/dimen_20dp"-->
+            <!--                android:layout_weight="3.7"-->
+            <!--                android:background="@drawable/dash_line" />-->
+
+            <!--            <TextView-->
+            <!--                style="@style/hr_bar_chart_value_txt_style"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="@dimen/dimen_10dp"-->
+            <!--                android:layout_weight="0.8"-->
+            <!--                android:gravity="end"-->
+            <!--                android:paddingHorizontal="0dp"-->
+            <!--                android:text="@string/_75" />-->
+            <!--        </LinearLayout>-->
+
+            <!--        <LinearLayout-->
+            <!--            android:id="@+id/ussdLayout"-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginTop="@dimen/dimen_15dp"-->
+            <!--            android:orientation="horizontal"-->
+            <!--            android:weightSum="6"-->
+            <!--            app:layout_constraintEnd_toEndOf="@+id/mobileLayout"-->
+            <!--            app:layout_constraintStart_toStartOf="@+id/mobileLayout"-->
+            <!--            app:layout_constraintTop_toBottomOf="@+id/mobileLayout">-->
+
+            <!--            <View-->
+            <!--                android:layout_width="@dimen/dimen_10dp"-->
+            <!--                android:layout_height="@dimen/dimen_20dp"-->
+            <!--                android:layout_weight="0.3"-->
+            <!--                android:background="@color/lekanColor60Alpha" />-->
+
+            <!--            <TextView-->
+            <!--                style="@style/hr_bar_chart_value_txt_style"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginHorizontal="@dimen/dimen_10dp"-->
+            <!--                android:layout_weight="1.2"-->
+            <!--                android:text="@string/ussd" />-->
+
+            <!--            <View-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="@dimen/dimen_20dp"-->
+            <!--                android:layout_weight="3.7"-->
+            <!--                android:background="@drawable/dash_line" />-->
+
+            <!--            <TextView-->
+            <!--                style="@style/hr_bar_chart_value_txt_style"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="@dimen/dimen_10dp"-->
+            <!--                android:layout_weight="0.8"-->
+            <!--                android:gravity="end"-->
+            <!--                android:paddingHorizontal="0dp"-->
+            <!--                android:text="@string/_60" />-->
+            <!--        </LinearLayout>-->
+
+            <!--        <LinearLayout-->
+            <!--            android:id="@+id/internetBankingLayout"-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginTop="@dimen/dimen_15dp"-->
+            <!--            android:orientation="horizontal"-->
+            <!--            android:weightSum="6"-->
+            <!--            app:layout_constraintBottom_toTopOf="@+id/guideline22"-->
+            <!--            app:layout_constraintEnd_toEndOf="@+id/ussdLayout"-->
+            <!--            app:layout_constraintStart_toStartOf="@+id/ussdLayout"-->
+            <!--            app:layout_constraintTop_toBottomOf="@+id/ussdLayout"-->
+            <!--            app:layout_constraintVertical_bias="0.0">-->
+
+            <!--            <View-->
+            <!--                android:layout_width="@dimen/dimen_10dp"-->
+            <!--                android:layout_height="@dimen/dimen_20dp"-->
+            <!--                android:layout_weight="0.3"-->
+            <!--                android:background="@color/lekanColor40Alpha" />-->
+
+            <!--            <TextView-->
+            <!--                style="@style/hr_bar_chart_value_txt_style"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginHorizontal="@dimen/dimen_10dp"-->
+            <!--                android:layout_weight="1.2"-->
+            <!--                android:text="@string/cards" />-->
+
+            <!--            <View-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="@dimen/dimen_20dp"-->
+            <!--                android:layout_weight="3.7"-->
+            <!--                android:background="@drawable/dash_line" />-->
+
+            <!--            <TextView-->
+            <!--                style="@style/hr_bar_chart_value_txt_style"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="@dimen/dimen_10dp"-->
+            <!--                android:layout_weight="0.8"-->
+            <!--                android:gravity="end"-->
+            <!--                android:paddingHorizontal="0dp"-->
+            <!--                android:text="@string/_40" />-->
+            <!--        </LinearLayout>-->
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <ProgressBar
+                android:id="@+id/callingAccountSummaryPB"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="@dimen/dimen_40dp"
+                android:layout_height="@dimen/dimen_40dp"
+                android:layout_marginBottom="@dimen/dimen_20dp"
+                android:indeterminateDrawable="@drawable/please_wait_progress"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.4"
-                app:layout_constraintStart_toEndOf="@+id/backText"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/pageGuideLine"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.15" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/accountTypeTIL"
-            style="@style/lekanDropDownMenuStyle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/dimen_15dp"
-            android:layout_marginTop="@dimen/dimen_20dp"
-            android:gravity="center_vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/pageGuideLine">
-
-            <AutoCompleteTextView
-                android:id="@+id/accountTypeTIET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawablePadding="@dimen/dimen_20dp"
-                android:ellipsize="end"
-                android:hint="@string/selectAccount"
-                android:inputType="none"
-                android:maxLines="1"
-                android:singleLine="true"
-                tools:ignore="LabelFor" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:id="@+id/textView30"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_30dp"
-            android:textColor="@color/lekanColorDeepBlueVariation"
-            android:fontFamily="@font/poppins_medium"
-            android:text="@string/account_breakdown"
-            app:layout_constraintStart_toStartOf="@+id/accountTypeTIL"
-            app:layout_constraintTop_toBottomOf="@+id/accountTypeTIL" />
-
-        <com.github.mikephil.charting.charts.HorizontalBarChart
-            android:id="@+id/barChart"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginVertical="@dimen/dimen_10dp"
-            android:layout_marginTop="@dimen/dimen_10dp"
-            android:layout_marginEnd="@dimen/dimen_5dp"
-            android:elevation="@dimen/dimen_10dp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline26"
-            app:layout_constraintEnd_toStartOf="@+id/chartValue"
-            app:layout_constraintStart_toStartOf="@+id/textView30"
-            app:layout_constraintTop_toBottomOf="@+id/textView30"
-            app:layout_constraintVertical_bias="0.0" >
-        </com.github.mikephil.charting.charts.HorizontalBarChart>
-
-        <LinearLayout
-            android:id="@+id/chartValue"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:paddingVertical="@dimen/dimen_5dp"
-            android:gravity="center_vertical"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="@+id/barChart"
-            app:layout_constraintEnd_toEndOf="@+id/accountTypeTIL"
-            app:layout_constraintTop_toTopOf="@+id/barChart">
-
-            <TextView
-                android:id="@+id/value1"
-                style="@style/hr_bar_chart_value_txt_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sample_value_for_chart" />
-
-            <TextView
-                android:id="@+id/value2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="354098"
-                style="@style/hr_bar_chart_value_txt_style" />
-
-            <TextView
-                android:id="@+id/value3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="234650"
-                style="@style/hr_bar_chart_value_txt_style" />
-
-            <TextView
-                android:id="@+id/value4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="231079"
-                style="@style/hr_bar_chart_value_txt_style" />
-
-            <TextView
-                android:id="@+id/value5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="150789"
-                style="@style/hr_bar_chart_value_txt_style" />
-        </LinearLayout>
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline26"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.65" />
-
-        <TextView
-            android:id="@+id/textView47"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/breakDown"
-            android:textColor="@color/lekanColorDeepBlueVariation"
-            android:fontFamily="@font/poppins_medium"
-            android:layout_marginTop="@dimen/dimen_20dp"
-            app:layout_constraintStart_toStartOf="@+id/barChart"
-            app:layout_constraintTop_toTopOf="@+id/guideline26" />
-
-        <TextView
-            android:id="@+id/textView48"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/percent_sign"
-            android:layout_marginEnd="@dimen/dimen_5dp"
-            android:textColor="@color/lekanColorDeepBlueVariation"
-            android:fontFamily="@font/poppins_medium"
-            app:layout_constraintEnd_toEndOf="@+id/chartValue"
-            app:layout_constraintTop_toTopOf="@+id/textView47" />
-
-        <LinearLayout
-            android:id="@+id/cardsLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:weightSum="6"
-            android:layout_marginTop="@dimen/dimen_15dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/textView48"
-            app:layout_constraintStart_toStartOf="@+id/textView47"
-            app:layout_constraintTop_toBottomOf="@+id/textView48">
-
-            <View
-                android:id="@+id/view6"
-                android:layout_width="@dimen/dimen_10dp"
-                android:layout_weight="0.3"
-                android:layout_height="@dimen/dimen_20dp"
-                android:background="@color/lekanColor90Alpha" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1.2"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/dimen_10dp"
-                android:text="@string/cards"
-                style="@style/hr_bar_chart_value_txt_style"/>
-
-            <View
-                android:layout_width="0dp"
-                android:layout_weight="3.7"
-                android:layout_height="@dimen/dimen_20dp"
-                android:background="@drawable/dash_line" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/_84"
-                android:layout_weight="0.8"
-                android:paddingHorizontal="0dp"
-                android:layout_marginStart="@dimen/dimen_10dp"
-                android:gravity="end"
-                style="@style/hr_bar_chart_value_txt_style"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/mobileLayout"
-            android:layout_width="0dp"
-            android:layout_marginTop="@dimen/dimen_15dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="6"
-            app:layout_constraintEnd_toEndOf="@+id/cardsLayout"
-            app:layout_constraintStart_toStartOf="@+id/cardsLayout"
-            app:layout_constraintTop_toBottomOf="@+id/cardsLayout">
-
-            <View
-                android:layout_width="@dimen/dimen_10dp"
-                android:layout_height="@dimen/dimen_20dp"
-                android:layout_weight="0.3"
-                android:background="@color/lekanColor75Alpha" />
-
-            <TextView
-                style="@style/hr_bar_chart_value_txt_style"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/dimen_10dp"
-                android:layout_weight="1.2"
-                android:text="@string/mobile" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dimen_20dp"
-                android:layout_weight="3.7"
-                android:background="@drawable/dash_line" />
-
-            <TextView
-                style="@style/hr_bar_chart_value_txt_style"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimen_10dp"
-                android:layout_weight="0.8"
-                android:gravity="end"
-                android:paddingHorizontal="0dp"
-                android:text="@string/_75" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ussdLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_15dp"
-            android:orientation="horizontal"
-            android:weightSum="6"
-            app:layout_constraintEnd_toEndOf="@+id/mobileLayout"
-            app:layout_constraintStart_toStartOf="@+id/mobileLayout"
-            app:layout_constraintTop_toBottomOf="@+id/mobileLayout">
-
-            <View
-                android:layout_width="@dimen/dimen_10dp"
-                android:layout_height="@dimen/dimen_20dp"
-                android:layout_weight="0.3"
-                android:background="@color/lekanColor60Alpha" />
-
-            <TextView
-                style="@style/hr_bar_chart_value_txt_style"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/dimen_10dp"
-                android:layout_weight="1.2"
-                android:text="@string/ussd" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dimen_20dp"
-                android:layout_weight="3.7"
-                android:background="@drawable/dash_line" />
-
-            <TextView
-                style="@style/hr_bar_chart_value_txt_style"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimen_10dp"
-                android:layout_weight="0.8"
-                android:gravity="end"
-                android:paddingHorizontal="0dp"
-                android:text="@string/_60" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/internetBankingLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_15dp"
-            android:orientation="horizontal"
-            android:weightSum="6"
-            app:layout_constraintBottom_toTopOf="@+id/guideline22"
-            app:layout_constraintEnd_toEndOf="@+id/ussdLayout"
-            app:layout_constraintStart_toStartOf="@+id/ussdLayout"
-            app:layout_constraintTop_toBottomOf="@+id/ussdLayout"
-            app:layout_constraintVertical_bias="0.0">
-
-            <View
-                android:layout_width="@dimen/dimen_10dp"
-                android:layout_height="@dimen/dimen_20dp"
-                android:layout_weight="0.3"
-                android:background="@color/lekanColor40Alpha" />
-
-            <TextView
-                style="@style/hr_bar_chart_value_txt_style"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/dimen_10dp"
-                android:layout_weight="1.2"
-                android:text="@string/cards" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dimen_20dp"
-                android:layout_weight="3.7"
-                android:background="@drawable/dash_line" />
-
-            <TextView
-                style="@style/hr_bar_chart_value_txt_style"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimen_10dp"
-                android:layout_weight="0.8"
-                android:gravity="end"
-                android:paddingHorizontal="0dp"
-                android:text="@string/_40" />
-        </LinearLayout>
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline22"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.95" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </layout>

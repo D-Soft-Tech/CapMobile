@@ -16,9 +16,9 @@
         <Spinner
             android:id="@+id/spinnerView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/dimen_30dp"
             android:layout_marginEnd="@dimen/dimen_20dp"
-            android:paddingHorizontal="@dimen/dimen_5dp"
+            android:paddingEnd="@dimen/dimen_10dp"
             android:paddingVertical="@dimen/dimen_2dp"
             android:elevation="@dimen/dimen_1dp"
             android:spinnerMode="dropdown"
@@ -26,7 +26,7 @@
             android:drawableEnd="@drawable/ic_drop_down"
             android:dropDownSelector="@drawable/ic_drop_down"
             android:layout_marginBottom="@dimen/dimen_5dp"
-            android:background="@drawable/new_spinner"
+            android:background="@drawable/drawable_spinner_bg_that_shows_drop_down_arror"
             android:entries="@array/new_statuses"
             app:layout_constraintBottom_toTopOf="@+id/constraintLayout5"
             app:layout_constraintEnd_toEndOf="parent"
@@ -158,13 +158,14 @@
                 android:id="@+id/backText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimen_10dp"
+                android:paddingStart="@dimen/dimen_10dp"
                 android:fontFamily="@font/poppins_medium"
                 android:text="@string/back"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="@+id/backArrow"
                 app:layout_constraintStart_toEndOf="@+id/backArrow"
-                app:layout_constraintTop_toTopOf="@+id/backArrow" />
+                app:layout_constraintTop_toTopOf="@+id/backArrow"
+                tools:ignore="RtlSymmetry" />
 
             <TextView
                 android:id="@+id/pageTitle"

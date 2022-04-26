@@ -90,12 +90,24 @@
                 android:layout_weight="1"
                 android:drawablePadding="@dimen/dimen_20dp"
                 android:ellipsize="end"
-                android:hint="@string/selectAccount"
+                android:hint="@string/selectLevel"
                 android:inputType="none"
                 android:maxLines="1"
                 android:singleLine="true"
                 tools:ignore="LabelFor" />
         </com.google.android.material.textfield.TextInputLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBarForGetLevels"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="@dimen/dimen_40dp"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:visibility="invisible"
+            android:indeterminateDrawable="@drawable/please_wait_progress"
+            app:layout_constraintBottom_toBottomOf="@+id/levelsTIL"
+            app:layout_constraintEnd_toEndOf="@+id/levelsTIL"
+            app:layout_constraintTop_toTopOf="@+id/levelsTIL" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/statusTIL"
@@ -116,51 +128,145 @@
                 android:layout_weight="1"
                 android:drawablePadding="@dimen/dimen_20dp"
                 android:ellipsize="end"
-                android:hint="@string/selectLevel"
+                android:hint="@string/selectTransactionStatus"
                 android:inputType="none"
                 android:maxLines="1"
                 android:singleLine="true"
                 tools:ignore="LabelFor" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:id="@+id/messageSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_20dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:fontFamily="@font/poppins_medium"
+            android:maxLines="2"
+            android:textColor="@color/lekanColor"
+            app:layout_constraintEnd_toStartOf="@+id/createNewMessage"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayoutOptionalMessage"
+            app:layout_constraintTop_toBottomOf="@+id/statusTIL" />
+
+        <ImageView
+            android:id="@+id/createNewMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_30dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:contentDescription="@string/editIcon"
+            android:src="@android:drawable/ic_menu_edit"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayoutOptionalMessage"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayoutOptionalMessage"
+            app:layout_constraintTop_toTopOf="@+id/messageSubject" />
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/textInputLayoutOptionalMessage"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginVertical="@dimen/dimen_30dp"
-            android:layout_marginTop="391dp"
+            android:layout_marginTop="@dimen/dimen_5dp"
             android:background="@drawable/lekan_et_bg2"
             android:padding="@dimen/dimen_5dp"
-            app:layout_constraintBottom_toTopOf="@+id/engageBtn"
-            app:layout_constraintEnd_toEndOf="@+id/levelsTIL"
-            app:layout_constraintStart_toStartOf="@+id/levelsTIL"
-            app:layout_constraintTop_toBottomOf="@+id/statusTIL">
+            app:layout_constraintBottom_toTopOf="@+id/guideline6"
+            app:layout_constraintEnd_toEndOf="@+id/statusTIL"
+            app:layout_constraintStart_toStartOf="@+id/statusTIL"
+            app:layout_constraintTop_toBottomOf="@+id/messageSubject">
 
-            <include
-                android:id="@+id/nestedEditor"
-                layout="@layout/rich_text_editor_layout"
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="@dimen/dimen_40dp"
+                android:layout_height="@dimen/dimen_40dp"
+                android:indeterminateDrawable="@drawable/please_wait_progress"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/textArea_information"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:overScrollMode="always"
+                android:padding="@dimen/dimen_10dp"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:scrollHorizontally="false"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                tools:ignore="Autofill,RtlHardcoded,SpeakableTextPresentCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <android.widget.Button
-            android:id="@+id/engageBtn"
-            style="@style/reuseableFairPayBtn"
-            android:layout_width="@dimen/dimen_170dp"
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/dimen_20dp"
-            android:text="@string/engage"
+            android:fontFamily="@font/poppins"
+            android:text="@string/send_via"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:textColor="@color/lekanColor50"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayoutOptionalMessage"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayoutOptionalMessage"
+            app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+        <android.widget.Button
+            android:id="@+id/engageViaKeystoneService"
+            style="@style/reuseableFairPayBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/keystone"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/dimen_20dp"
+            android:drawablePadding="@dimen/dimen_10dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toStartOf="@+id/keystoneService"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:ignore="RtlSymmetry"
+            tools:targetApi="m" />
+
+        <android.widget.Button
+            android:id="@+id/keystoneService"
+            style="@style/reuseableFairPayBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:drawablePadding="@dimen/dimen_10dp"
+            android:paddingHorizontal="@dimen/dimen_20dp"
+            android:drawableStart="@drawable/ic_email"
+            android:drawableTint="@color/white"
+            android:text="@string/email"
             android:textAlignment="center"
             android:textAllCaps="false"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/engageViaKeystoneService"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="RtlSymmetry" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/engageViaKeystoneService"
+            app:layout_constraintTop_toTopOf="@+id/engageViaKeystoneService"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="RtlSymmetry"
+            tools:targetApi="m" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

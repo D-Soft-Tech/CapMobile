@@ -1,0 +1,31 @@
+package com.keystone.capmobile.data.model
+
+data class Detail(
+    val AccountNo: String,
+    val Active_On_Cards: String,
+    val Active_On_Ibank: String,
+    val Active_On_Mobile: String,
+    val Active_On_USSD: String,
+    val BalanceLCY: String,
+    val Balance_Status: String,
+    val BranchCode: String,
+    val CURRENCY: String,
+    val Category: String,
+    val Email_add: String?,
+    val IsOnIbank: Int,
+    val IsonMobile: Int,
+    val IsonUSSD: Int,
+    val LastIbankTransactionDate: Any,
+    val LastMobileTransactionDate: String,
+    val LastUSSDTransactionDate: Any,
+    val Last_Transacted: String,
+    val Mobile_Limits: String,
+    val Name: String,
+    val Opening_Date: String,
+    val PRODUCT: String,
+    val Phone_Number: String,
+    val PostRestriction: String,
+    val STATUS: String,
+    val Summary: String,
+    val UnmaskedAccountNo: String
+)

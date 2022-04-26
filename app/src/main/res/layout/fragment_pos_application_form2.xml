@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.view.forms.pos.PosApplicationForm2">
+
+    <data>
+
+        <variable
+            name="bvnResponse"
+            type="com.keystone.capmobile.data.model.BvnValidationResponse" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/pageHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_15dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/directDetails"
+                android:textColor="@color/lekanColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteY="57dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout5"
+                style="@style/lekanTilStyle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                app:layout_constraintEnd_toEndOf="@+id/pageHeading"
+                app:layout_constraintStart_toStartOf="@+id/pageHeading"
+                app:layout_constraintTop_toBottomOf="@+id/pageHeading">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen_20dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/firstName"
+                    android:text="@{bvnResponse.bvnSearchResult.firstName}" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password"
+                style="@style/lekanTilStyle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayout5"
+                app:layout_constraintStart_toStartOf="@+id/textInputLayout5"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayout5">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/lastName"
+                    android:singleLine="true"
+                    android:text="@{bvnResponse.bvnSearchResult.lastName}" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/daoCodeTIL"
+                style="@style/lekanTilStyle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                app:layout_constraintEnd_toEndOf="@+id/password"
+                app:layout_constraintStart_toStartOf="@+id/password"
+                app:layout_constraintTop_toBottomOf="@+id/password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bvnOfNonAuth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen_20dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/otherName"
+                    android:singleLine="true"
+                    android:text="@{bvnResponse.bvnSearchResult.middleName}" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/genderTil"
+                style="@style/lekanTilStyle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/dimen_10dp"
+                app:layout_constraintEnd_toEndOf="@+id/daoCodeTIL"
+                app:layout_constraintStart_toStartOf="@+id/daoCodeTIL"
+                app:layout_constraintTop_toBottomOf="@+id/daoCodeTIL">
+
+                <AutoCompleteTextView
+                    android:id="@+id/role"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen_20dp"
+                    android:drawableEnd="@drawable/ic_lekan_dropdown_icon"
+                    android:hint="@string/title"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/dimen_10dp"
+                    android:singleLine="true"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dateOfBirthTIL"
+                style="@style/lekanTilStyle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:paddingHorizontal="@dimen/dimen_10dp"
+                app:layout_constraintEnd_toEndOf="@+id/genderTil"
+                app:layout_constraintStart_toStartOf="@+id/genderTil"
+                app:layout_constraintTop_toBottomOf="@+id/genderTil">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen_20dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/phoneNumber"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:text="@{bvnResponse.bvnSearchResult.dateOfBirth}" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/bvnLabel"
+                style="@style/lekanTilStyle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:paddingHorizontal="@dimen/dimen_10dp"
+                app:layout_constraintEnd_toEndOf="@+id/genderTil"
+                app:layout_constraintStart_toStartOf="@+id/genderTil"
+                app:layout_constraintTop_toBottomOf="@+id/dateOfBirthTIL">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bvn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen_20dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/designation"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:text="@{bvnResponse.bvnSearchResult.dateOfBirth}" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <android.widget.Button
+                android:id="@+id/proceedBtn"
+                style="@style/reuseableFairPayBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/next"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="@+id/previousPage"
+                app:layout_constraintEnd_toEndOf="@+id/dateOfBirthTIL"
+                app:layout_constraintTop_toTopOf="@+id/previousPage"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="RtlSymmetry" />
+
+            <android.widget.Button
+                android:id="@+id/previousPage"
+                style="@style/reuseableFairPayBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen_35dp"
+                android:text="@string/previous"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/bvnLabel"
+                app:layout_constraintTop_toBottomOf="@+id/bvnLabel"
+                tools:ignore="RtlSymmetry" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

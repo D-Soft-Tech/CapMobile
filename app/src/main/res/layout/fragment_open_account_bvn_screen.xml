@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.openAccountScreens.OpenAccountBvnScreen">
+    tools:context=".ui.view.openAccountScreens.OpenAccountBvnScreen">
 
     <data>
 
@@ -12,58 +12,50 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView35"
-            style="@style/lekan_txt_view_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen_20dp"
-            android:layout_marginTop="@dimen/dimen_20dp"
-            android:text="@string/bvn"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout5"
             style="@style/lekanTilStyle2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_30dp"
+            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginHorizontal="@dimen/dimen_15dp"
-            android:layout_marginTop="@dimen/dimen_5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView35">
+            tools:layout_editor_absoluteY="45dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/bvn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                validate="@{1}"
                 android:drawablePadding="@dimen/dimen_20dp"
                 android:hint="@string/bvn"
+                android:maxLength="11"
                 android:inputType="number"
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/passwordLabel"
-            style="@style/lekan_txt_view_label"
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_15dp"
-            android:text="@string/existing_account"
-            app:layout_constraintStart_toStartOf="@+id/textView35"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
+            android:layout_height="0dp"
+            android:visibility="invisible"
+            android:indeterminateDrawable="@drawable/please_wait_progress"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textInputLayout5"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout5"
+            app:layout_constraintTop_toTopOf="@+id/textInputLayout5" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/password"
             style="@style/lekanTilStyle2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
             app:layout_constraintEnd_toEndOf="@+id/textInputLayout5"
             app:layout_constraintStart_toStartOf="@+id/textInputLayout5"
-            app:layout_constraintTop_toBottomOf="@+id/passwordLabel">
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/existingAccount"
@@ -74,25 +66,15 @@
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/daoCodeLabel"
-            style="@style/lekan_txt_view_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_15dp"
-            android:text="@string/daoCodeLabel"
-            app:layout_constraintStart_toStartOf="@+id/passwordLabel"
-            app:layout_constraintTop_toBottomOf="@+id/password" />
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/daoCodeTIL"
             style="@style/lekanTilStyle2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
             app:layout_constraintEnd_toEndOf="@+id/password"
             app:layout_constraintStart_toStartOf="@+id/password"
-            app:layout_constraintTop_toBottomOf="@+id/daoCodeLabel">
+            app:layout_constraintTop_toBottomOf="@+id/password">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/daoCodeTIET"
@@ -104,26 +86,19 @@
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/accountTypeLabel"
-            style="@style/lekan_txt_view_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_15dp"
-            android:text="@string/accountType"
-            app:layout_constraintStart_toStartOf="@+id/daoCodeLabel"
-            app:layout_constraintTop_toBottomOf="@+id/daoCodeTIL" />
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/accountTypeTIL"
             style="@style/lekanDropDownMenuStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
             android:gravity="center_vertical"
+            android:paddingStart="@dimen/dimen_10dp"
+            android:paddingEnd="@dimen/dimen_10dp"
             app:layout_constraintEnd_toEndOf="@+id/daoCodeTIL"
             app:layout_constraintStart_toStartOf="@+id/daoCodeTIL"
-            app:layout_constraintTop_toBottomOf="@+id/accountTypeLabel">
+            app:layout_constraintTop_toBottomOf="@+id/daoCodeTIL"
+            tools:ignore="RtlSymmetry">
 
             <AutoCompleteTextView
                 android:id="@+id/accountTypeTIET"

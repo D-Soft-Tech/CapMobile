@@ -5,7 +5,7 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
+    <color name="black">#66000000</color>
     <color name="background_color">#E5E5E5</color>
     <color name="background_color_variant_2">#FBF7F7</color>
     <color name="white">#FFFFFFFF</color>
@@ -53,4 +53,7 @@
     <color name="color_lekan_grey_2">#331E1F20</color>
     <color name="color_70_a_black">#B31E1F20</color>
     <color name="new_grey_color">#4DC4C4C4</color>
+    <color name="black_33_opacity">#59000000</color>
+    <color name="lekanColor50">#800056A3</color>
+    <color name="error_color_2">#e06666</color>
 </resources>
