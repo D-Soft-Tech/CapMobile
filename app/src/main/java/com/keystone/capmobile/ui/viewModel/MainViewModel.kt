@@ -37,9 +37,9 @@ class MainViewModel @Inject constructor(
     private var _messageFetchedFromTheBackEnd: MutableLiveData<Resource<GeneralMessageResponseBody>> =
         MutableLiveData()
     val messageFetchedFromTheBackEnd: LiveData<Resource<GeneralMessageResponseBody>> get() = _messageFetchedFromTheBackEnd
-    private var _sendMessageResponse: MutableLiveData<Resource<GeneralMessageResponseBody>> =
+    private var _sendMessageResponse: MutableLiveData<Resource<SendMessageResponseBody>> =
         MutableLiveData()
-    val sendMessageResponse: LiveData<Resource<GeneralMessageResponseBody>> get() = _sendMessageResponse
+    val sendMessageResponse: LiveData<Resource<SendMessageResponseBody>> get() = _sendMessageResponse
     private var _getHardCore: MutableLiveData<Resource<GetHardCoreResponseBody>> =
         MutableLiveData()
     val getHardCore: LiveData<Resource<GetHardCoreResponseBody>> get() = _getHardCore
@@ -125,6 +125,7 @@ class MainViewModel @Inject constructor(
                     headers,
                     sendMessageRequestBody
                 ).collect { sendMessageResponse ->
+                    Log.d("MESSAGE_RESPONSE_1", sendMessageResponse.toString())
                     _sendMessageResponse.value = sendMessageResponse
                 }
             }

@@ -56,4 +56,5 @@
     <color name="black_33_opacity">#59000000</color>
     <color name="lekanColor50">#800056A3</color>
     <color name="error_color_2">#e06666</color>
+    <color name="transparent_black">#73000000</color>
 </resources>

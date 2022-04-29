@@ -8,6 +8,8 @@
         <entry key="../../Library/Android/sdk/platforms/android-31/data/res/layout/activity_list_item.xml" value="0.3333333333333333" />
         <entry key="../../Library/Android/sdk/platforms/android-31/data/res/layout/simple_expandable_list_item_1.xml" value="0.31875" />
         <entry key="../../Library/Android/sdk/platforms/android-31/data/res/layout/simple_list_item_1.xml" value="0.31875" />
+        <entry key="app/src/main/res/drawable-v24/curve_bg.xml" value="0.2851851851851852" />
+        <entry key="app/src/main/res/drawable-v24/white_custom_progress_bar.xml" value="0.2851851851851852" />
         <entry key="app/src/main/res/drawable/account_card_bg.xml" value="0.29739583333333336" />
         <entry key="app/src/main/res/drawable/active_status_bg.xml" value="0.2462962962962963" />
         <entry key="app/src/main/res/drawable/block_quote_background.xml" value="0.17314814814814813" />
@@ -15,6 +17,7 @@
         <entry key="app/src/main/res/drawable/bottom_sheet_bg.xml" value="0.3020833333333333" />
         <entry key="app/src/main/res/drawable/btn_bg_with_new_main_color.xml" value="0.30364583333333334" />
         <entry key="app/src/main/res/drawable/button_bg.xml" value="0.29739583333333336" />
+        <entry key="app/src/main/res/drawable/curve_bg.xml" value="0.2851851851851852" />
         <entry key="app/src/main/res/drawable/curved_top_sheet_bottom_sheet.xml" value="0.2074074074074074" />
         <entry key="app/src/main/res/drawable/custom_edittext_border.xml" value="0.30462962962962964" />
         <entry key="app/src/main/res/drawable/customer_engagement_tab_bg.xml" value="0.3020833333333333" />
@@ -265,6 +268,7 @@
         <entry key="app/src/main/res/layout/layout_reactivate_account_response_bottom_sheet.xml" value="0.2782608695652174" />
         <entry key="app/src/main/res/layout/layout_recent_dashboard.xml" value="0.1" />
         <entry key="app/src/main/res/layout/lekan_button_bg.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/loading_dialog.xml" value="0.28958333333333336" />
         <entry key="app/src/main/res/layout/loading_dialog_layout.xml" value="0.31875" />
         <entry key="app/src/main/res/layout/login_screen_new.xml" value="0.28802083333333334" />
         <entry key="app/src/main/res/layout/logout_dialog_layout.xml" value="0.2875" />
@@ -281,10 +285,12 @@
         <entry key="app/src/main/res/layout/refer_a_friend_bottom_sheet_layout.xml" value="0.2859375" />
         <entry key="app/src/main/res/layout/refer_a_friend_dialog_layout.xml" value="0.31875" />
         <entry key="app/src/main/res/layout/refer_a_friend_success_page.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/response_modal.xml" value="0.28958333333333336" />
         <entry key="app/src/main/res/layout/rich_text_editor_layout.xml" value="0.25" />
         <entry key="app/src/main/res/layout/select_branch_item_layout.xml" value="0.28958333333333336" />
         <entry key="app/src/main/res/layout/signature_canvas_view.xml" value="0.28958333333333336" />
         <entry key="app/src/main/res/layout/spinner_drop_down.xml" value="0.3282051282051282" />
+        <entry key="app/src/main/res/layout/success_modal.xml" value="0.28958333333333336" />
         <entry key="app/src/main/res/layout/table_heading.xml" value="0.2875" />
         <entry key="app/src/main/res/layout/table_item_layout.xml" value="0.375" />
         <entry key="app/src/main/res/layout/testing.xml" value="0.3333333333333333" />

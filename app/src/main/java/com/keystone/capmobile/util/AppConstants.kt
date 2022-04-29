@@ -911,14 +911,14 @@ object AppConstants {
     }
 }
 
-fun currencyFormat(amount: Double?): String {
+fun currencyFormat(amount: Double? = 0.0): String {
     val formatter = DecimalFormat("#,###,##0.00")
     return amount?.let { formatter.format(it) } ?: "0"
 }
 
 fun Double.roundToDecimalPlace(decimals: Int = 2): Double = "%.${decimals}f".format(this).toDouble()
 
-fun currencyFormat(amount: Int?): String {
+fun currencyFormat(amount: Int? = 0): String {
     val formatter = DecimalFormat("#,###,##0.00")
     return amount?.let { formatter.format(it) } ?: "0"
 }

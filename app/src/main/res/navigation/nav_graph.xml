@@ -8,7 +8,11 @@
     <fragment
         android:id="@+id/customerEngagement"
         android:name="com.keystone.capmobile.ui.view.customerEngagement.CustomerEngagement"
-        android:label="CustomerEngagement" />
+        android:label="CustomerEngagement" >
+        <action
+            android:id="@+id/action_customerEngagement_to_networkResponseModal"
+            app:destination="@id/networkResponseModal" />
+    </fragment>
     <fragment
         android:id="@+id/dashboardNew"
         android:name="com.keystone.capmobile.ui.view.dashboard.DashboardNew"
@@ -251,5 +255,22 @@
         android:id="@+id/newReactivateAccountFragment"
         android:name="com.keystone.capmobile.ui.view.reactivateAccountScreens.NewReactivateAccountFragment"
         android:label="fragment_new_reactivate_account"
-        tools:layout="@layout/fragment_new_reactivate_account" />
+        tools:layout="@layout/fragment_new_reactivate_account" >
+        <action
+            android:id="@+id/action_newReactivateAccountFragment_to_reactivateAccountBottomSheet"
+            app:destination="@id/reactivateAccountBottomSheet"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/newReactivateAccountFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/reactivateAccountBottomSheet"
+        android:name="com.keystone.capmobile.ui.view.dialogFragments.ReactivateAccountResponseBottomSheet"
+        android:label="fragment_reactivate_account_bottom_sheet"
+        tools:layout="@layout/layout_reactivate_account_response_bottom_sheet" />
+    <dialog
+        android:id="@+id/networkResponseModal"
+        android:name="com.keystone.capmobile.ui.view.dialogFragments.ResponseModal"
+        android:label="ResponseModal"
+        tools:layout="@layout/response_modal" />
+
 </navigation>

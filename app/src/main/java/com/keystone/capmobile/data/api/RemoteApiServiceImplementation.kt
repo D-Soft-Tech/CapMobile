@@ -79,10 +79,12 @@ class RemoteApiServiceImplementation @Inject constructor(
     fun sendMessage(
         headers: Map<String, String>,
         messageRequestBody: SendMessageRequestBody
-    ): Flow<Resource<GeneralMessageResponseBody>> = flow {
+    ): Flow<Resource<SendMessageResponseBody>> = flow {
         emit(Resource.loading(null))
         try {
-            emit(Resource.success(remoteApiService.sendMessage(headers, messageRequestBody)))
+            val data = remoteApiService.sendMessage(headers, messageRequestBody)
+            Log.d("DATADATADATADATA", data.details.toString())
+            emit(Resource.success(data))
         } catch (e: java.lang.Exception) {
             if (e == SocketTimeoutException()) {
                 emit(Resource.timeOut(null))
@@ -101,13 +103,10 @@ class RemoteApiServiceImplementation @Inject constructor(
           val hardCore =  remoteApiService.getHardCore(headers, hardCoreRequestBody)
             emit(Resource.success(hardCore))
         } catch (e: Exception) {
-            println(e)
-            Log.d("1e==", e.localizedMessage)
             if (e != SocketTimeoutException()) {
-                Log.d("1e==", e.localizedMessage)
                 emit(Resource.error(null))
-            } else {
-                Log.d("2e==", e.localizedMessage)
+            }
+            else {
                 emit(Resource.timeOut(null))
             }
         }

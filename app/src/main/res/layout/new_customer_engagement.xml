@@ -156,6 +156,7 @@
             android:layout_marginEnd="@dimen/dimen_30dp"
             android:layout_marginBottom="@dimen/dimen_10dp"
             android:contentDescription="@string/editIcon"
+            android:visibility="invisible"
             android:src="@android:drawable/ic_menu_edit"
             app:layout_constraintBottom_toTopOf="@+id/textInputLayoutOptionalMessage"
             app:layout_constraintEnd_toEndOf="@+id/textInputLayoutOptionalMessage"
@@ -205,58 +206,21 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins"
-            android:text="@string/send_via"
-            android:layout_marginTop="@dimen/dimen_5dp"
-            android:textColor="@color/lekanColor50"
-            app:layout_constraintEnd_toEndOf="@+id/textInputLayoutOptionalMessage"
-            app:layout_constraintStart_toStartOf="@+id/textInputLayoutOptionalMessage"
-            app:layout_constraintTop_toTopOf="@+id/guideline6" />
-
         <android.widget.Button
             android:id="@+id/engageViaKeystoneService"
             style="@style/reuseableFairPayBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/keystone"
-            android:textAlignment="center"
+            android:drawablePadding="@dimen/dimen_10dp"
             android:gravity="center"
             android:paddingHorizontal="@dimen/dimen_20dp"
-            android:drawablePadding="@dimen/dimen_10dp"
-            android:layout_marginStart="@dimen/dimen_10dp"
-            android:layout_marginEnd="@dimen/dimen_20dp"
-            android:textAllCaps="false"
-            app:layout_constraintEnd_toStartOf="@+id/keystoneService"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            tools:ignore="RtlSymmetry"
-            tools:targetApi="m" />
-
-        <android.widget.Button
-            android:id="@+id/keystoneService"
-            style="@style/reuseableFairPayBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen_10dp"
-            android:layout_marginEnd="@dimen/dimen_20dp"
-            android:drawablePadding="@dimen/dimen_10dp"
-            android:paddingHorizontal="@dimen/dimen_20dp"
-            android:drawableStart="@drawable/ic_email"
-            android:drawableTint="@color/white"
-            android:text="@string/email"
+            android:text="@string/send"
             android:textAlignment="center"
             android:textAllCaps="false"
-            app:layout_constraintBottom_toBottomOf="@+id/engageViaKeystoneService"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/engageViaKeystoneService"
-            app:layout_constraintTop_toTopOf="@+id/engageViaKeystoneService"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayoutOptionalMessage"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayoutOptionalMessage"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutOptionalMessage"
             tools:ignore="RtlSymmetry"
             tools:targetApi="m" />
 

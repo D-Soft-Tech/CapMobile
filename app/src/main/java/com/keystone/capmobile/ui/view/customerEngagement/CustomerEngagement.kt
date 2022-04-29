@@ -8,19 +8,27 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.annotation.RawRes
+import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.keystone.capmobile.R
+import com.keystone.capmobile.data.model.ModalData
 import com.keystone.capmobile.data.model.SendMessageRequestBody
 import com.keystone.capmobile.databinding.NewCustomerEngagementBinding
 import com.keystone.capmobile.ui.interfaces.DrawerLocker
 import com.keystone.capmobile.ui.view.dialogFragments.BottomSheetCreateMessageDialog
+import com.keystone.capmobile.ui.view.dialogFragments.LoadingDialog
+import com.keystone.capmobile.ui.view.dialogFragments.ResponseModal
 import com.keystone.capmobile.ui.viewModel.MainViewModel
 import com.keystone.capmobile.util.AppConstants.customSnackBar
 import com.keystone.capmobile.util.AppConstants.customToast
 import com.keystone.capmobile.util.AppConstants.hideKeyboard
+import com.keystone.capmobile.util.ConstantsOnly.NETWORK_CALL_RESPONSE_DATA_DIALOG_BUNDLE_KEY
+import com.keystone.capmobile.util.ConstantsOnly.NETWORK_CALL_RESPONSE_DATA_DIALOG_REQUEST_KEY
 import com.keystone.capmobile.util.Status
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -32,6 +40,10 @@ class CustomerEngagement : Fragment() {
 
     @Inject
     lateinit var createMessageBottomSheet: BottomSheetCreateMessageDialog
+    @Inject
+    lateinit var loadingProgressDialog: LoadingDialog
+    @Inject
+    lateinit var responseModal: ResponseModal
     private lateinit var backArrowImageView: ImageView
     private lateinit var editMessage: ImageView
     private lateinit var backTextView: TextView
@@ -259,6 +271,45 @@ class CustomerEngagement : Fragment() {
             selectedTransactionStatus
         )
         viewModel.sendMessage(message)
+        observeSendMessageResponse()
+    }
+
+    private fun observeSendMessageResponse() {
+        viewModel.sendMessageResponse.observe(viewLifecycleOwner) {
+            when (it.status) {
+                Status.LOADING -> {
+                    loadingProgressDialog.show(parentFragmentManager, "LOADER")
+                }
+                Status.SUCCESS -> {
+                    loadingProgressDialog.dismiss()
+                    showModal(R.raw.success, getString(R.string.messageSentSuccessfully))
+                }
+                Status.ERROR -> {
+                    loadingProgressDialog.dismiss()
+                    showModal(R.raw.failed, getString(R.string.messageWasNotSent))
+                }
+                Status.TIMEOUT -> {
+                    loadingProgressDialog.dismiss()
+                    showModal(R.raw.success, getString(R.string.messageSentSuccessfully))
+                }
+            }
+        }
+    }
+
+    private fun showModal(@RawRes lottieIcon: Int, message: String) {
+        val modalData = ModalData(
+            lottieIcon,
+            message
+        )
+        setFragmentResult(
+            NETWORK_CALL_RESPONSE_DATA_DIALOG_REQUEST_KEY,
+            bundleOf(NETWORK_CALL_RESPONSE_DATA_DIALOG_BUNDLE_KEY to modalData)
+        )
+
+        if (findNavController().currentDestination?.id != R.id.action_customerEngagement_to_networkResponseModal) {
+            val action  = CustomerEngagementDirections.actionCustomerEngagementToNetworkResponseModal()
+            findNavController().navigate(action)
+        }
     }
 
 }

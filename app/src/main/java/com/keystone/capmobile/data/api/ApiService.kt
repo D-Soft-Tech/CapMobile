@@ -41,7 +41,7 @@ interface ApiService {
     suspend fun sendMessage(
         @HeaderMap headers: Map<String, String>,
         @Body messageRequestModel: SendMessageRequestBody
-    ): GeneralMessageResponseBody
+    ): SendMessageResponseBody
 
     @POST("Operations/BvnValidation")
     suspend fun validateBvn(@Body bvnRequestBody: BvnValidationRequestModel): BvnValidationResponse

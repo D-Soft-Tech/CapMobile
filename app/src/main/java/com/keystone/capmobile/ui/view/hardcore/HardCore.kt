@@ -221,9 +221,15 @@ class HardCore @Inject constructor() : Fragment() {
                 when (headingTv.text) {
                     "Avg Deposit Portfolio" -> {
                         data.data?.details?.run {
-                            setOpeningClosingAndMovementBalances(
-                                summary.OpeningAvgBal,
-                                summary.ClosingAvgBalance,
+                            summary?.OpeningAvgBal?.let {
+                                setOpeningClosingAndMovementBalances(
+                                     it,
+                                    summary?.ClosingAvgBalance ?: 0.0,
+                                    mapToHardCoreDataObjects()
+                                )
+                            }?: setOpeningClosingAndMovementBalances(
+                                0.0,
+                                summary?.ClosingAvgBalance ?: 0.0,
                                 mapToHardCoreDataObjects()
                             )
                         }
@@ -231,8 +237,8 @@ class HardCore @Inject constructor() : Fragment() {
                     "Average DOM Portfolio" -> {
                         data.data?.details?.run {
                             setOpeningClosingAndMovementBalances(
-                                summary.DOMOpeningAvgBal.toDouble(),
-                                summary.DOMClosingAvgBalance.toDouble(),
+                                summary?.DOMOpeningAvgBal?.toDouble() ?: 0.0,
+                                summary?.DOMClosingAvgBalance?.toDouble() ?: 0.0,
                                 mapToHardCoreDataObjects()
                             )
                         }
@@ -240,8 +246,8 @@ class HardCore @Inject constructor() : Fragment() {
                     "Avg CASA Portfolio" -> {
                         data.data?.details?.run {
                             setOpeningClosingAndMovementBalances(
-                                summary.CASAOpeningAvgBal,
-                                summary.CASAClosingAvgBalance,
+                                summary?.CASAOpeningAvgBal ?: 0.0,
+                                summary?.CASAClosingAvgBalance ?: 0.0,
                                 mapToHardCoreDataObjects()
                             )
                         }
@@ -249,8 +255,8 @@ class HardCore @Inject constructor() : Fragment() {
                     "Avg FD Portfolio" -> {
                         data.data?.details?.run {
                             setOpeningClosingAndMovementBalances(
-                                summary.FixedDepositOpeningAvgBal,
-                                summary.FixedDepositClosingAvgBalance.toDouble(),
+                                summary?.FixedDepositOpeningAvgBal ?: 0.0,
+                                summary?.FixedDepositClosingAvgBalance?.toDouble() ?: 0.0,
                                 mapToHardCoreDataObjects()
                             )
                         }
@@ -266,13 +272,13 @@ class HardCore @Inject constructor() : Fragment() {
         closingBal: Double?,
         accountsMappedToUser: List<HardCoreDataObjects>
     ) {
-//        openingBalanceTv.text = openingBal?.let { currencyFormat(it) } ?: "Not Available"
-//        closingBalanceTv.text = closingBal?.let { currencyFormat(it) } ?: "Not Available"
-//        movementTv.text = closingBal?.let { closBal ->
-//            openingBal?.let { opBal ->
-//                currencyFormat((closBal - opBal))
-//            }
-//        } ?: "Not Available"
+        openingBalanceTv.text = openingBal?.let { currencyFormat(it) } ?: "Not Available"
+        closingBalanceTv.text = closingBal?.let { currencyFormat(it) } ?: "Not Available"
+        movementTv.text = closingBal?.let { closBal ->
+            openingBal?.let { opBal ->
+                currencyFormat((closBal - opBal))
+            }
+        } ?: "Not Available"
         hardCoreData = accountsMappedToUser
         accountsAdapter.setData(hardCoreData)
         accountsAdapter.notifyDataSetChanged()

@@ -53,14 +53,14 @@ class ReactivateAccountResponseBottomSheet @Inject constructor() : BottomSheetDi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViews()
-        this.isCancelable = false
+        this.isCancelable = true
     }
 
     override fun onResume() {
         super.onResume()
         setData()
         cancelButton.setOnClickListener {
-            dismiss()
+            this.dismiss()
         }
     }
 

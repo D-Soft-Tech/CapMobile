@@ -465,6 +465,10 @@
     <string name="view_details">View Details</string>
     <string name="accountReactivatedSuccessfully">Account reactivated successfully</string>
     <string name="errorReactivatingAccount">Error reactivating account</string>
+    <string name="processing">Processing...</string>
+    <string name="messageSentSuccessfully">Message sent successfully</string>
+    <string name="cancel_button">Cancel Button</string>
+    <string name="messageWasNotSent">Failed!, Please try again</string>
 
     <string-array name="statuses">
         <item>Active</item>

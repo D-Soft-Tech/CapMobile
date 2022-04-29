@@ -7,7 +7,7 @@ data class HardCoreDataObjects(
     var accountNumber: String,
     var status: String,
     var product: Int,
-    var balance: String
+    var balance: String? = "0"
 ) {
-    fun getCurrencyFormattedBalance(): String = currencyFormat(balance.toDouble())
+    fun getCurrencyFormattedBalance(): String = currencyFormat(balance?.toDouble() ?: 0.0)
 }

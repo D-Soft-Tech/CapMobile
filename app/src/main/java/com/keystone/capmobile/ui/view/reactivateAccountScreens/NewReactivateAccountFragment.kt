@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.setFragmentResult
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.textfield.TextInputEditText
 import com.keystone.capmobile.R
 import com.keystone.capmobile.data.model.ReactivateAcctBottomSheetData
@@ -119,13 +120,15 @@ class NewReactivateAccountFragment @Inject constructor() : Fragment() {
     }
 
     private fun showReactivateAccountResponseBottomSheet(dataToShowInTheBottomSheet: ReactivateAcctBottomSheetData) {
-//        setFragmentResult(
-//            REACTIVATE_ACCT_BOTTOM_SHEET_DIALOG_RK,
-//            bundleOf(REACTIVATE_ACCT_BOTTOM_SHEET_DIALOG_BK to dataToShowInTheBottomSheet)
-//        )
-        reactivateAccountResponseBottomSheet.show(
-            parentFragmentManager,
-            REACTIVATE_ACCT_BOTTOM_SHEET_DIALOG_FRAGMENT_TAG
+
+        setFragmentResult(
+            REACTIVATE_ACCT_BOTTOM_SHEET_DIALOG_RK,
+            bundleOf(REACTIVATE_ACCT_BOTTOM_SHEET_DIALOG_BK to dataToShowInTheBottomSheet)
         )
+
+        if (findNavController().currentDestination?.id != R.id.reactivateAccountBottomSheet) {
+            val action  = NewReactivateAccountFragmentDirections.actionNewReactivateAccountFragmentToReactivateAccountBottomSheet()
+            findNavController().navigate(action)
+        }
     }
 }

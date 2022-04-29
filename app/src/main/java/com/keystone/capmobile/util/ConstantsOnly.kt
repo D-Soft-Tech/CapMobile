@@ -32,6 +32,9 @@ object ConstantsOnly {
     const val REACTIVATE_ACCT_BOTTOM_SHEET_DIALOG_RK = "ReactivateAccountResponseBottomSheetRK"
     const val REACTIVATE_ACCT_BOTTOM_SHEET_DIALOG_BK = "ReactivateAccountResponseBottomSheetBK"
     const val REACTIVATE_ACCT_BOTTOM_SHEET_DIALOG_FRAGMENT_TAG = "reactivateAccount"
+    const val NETWORK_CALL_RESPONSE_DATA_DIALOG_TAG = "NetworkModalTag"
+    const val NETWORK_CALL_RESPONSE_DATA_DIALOG_REQUEST_KEY = "NetworkModalRK"
+    const val NETWORK_CALL_RESPONSE_DATA_DIALOG_BUNDLE_KEY = "NetworkModalBK"
 
     fun TextInputEditText.notifySuccessfulValidationWithCheckAndBorder() {
         style(R.style.lekanTilStyleForSuccess)
